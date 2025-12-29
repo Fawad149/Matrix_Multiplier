@@ -3,6 +3,7 @@ module controller (
     input  logic rst,
     input  logic start,
     input logic [7:0] wr_data,
+  	input logic [13:0] coeff_data,
 
 
     // // status inputs
@@ -19,7 +20,7 @@ module controller (
     output logic [3:0] rom_addr,
 
     output logic [4:0] inbuf_rd_addr,
-    
+  	output logic [6:0]	coeff_out,
 
     output logic save_result,
     output logic [3:0] res_index,
@@ -47,7 +48,13 @@ module controller (
 
     // ---------- result index ----------
     logic [3:0] res_idx_r;
+  
+  	//------misc-----
     logic one_matrix_calculated;
+  
+  	//----ROM-----
+  	logic [6:0]  coeff_hi;
+    logic [6:0]  coeff_lo;
     //----------------------------------------------------
     // FSM state register
     //----------------------------------------------------
@@ -165,16 +172,19 @@ module controller (
     else
       one_matrix_calculated <= (k_cnt == 0);
 	end
-
+	
+  	assign coeff_out = (k_cnt[0] == 1'b0) ? coeff_hi : coeff_lo;
   	assign mac_clr = (k_cnt == 0) & ~one_matrix_calculated;
     assign mac_en  = (state == COMPUTE_MAC);	
 
     //----------------------------------------------------
     // ROM addressing
     //----------------------------------------------------
+  	assign coeff_hi = coeff_data[13:7];
+    assign coeff_lo = coeff_data[6:0];
     wire [1:0] pair_index = k_cnt[2:1];
     assign rom_addr = {col_j, pair_index};
-
+// 	assign coeff_out = (k_cnt[0] == 1'b0) ? coeff_hi : coeff_lo;
     //----------------------------------------------------
     // input buffer read address  (k*4 + i)
     //----------------------------------------------------
