@@ -8,7 +8,7 @@ module input_buffer (
     input  logic [7:0]  wr_data,
 
     input  logic [4:0]  rd_addr,
-    output logic [7:0]  rd_data
+  output logic [31:0]  rd_data
 );
 
     // 32 x 8-bit memory
@@ -22,6 +22,6 @@ module input_buffer (
     end
 
     // read logic
-  assign rd_data =(comp_en) ? mem[rd_addr] : 8'd0;
+  assign rd_data =(comp_en) ? {mem[rd_addr],mem[rd_addr+1],mem[rd_addr+2],mem[rd_addr+3]} : 32'd0;
 
 endmodule

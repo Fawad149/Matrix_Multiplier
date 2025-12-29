@@ -97,7 +97,7 @@ module controller (
             end
 
             NEXT_ELEMENT: begin
-                if (row_i == 2'd3 && col_j == 2'd3)
+                if (col_j == 2'd3)
                     next_state = DONE;
                 else
                     next_state = COMPUTE_MAC;
@@ -144,22 +144,22 @@ module controller (
     end
 
     // row index i
-    always_ff @(posedge clk) begin
-        if (rst)
-            row_i <= 2'd0;
-        else if (state == NEXT_ELEMENT) begin
-            if (row_i == 2'd3)
-                row_i <= 2'd0;
-            else
-                row_i <= row_i + 2'd1;
-        end
-    end
+//     always_ff @(posedge clk) begin
+//         if (rst)
+//             row_i <= 2'd0;
+//         else if (state == NEXT_ELEMENT) begin
+//             if (row_i == 2'd3)
+//                 row_i <= 2'd0;
+//             else
+//                 row_i <= row_i + 2'd1;
+//         end
+//     end
 
     // column index j
     always_ff @(posedge clk) begin
         if (rst)
             col_j <= 2'd0;
-        else if (state == NEXT_ELEMENT && row_i == 2'd3)
+      else if (state == NEXT_ELEMENT)
             col_j <= col_j + 2'd1;
     end
 
@@ -188,7 +188,7 @@ module controller (
     //----------------------------------------------------
     // input buffer read address  (k*4 + i)
     //----------------------------------------------------
-    assign inbuf_rd_addr = {k_cnt, row_i};
+  assign inbuf_rd_addr = {k_cnt*4};
 
     //----------------------------------------------------
     // result index
