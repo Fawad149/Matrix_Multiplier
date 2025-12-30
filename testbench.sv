@@ -67,8 +67,6 @@ module tb;
 
     i_read_ram = 1'b1;
     @(posedge clk);
-    @(posedge clk);
-
     for (r = 0; r < 16; r++) begin
 
         calculated_results[base + r] = 32'd0;
