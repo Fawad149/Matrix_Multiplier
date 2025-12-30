@@ -30,7 +30,7 @@ module mm_top (
 //     logic [6:0]  coeff_hi;
 //     logic [6:0]  coeff_lo;
   	logic [6:0] a_mac;
-  logic [17:0] mac_acc_1, mac_acc_2, mac_acc_3, mac_acc_4;
+  	logic [17:0] mac_acc[3:0];
     logic [17:0] result_ram [0:15];
     
     logic [3:0]  read_index;
@@ -84,6 +84,11 @@ module mm_top (
 //     assign coeff_lo = rom_data[6:0];
 
     // ========================= MAC =========================
+    assign x1 = top_rd_data[31:24];
+  	assign x2 = top_rd_data[23:16];
+  	assign x3 = top_rd_data[15:8];
+  	assign x4 = top_rd_data[7:0];
+  
     mac_unit u_mac_1 (
         .clk(clk),
         .rst(rst),
@@ -91,13 +96,8 @@ module mm_top (
         .clr(mac_clr),
       .x(x1),
       	.w(a_mac),
-      .acc(mac_acc_1)
+      .acc(mac_acc[0])
     );
-  
-  assign x1 = top_rd_data[31:24];
-  assign x2 = top_rd_data[23:16];
-  assign x3 = top_rd_data[15:8];
-  assign x4 = top_rd_data[7:0];
   
    mac_unit u_mac_2 (
         .clk(clk),
@@ -106,7 +106,7 @@ module mm_top (
         .clr(mac_clr),
      .x(x2),
       	.w(a_mac),
-     .acc(mac_acc_2)
+     .acc(mac_acc[1])
     );
   
    mac_unit u_mac_3 (
@@ -116,7 +116,7 @@ module mm_top (
         .clr(mac_clr),
      .x(x3),
       	.w(a_mac),
-     .acc(mac_acc_3)
+     .acc(mac_acc[2])
     );
   
    mac_unit u_mac_4 (
@@ -126,13 +126,17 @@ module mm_top (
         .clr(mac_clr),
      .x(x4),
       	.w(a_mac),
-     .acc(mac_acc_4)
+     .acc(mac_acc[3])
     );
 
     // ================== STORE RESULTS ======================
     always_ff @(posedge clk) begin
-        if (save_result)
-          result_ram[res_index] <= mac_acc_1;
+        if (save_result) begin
+          result_ram[res_index] <= mac_acc[0];
+          result_ram[res_index+1] <= mac_acc[1];
+          result_ram[res_index+2] <= mac_acc[2];
+          result_ram[res_index+3] <= mac_acc[3];
+        end
     end
 
     // ===================== READ INTERFACE =================
@@ -157,8 +161,8 @@ module mm_top (
             read_data_out <= 0;
         end
         else if (read_ram) begin
+          	read_shift <= result_ram[read_index];
             if (!half_sel) begin
-                read_shift <= result_ram[read_index];
                 read_data_out <= result_ram[read_index][8:0];
                 half_sel <= 1'b1;
             end else begin

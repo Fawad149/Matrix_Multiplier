@@ -197,7 +197,7 @@ module controller (
         if (rst)
             res_idx_r <= 0;
         else if (state == SAVE_RESULT)
-            res_idx_r <= res_idx_r + 1;
+            res_idx_r <= res_idx_r + 4;
     end
 
     assign res_index = res_idx_r;
