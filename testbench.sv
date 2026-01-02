@@ -67,12 +67,14 @@ module tb;
 
     i_read_ram = 1'b1;
     @(posedge clk);
+//       @(posedge clk);
     for (r = 0; r < 16; r++) begin
 
         calculated_results[base + r] = 32'd0;
 
         for (chunk = 0; chunk < 2; chunk++) begin
             @(posedge clk);
+          
 
             if (chunk == 0) begin
                 // LOWER 9 BITS
@@ -85,7 +87,7 @@ module tb;
 //                 $display("  Upper 9 bits stored: %b", o_read_data_out);
             end
         end
-
+		
     end
     i_read_ram = 1'b0;
 

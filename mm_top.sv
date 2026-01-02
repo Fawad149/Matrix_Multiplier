@@ -2,6 +2,7 @@
 `include "mac_unit.sv"
 `include "rom_coeff.sv"
 `include "controller.sv"
+`include "RM_IHPSG13_1P_512x32_c2_bm_bistv.v"
 
 module mm_top (
     input  logic        clk,
@@ -21,7 +22,7 @@ module mm_top (
     logic [3:0]  rom_addr;
     logic [4:0]  top_rd_addr;
     logic        save_result;
-    logic [3:0]  res_index;
+  	logic [8:0]  res_index;
     
     // ---------- Data Signals ----------
   	logic [7:0]	 top_wr_data;
@@ -31,11 +32,17 @@ module mm_top (
 //     logic [6:0]  coeff_lo;
   	logic [6:0] a_mac;
     logic [17:0] mac_acc [0:3];
-    logic [17:0] result_ram [0:15];
+  	logic [31:0] result_ram;
+  	logic [31:0] ram_read_data;
     
-    logic [3:0]  read_index;
-    logic [17:0] read_shift;
-    logic        half_sel;
+  	logic [8:0]  read_index;
+  	logic [8:0] ram_addr;
+  	logic [31:0] read_shift;
+  	logic [1:0]      half_sel;
+  	logic 	     second_ram_data;
+  	logic [1:0] ram_wrcnt;
+  	logic [3:0] read_addr;
+  logic read_valid;
   
     logic  [7:0] x1,x2,x3,x4;
 
@@ -56,6 +63,9 @@ module mm_top (
       	.coeff_out(a_mac),
         .save_result(save_result),
         .res_index(res_index),
+      	.ram_write_cnt(ram_wrcnt),
+      	.ram_read(read_ram),
+      	.addr_read(read_addr),
         .finish(finish)
     );
 
@@ -98,7 +108,7 @@ module mm_top (
         .acc(mac_acc[0])
     );
   
-  
+  	
   
     mac_unit u_mac_2 (
         .clk(clk),
@@ -130,31 +140,126 @@ module mm_top (
         .acc(mac_acc[3])
     );
 
+  	// RAM instantiation
+RM_IHPSG13_1P_512x32_c2_bm_bist u_ram (
+    .A_CLK(clk),               // Connect the clock
+    .A_MEN(1'b1),              // Memory enable (always on)
+    .A_WEN(save_result),       // Write enable (triggered when save_result is active)
+    .A_REN(read_ram),          // Read enable (controlled by read_ram signal)
+  	.A_ADDR(ram_addr),        // Address for writing data, could be controlled by res_index
+  	.A_DIN(result_ram), // Data to be written (MAC results)
+  	.A_DOUT(read_shift),      // Data read from RAM (connected to top_rd_data)
+    .A_BM(32'b11111111111111111111111111111111), // Mask bits (set to all 1s for full write)
+    .A_BIST_EN(1'b0),          // BIST mode disabled
+    .A_BIST_MEN(1'b0),         // BIST memory enable disabled
+    .A_BIST_WEN(1'b0),         // BIST write enable disabled
+  	.A_BIST_REN(1'b0),         // BIST read enable disabled,
+  	.A_BIST_ADDR(9'b0),
+  	.A_BIST_DIN(32'd0),
+  	.A_BIST_BM(32'd0),
+  	.A_BIST_CLK(1'b0),          // BIST clock signal (not used in this case)
+    .A_DLY(1'b1)               // Delay setting (recommended to tie to 1)
+);
+  
+//     RM_IHPSG13_1P_512x32_c2_bm_bist u_ram(
+//       .A_CLK(clk),
+//       .A_MEN(1'b1),
+//       .A_WEN(),
+//       .A_REN(read_ram),
+//       .A_ADDR(),
+//       .A_DIN(),
+//       .A_DLY(),
+//       .A_DOUT(),
+//       .A_BM(),
+//       .A_BIST_CLK(1'b0),
+//       .A_BIST_EN(1'b0),
+//       .A_BIST_MEN(1'b0),
+//       .A_BIST_WEN(1'b0),
+//       .A_BIST_REN(1'b0),
+//       .A_BIST_ADDR(1'b0),
+//       .A_BIST_DIN(1'b0),
+//       .A_BIST_BM(1'b0)
+//     );
+  
     // ================== STORE RESULTS ======================
-    always_ff @(posedge clk) begin
-      if (save_result) begin
-        result_ram[res_index] <= mac_acc[0];
-        result_ram[res_index+1] <= mac_acc[1];
-        result_ram[res_index+2] <= mac_acc[2];
-        result_ram[res_index+3] <= mac_acc[3];
-      end 
+//     always_ff @(posedge clk) begin
+//       if (save_result) begin
+//         result_ram[res_index] <= mac_acc[0];
+//         result_ram[res_index+1] <= mac_acc[1];
+//         result_ram[res_index+2] <= mac_acc[2];
+//         result_ram[res_index+3] <= mac_acc[3];
+//       end 
+//     end
+  always_ff @(posedge clk) begin
+    if(rst)
+      ram_wrcnt <= 0;
+    else if (save_result)
+      ram_wrcnt <= ram_wrcnt + 1;
+  end
+//   always_ff @(posedge clk) begin
+//     if(rst)
+//       result_ram <= 32'd0;
+//     if(save_result) begin
+//     case (ram_wrcnt)
+//         2'd0: result_ram <= {14'd0, mac_acc[0]};
+//         2'd1: result_ram <= {14'd0, mac_acc[1]};
+//         2'd2: result_ram <= {14'd0, mac_acc[2]};
+//         2'd3: result_ram <= {14'd0, mac_acc[3]};
+// //         default: result_ram <= 32'd0;
+//     endcase
+//     end
+// end
+  
+  always_comb begin
+    if(save_result) begin
+    case (ram_wrcnt)
+        2'd0: result_ram = {14'd0, mac_acc[0]};
+        2'd1: result_ram = {14'd0, mac_acc[1]};
+        2'd2: result_ram = {14'd0, mac_acc[2]};
+        2'd3: result_ram = {14'd0, mac_acc[3]};
+        default: result_ram = 32'd0;
+    endcase
     end
+end
 
+//       always_ff @(posedge clk) begin
+//         if(rst) begin
+//           result_ram <= 32'd0;
+//         end else if (save_result) begin
+//           if(second_ram_data) begin
+//           result_ram <= {mac_acc[1][17:2],mac_acc[0][17:2]};
+//         	second_ram_data <= 1'b1;
+//         end else begin
+//           result_ram <= {mac_acc[3][17:2],mac_acc[2][17:2]};
+//           	second_ram_data <= 1'b0;
+// //         result_ram[res_index+2] <= mac_acc[2];
+// //         result_ram[res_index+3] <= mac_acc[3];
+//       end 
+//     end
+//       end
+  
+  assign ram_addr = (save_result== 1'b1) ? res_index : (!half_sel) ? (read_index) : (read_index+1);
     // ===================== READ INTERFACE =================
 
 
-    always_ff @(posedge clk) begin
+
+// always_ff @(posedge clk) begin
+//     if (rst)
+//         read_valid <= 1'b0;
+//     else
+//         read_valid <= read_ram;
+// end
+  
+
+   always_ff @(posedge clk) begin
         if (rst) begin
             read_index <= 0;
-            read_shift <= 0;
             half_sel   <= 0;
             read_data_out <= 0;
         end
-
-        else if (read_ram) begin
+     else if (read_ram) begin
             if (!half_sel) begin
-                read_shift <= result_ram[read_index];
-                read_data_out <= result_ram[read_index][8:0];
+                read_data_out <= read_shift[8:0];
                 half_sel <= 1'b1;
             end else begin
                 read_data_out <= read_shift[17:9];
@@ -163,11 +268,38 @@ module mm_top (
             end
         end
         else begin
-          read_index <= 0;
-            half_sel   <= 0;
-            read_shift <= 0;
+//           read_index <= 0;
+            half_sel <= 0;
             read_data_out <= 0;
         end
     end
+
+          
+// //     always_ff @(posedge clk) begin
+// //         if (rst) begin
+// //             read_index <= 0;
+// //             half_sel   <= 0;
+// //             read_data_out <= 0;
+// //         end else if (read_ram) begin
+// //           if (half_sel== 2'b00) begin
+// //             read_data_out <= read_shift[7:0];
+// //                 half_sel <= half_sel + 1;
+// //           end else if (half_sel == 2'b01) begin
+// //               read_data_out <= read_shift[15:8];
+// //                 half_sel <= half_sel + 1;
+// // //                 read_index <= read_index + 1;
+// //           end else if (half_sel == 2'b10) begin
+// //             read_data_out <=  read_shift[23:16];
+// //             half_sel <= half_sel + 1;
+// //           end else begin
+// //             read_data_out <= read_shift[31:24];
+// //             read_index <= read_index + 1;
+// //         end
+// //           end else begin
+// //           	read_index <= 0;
+// //             half_sel   <= 0;
+// //             read_data_out <= 0;
+// //         end
+// //     end
 
 endmodule

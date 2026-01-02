@@ -42,7 +42,7 @@ module controller (
 
     // ---------- loop counters ----------
     logic [4:0] input_cnt;
-    logic [1:0] row_i;
+//     logic [1:0] row_i;
     logic [1:0] col_j;
     logic [2:0] k_cnt;
 
