@@ -145,7 +145,7 @@ RM_IHPSG13_1P_512x32_c2_bm_bist u_ram (
     .A_CLK(clk),               // Connect the clock
     .A_MEN(1'b1),              // Memory enable (always on)
     .A_WEN(save_result),       // Write enable (triggered when save_result is active)
-    .A_REN(read_ram),          // Read enable (controlled by read_ram signal)
+  	.A_REN(finish | read_ram),          // Read enable (controlled by read_ram signal)
   	.A_ADDR(ram_addr),        // Address for writing data, could be controlled by res_index
   	.A_DIN(result_ram), // Data to be written (MAC results)
   	.A_DOUT(read_shift),      // Data read from RAM (connected to top_rd_data)
@@ -263,8 +263,9 @@ end
                 half_sel <= 1'b1;
             end else begin
                 read_data_out <= read_shift[17:9];
+              	read_index <= read_index + 1;
                 half_sel <= 1'b0;
-                read_index <= read_index + 1;
+//                 read_index <= read_index + 1;
             end
         end
         else begin
