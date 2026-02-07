@@ -14,9 +14,7 @@ and post-layout timing analysis**.
 
 The accelerator computes the matrix product:
 
-\[
-\mathbf{P} = \mathbf{X}\mathbf{A}
-\]
+**P = X × A**
 
 where:
 
@@ -53,6 +51,8 @@ including **zero-skip operand isolation**.
 Stores computed output values using a single-port SRAM macro from the  
 **IHP SG13G2 PDK**.
 
+![Block Diagram](images/Block_diagram.png)
+
 ---
 
 ## Controller FSM (ASMD)
@@ -83,10 +83,10 @@ Functional correctness was verified using a SystemVerilog testbench:
 
 Simulation waveforms confirm:
 
-- Correct input buffer loading
-- Iterative MAC computation over multiple cycles
-- Result storage in SRAM
-- Correct readback of output data after full matrix computation
+- Correct input buffer loading  
+- Iterative MAC computation over multiple cycles  
+- Result storage in SRAM  
+- Correct readback of output data after full matrix computation  
 
 ---
 
@@ -161,9 +161,9 @@ reasoning is tractable and meaningful.
 - **Technology**: IHP SG13G2 130 nm standard cell library  
 
 ### Outputs
-- Gate-level netlist
-- Synthesis statistics
-- Area and cell utilization reports
+- Gate-level netlist  
+- Synthesis statistics  
+- Area and cell utilization reports  
 
 Post-synthesis analysis includes standard cell usage, logic complexity, and
 module-level area distribution.
@@ -178,14 +178,12 @@ Physical implementation was performed using an open-source RTL-to-GDS flow:
 - **Tools**: OpenROAD, OpenSTA, KLayout  
 
 ### Major Steps
-- Floorplanning
-- Placement
-- Clock Tree Synthesis (CTS)
-- Routing
-- Parasitic extraction
-- Post-layout timing analysis
-
-![Block Diagram](images/Block_diagram.png)
+- Floorplanning  
+- Placement  
+- Clock Tree Synthesis (CTS)  
+- Routing  
+- Parasitic extraction  
+- Post-layout timing analysis  
 
 ---
 
@@ -195,7 +193,7 @@ Clock tree synthesis resulted in a balanced clock distribution network with
 automatically inserted buffers.
 
 - **Measured clock skew**: 0.251 ns – 0.266 ns  
-- Skew remains well within acceptable limits for the target clock period
+- Skew remains well within acceptable limits for the target clock period  
 
 ![CTS View](images/cts_view.png)
 
@@ -216,19 +214,24 @@ Hold timing was also verified post-layout, with no violations observed.
 
 ![Timing Report](images/path_timing_report.png)
 
+---
 
-### Toolchain
-- RTL & Formal Verification:
-  - Yosys
-  - SymbiYosys (SBY)
-  - SMTBMC
-  - Yices SMT Solver
-- Simulation & Debug:
-  - GTKWave
-- Synthesis & Physical Design:
-  - LibreLane
-  - OpenROAD
-  - OpenSTA
-  - KLayout
-- Technology:
-  - IHP SG13G2 130 nm PDK
+## Toolchain
+
+### RTL & Formal Verification
+- Yosys  
+- SymbiYosys (SBY)  
+- SMTBMC  
+- Yices SMT Solver  
+
+### Simulation & Debug
+- GTKWave  
+
+### Synthesis & Physical Design
+- LibreLane  
+- OpenROAD  
+- OpenSTA  
+- KLayout  
+
+### Technology
+- IHP SG13G2 130 nm PDK
