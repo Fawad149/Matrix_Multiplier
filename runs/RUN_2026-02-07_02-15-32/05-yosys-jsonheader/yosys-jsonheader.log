@@ -1,0 +1,348 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.54 (git sha1 db72ec3bde296a9512b2d1e6fabf81cfb07c2c1b, clang++ 19.1.7 -fPIC -O3)
+
+1. Executing Verilog-2005 frontend: /home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/tmp/07ca3edb9aa544d787a09962913cc1ee.bb.v
+Parsing SystemVerilog input from `/home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/tmp/07ca3edb9aa544d787a09962913cc1ee.bb.v' to AST representation.
+Generating RTLIL representation for module `\sg13g2_a21o_1'.
+Generating RTLIL representation for module `\sg13g2_a21o_2'.
+Generating RTLIL representation for module `\sg13g2_a21oi_1'.
+Generating RTLIL representation for module `\sg13g2_a21oi_2'.
+Generating RTLIL representation for module `\sg13g2_a221oi_1'.
+Generating RTLIL representation for module `\sg13g2_a22oi_1'.
+Generating RTLIL representation for module `\sg13g2_and2_1'.
+Generating RTLIL representation for module `\sg13g2_and2_2'.
+Generating RTLIL representation for module `\sg13g2_and3_1'.
+Generating RTLIL representation for module `\sg13g2_and3_2'.
+Generating RTLIL representation for module `\sg13g2_and4_1'.
+Generating RTLIL representation for module `\sg13g2_and4_2'.
+Generating RTLIL representation for module `\sg13g2_antennanp'.
+Generating RTLIL representation for module `\sg13g2_buf_1'.
+Generating RTLIL representation for module `\sg13g2_buf_16'.
+Generating RTLIL representation for module `\sg13g2_buf_2'.
+Generating RTLIL representation for module `\sg13g2_buf_4'.
+Generating RTLIL representation for module `\sg13g2_buf_8'.
+Generating RTLIL representation for module `\sg13g2_decap_4'.
+Generating RTLIL representation for module `\sg13g2_decap_8'.
+Generating RTLIL representation for module `\sg13g2_dfrbp_1'.
+Generating RTLIL representation for module `\sg13g2_dfrbp_2'.
+Generating RTLIL representation for module `\sg13g2_dfrbpq_1'.
+Generating RTLIL representation for module `\sg13g2_dfrbpq_2'.
+Generating RTLIL representation for module `\sg13g2_dlhq_1'.
+Generating RTLIL representation for module `\sg13g2_dlhr_1'.
+Generating RTLIL representation for module `\sg13g2_dlhrq_1'.
+Generating RTLIL representation for module `\sg13g2_dllr_1'.
+Generating RTLIL representation for module `\sg13g2_dllrq_1'.
+Generating RTLIL representation for module `\sg13g2_dlygate4sd1_1'.
+Generating RTLIL representation for module `\sg13g2_dlygate4sd2_1'.
+Generating RTLIL representation for module `\sg13g2_dlygate4sd3_1'.
+Generating RTLIL representation for module `\sg13g2_ebufn_2'.
+Generating RTLIL representation for module `\sg13g2_ebufn_4'.
+Generating RTLIL representation for module `\sg13g2_ebufn_8'.
+Generating RTLIL representation for module `\sg13g2_einvn_2'.
+Generating RTLIL representation for module `\sg13g2_einvn_4'.
+Generating RTLIL representation for module `\sg13g2_einvn_8'.
+Generating RTLIL representation for module `\sg13g2_fill_1'.
+Generating RTLIL representation for module `\sg13g2_fill_2'.
+Generating RTLIL representation for module `\sg13g2_fill_4'.
+Generating RTLIL representation for module `\sg13g2_fill_8'.
+Generating RTLIL representation for module `\sg13g2_inv_1'.
+Generating RTLIL representation for module `\sg13g2_inv_16'.
+Generating RTLIL representation for module `\sg13g2_inv_2'.
+Generating RTLIL representation for module `\sg13g2_inv_4'.
+Generating RTLIL representation for module `\sg13g2_inv_8'.
+Generating RTLIL representation for module `\sg13g2_lgcp_1'.
+Generating RTLIL representation for module `\sg13g2_mux2_1'.
+Generating RTLIL representation for module `\sg13g2_mux2_2'.
+Generating RTLIL representation for module `\sg13g2_mux4_1'.
+Generating RTLIL representation for module `\sg13g2_nand2_1'.
+Generating RTLIL representation for module `\sg13g2_nand2_2'.
+Generating RTLIL representation for module `\sg13g2_nand2b_1'.
+Generating RTLIL representation for module `\sg13g2_nand2b_2'.
+Generating RTLIL representation for module `\sg13g2_nand3_1'.
+Generating RTLIL representation for module `\sg13g2_nand3b_1'.
+Generating RTLIL representation for module `\sg13g2_nand4_1'.
+Generating RTLIL representation for module `\sg13g2_nor2_1'.
+Generating RTLIL representation for module `\sg13g2_nor2_2'.
+Generating RTLIL representation for module `\sg13g2_nor2b_1'.
+Generating RTLIL representation for module `\sg13g2_nor2b_2'.
+Generating RTLIL representation for module `\sg13g2_nor3_1'.
+Generating RTLIL representation for module `\sg13g2_nor3_2'.
+Generating RTLIL representation for module `\sg13g2_nor4_1'.
+Generating RTLIL representation for module `\sg13g2_nor4_2'.
+Generating RTLIL representation for module `\sg13g2_o21ai_1'.
+Generating RTLIL representation for module `\sg13g2_or2_1'.
+Generating RTLIL representation for module `\sg13g2_or2_2'.
+Generating RTLIL representation for module `\sg13g2_or3_1'.
+Generating RTLIL representation for module `\sg13g2_or3_2'.
+Generating RTLIL representation for module `\sg13g2_or4_1'.
+Generating RTLIL representation for module `\sg13g2_or4_2'.
+Generating RTLIL representation for module `\sg13g2_sdfbbp_1'.
+Generating RTLIL representation for module `\sg13g2_sdfrbp_1'.
+Generating RTLIL representation for module `\sg13g2_sdfrbp_2'.
+Generating RTLIL representation for module `\sg13g2_sdfrbpq_1'.
+Generating RTLIL representation for module `\sg13g2_sdfrbpq_2'.
+Generating RTLIL representation for module `\sg13g2_sighold'.
+Generating RTLIL representation for module `\sg13g2_slgcp_1'.
+Generating RTLIL representation for module `\sg13g2_tiehi'.
+Generating RTLIL representation for module `\sg13g2_tielo'.
+Generating RTLIL representation for module `\sg13g2_xnor2_1'.
+Generating RTLIL representation for module `\sg13g2_xor2_1'.
+Successfully finished Verilog frontend.
+wtaf
+
+2. Executing Verilog-2005 frontend: /home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv
+Parsing SystemVerilog input from `/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv' to AST representation.
+Storing AST representation for module `$abstract\input_buffer'.
+Storing AST representation for module `$abstract\mac_unit'.
+Storing AST representation for module `$abstract\rom_coeff'.
+Storing AST representation for module `$abstract\controller'.
+Storing AST representation for module `$abstract\mm_top'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v
+Parsing SystemVerilog input from `/home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v' to AST representation.
+Storing AST representation for module `$abstract\RM_IHPSG13_1P_512x32_c2_bm_bist'.
+Successfully finished Verilog frontend.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+5. Executing AST frontend in derive mode using pre-parsed AST for module `\mm_top'.
+Generating RTLIL representation for module `\mm_top'.
+
+5.1. Analyzing design hierarchy..
+Top module:  \mm_top
+
+5.2. Executing AST frontend in derive mode using pre-parsed AST for module `\RM_IHPSG13_1P_512x32_c2_bm_bist'.
+Generating RTLIL representation for module `\RM_IHPSG13_1P_512x32_c2_bm_bist'.
+
+5.3. Executing AST frontend in derive mode using pre-parsed AST for module `\mac_unit'.
+Generating RTLIL representation for module `\mac_unit'.
+
+5.4. Executing AST frontend in derive mode using pre-parsed AST for module `\rom_coeff'.
+Generating RTLIL representation for module `\rom_coeff'.
+
+5.5. Executing AST frontend in derive mode using pre-parsed AST for module `\input_buffer'.
+Generating RTLIL representation for module `\input_buffer'.
+
+5.6. Executing AST frontend in derive mode using pre-parsed AST for module `\controller'.
+Generating RTLIL representation for module `\controller'.
+Reprocessing module mm_top because instantiated module mac_unit has become available.
+Generating RTLIL representation for module `\mm_top'.
+Warning: Replacing memory \mac_acc with list of registers. See /home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:0
+
+5.7. Analyzing design hierarchy..
+Top module:  \mm_top
+Used module:     \mac_unit
+Used module:     \rom_coeff
+Used module:     \input_buffer
+Used module:     \controller
+
+5.8. Analyzing design hierarchy..
+Top module:  \mm_top
+Used module:     \mac_unit
+Used module:     \rom_coeff
+Used module:     \input_buffer
+Used module:     \controller
+Removing unused module `$abstract\RM_IHPSG13_1P_512x32_c2_bm_bist'.
+Removing unused module `$abstract\mm_top'.
+Removing unused module `$abstract\controller'.
+Removing unused module `$abstract\rom_coeff'.
+Removing unused module `$abstract\mac_unit'.
+Removing unused module `$abstract\input_buffer'.
+Removed 6 unused modules.
+Warning: Resizing cell port mm_top.u_ram.A_DOUT from 18 bits to 32 bits.
+Renaming module mm_top to mm_top.
+
+6. Executing PROC pass (convert processes to netlists).
+
+6.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+6.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 4 switch rules as full_case in process $proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:181$102 in module mm_top.
+Removed 1 dead cases from process $proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:0$94 in module mm_top.
+Marked 2 switch rules as full_case in process $proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:0$94 in module mm_top.
+Marked 1 switch rules as full_case in process $proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:156$92 in module mm_top.
+Marked 2 switch rules as full_case in process $proc$input_buffer.sv:18$36 in module input_buffer.
+Removed 1 dead cases from process $proc$rom_coeff.sv:0$33 in module rom_coeff.
+Marked 2 switch rules as full_case in process $proc$rom_coeff.sv:0$33 in module rom_coeff.
+Marked 1 switch rules as full_case in process $proc$mac_unit.sv:20$29 in module mac_unit.
+Marked 2 switch rules as full_case in process $proc$controller.sv:168$83 in module controller.
+Marked 1 switch rules as full_case in process $proc$controller.sv:158$80 in module controller.
+Marked 1 switch rules as full_case in process $proc$controller.sv:135$70 in module controller.
+Marked 1 switch rules as full_case in process $proc$controller.sv:127$66 in module controller.
+Marked 2 switch rules as full_case in process $proc$controller.sv:110$61 in module controller.
+Marked 6 switch rules as full_case in process $proc$controller.sv:0$56 in module controller.
+Marked 1 switch rules as full_case in process $proc$controller.sv:54$55 in module controller.
+Removed a total of 2 dead cases.
+
+6.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 3 redundant assignments.
+Promoted 15 assignments to connections.
+
+6.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\mac_unit.$proc$mac_unit.sv:15$32'.
+  Set init value: \temp_res = 18'000000000000000000
+Found init rule in `\controller.$proc$controller.sv:41$87'.
+  Set init value: \k_cnt = 3'000
+Found init rule in `\controller.$proc$controller.sv:39$86'.
+  Set init value: \input_cnt = 5'00000
+
+6.5. Executing PROC_ARST pass (detect async resets in processes).
+
+6.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 1 switch.
+<suppressed ~30 debug messages>
+
+6.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:0$106'.
+Creating decoders for process `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:181$102'.
+     1/4: $0\read_count[0:0]
+     2/4: $0\half_sel[0:0]
+     3/4: $0\read_index[8:0]
+     4/4: $0\read_data_out[8:0]
+Creating decoders for process `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:0$94'.
+     1/2: $2\result_ram[31:0]
+     2/2: $1\result_ram[31:0]
+Creating decoders for process `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:156$92'.
+     1/1: $0\ram_wrcnt[1:0]
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:18$36'.
+     1/5: $1$memwr$\mem$input_buffer.sv:22$35_EN[7:0]$46
+     2/5: $1$memwr$\mem$input_buffer.sv:22$35_DATA[7:0]$45
+     3/5: $1$memwr$\mem$input_buffer.sv:22$35_ADDR[4:0]$44
+     4/5: $1$memwr$\mem$input_buffer.sv:20$34_EN[7:0]$43
+     5/5: $1$memwr$\mem$input_buffer.sv:20$34_ADDR[4:0]$42
+Creating decoders for process `\rom_coeff.$proc$rom_coeff.sv:0$33'.
+     1/2: $2\data[13:0]
+     2/2: $1\data[13:0]
+Creating decoders for process `\mac_unit.$proc$mac_unit.sv:15$32'.
+Creating decoders for process `\mac_unit.$proc$mac_unit.sv:20$29'.
+     1/1: $0\temp_res[17:0]
+Creating decoders for process `\controller.$proc$controller.sv:41$87'.
+Creating decoders for process `\controller.$proc$controller.sv:39$86'.
+Creating decoders for process `\controller.$proc$controller.sv:168$83'.
+     1/1: $0\finish[0:0]
+Creating decoders for process `\controller.$proc$controller.sv:158$80'.
+     1/1: $0\res_idx_r[8:0]
+Creating decoders for process `\controller.$proc$controller.sv:135$70'.
+     1/1: $0\col_j[1:0]
+Creating decoders for process `\controller.$proc$controller.sv:127$66'.
+     1/1: $0\k_cnt[2:0]
+Creating decoders for process `\controller.$proc$controller.sv:110$61'.
+     1/1: $0\input_cnt[4:0]
+Creating decoders for process `\controller.$proc$controller.sv:0$56'.
+     1/6: $6\next_state[2:0]
+     2/6: $5\next_state[2:0]
+     3/6: $4\next_state[2:0]
+     4/6: $3\next_state[2:0]
+     5/6: $2\next_state[2:0]
+     6/6: $1\next_state[2:0]
+Creating decoders for process `\controller.$proc$controller.sv:54$55'.
+     1/1: $0\state[2:0]
+
+6.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\mm_top.\mac_acc[0]' from process `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:0$106'.
+No latch inferred for signal `\mm_top.\mac_acc[1]' from process `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:0$106'.
+No latch inferred for signal `\mm_top.\mac_acc[2]' from process `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:0$106'.
+No latch inferred for signal `\mm_top.\mac_acc[3]' from process `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:0$106'.
+No latch inferred for signal `\mm_top.\result_ram' from process `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:0$94'.
+No latch inferred for signal `\rom_coeff.\data' from process `\rom_coeff.$proc$rom_coeff.sv:0$33'.
+No latch inferred for signal `\controller.\next_state' from process `\controller.$proc$controller.sv:0$56'.
+
+6.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\mm_top.\read_data_out' using process `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:181$102'.
+  created $dff cell `$procdff$283' with positive edge clock.
+Creating register for signal `\mm_top.\read_index' using process `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:181$102'.
+  created $dff cell `$procdff$284' with positive edge clock.
+Creating register for signal `\mm_top.\half_sel' using process `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:181$102'.
+  created $dff cell `$procdff$285' with positive edge clock.
+Creating register for signal `\mm_top.\read_count' using process `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:181$102'.
+  created $dff cell `$procdff$286' with positive edge clock.
+Creating register for signal `\mm_top.\ram_wrcnt' using process `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:156$92'.
+  created $dff cell `$procdff$287' with positive edge clock.
+Creating register for signal `\input_buffer.$memwr$\mem$input_buffer.sv:20$34_ADDR' using process `\input_buffer.$proc$input_buffer.sv:18$36'.
+  created $dff cell `$procdff$288' with positive edge clock.
+Creating register for signal `\input_buffer.$memwr$\mem$input_buffer.sv:20$34_EN' using process `\input_buffer.$proc$input_buffer.sv:18$36'.
+  created $dff cell `$procdff$289' with positive edge clock.
+Creating register for signal `\input_buffer.$memwr$\mem$input_buffer.sv:22$35_ADDR' using process `\input_buffer.$proc$input_buffer.sv:18$36'.
+  created $dff cell `$procdff$290' with positive edge clock.
+Creating register for signal `\input_buffer.$memwr$\mem$input_buffer.sv:22$35_DATA' using process `\input_buffer.$proc$input_buffer.sv:18$36'.
+  created $dff cell `$procdff$291' with positive edge clock.
+Creating register for signal `\input_buffer.$memwr$\mem$input_buffer.sv:22$35_EN' using process `\input_buffer.$proc$input_buffer.sv:18$36'.
+  created $dff cell `$procdff$292' with positive edge clock.
+Creating register for signal `\mac_unit.\temp_res' using process `\mac_unit.$proc$mac_unit.sv:20$29'.
+  created $dff cell `$procdff$293' with positive edge clock.
+Creating register for signal `\controller.\finish' using process `\controller.$proc$controller.sv:168$83'.
+  created $dff cell `$procdff$294' with positive edge clock.
+Creating register for signal `\controller.\res_idx_r' using process `\controller.$proc$controller.sv:158$80'.
+  created $dff cell `$procdff$295' with positive edge clock.
+Creating register for signal `\controller.\col_j' using process `\controller.$proc$controller.sv:135$70'.
+  created $dff cell `$procdff$296' with positive edge clock.
+Creating register for signal `\controller.\k_cnt' using process `\controller.$proc$controller.sv:127$66'.
+  created $dff cell `$procdff$297' with positive edge clock.
+Creating register for signal `\controller.\input_cnt' using process `\controller.$proc$controller.sv:110$61'.
+  created $dff cell `$procdff$298' with positive edge clock.
+Creating register for signal `\controller.\state' using process `\controller.$proc$controller.sv:54$55'.
+  created $dff cell `$procdff$299' with positive edge clock.
+
+6.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+6.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:0$106'.
+Found and cleaned up 4 empty switches in `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:181$102'.
+Removing empty process `mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:181$102'.
+Found and cleaned up 2 empty switches in `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:0$94'.
+Removing empty process `mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:0$94'.
+Found and cleaned up 2 empty switches in `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:156$92'.
+Removing empty process `mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:156$92'.
+Found and cleaned up 2 empty switches in `\input_buffer.$proc$input_buffer.sv:18$36'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:18$36'.
+Found and cleaned up 2 empty switches in `\rom_coeff.$proc$rom_coeff.sv:0$33'.
+Removing empty process `rom_coeff.$proc$rom_coeff.sv:0$33'.
+Removing empty process `mac_unit.$proc$mac_unit.sv:15$32'.
+Found and cleaned up 1 empty switch in `\mac_unit.$proc$mac_unit.sv:20$29'.
+Removing empty process `mac_unit.$proc$mac_unit.sv:20$29'.
+Removing empty process `controller.$proc$controller.sv:41$87'.
+Removing empty process `controller.$proc$controller.sv:39$86'.
+Found and cleaned up 2 empty switches in `\controller.$proc$controller.sv:168$83'.
+Removing empty process `controller.$proc$controller.sv:168$83'.
+Found and cleaned up 2 empty switches in `\controller.$proc$controller.sv:158$80'.
+Removing empty process `controller.$proc$controller.sv:158$80'.
+Found and cleaned up 2 empty switches in `\controller.$proc$controller.sv:135$70'.
+Removing empty process `controller.$proc$controller.sv:135$70'.
+Found and cleaned up 2 empty switches in `\controller.$proc$controller.sv:127$66'.
+Removing empty process `controller.$proc$controller.sv:127$66'.
+Found and cleaned up 3 empty switches in `\controller.$proc$controller.sv:110$61'.
+Removing empty process `controller.$proc$controller.sv:110$61'.
+Found and cleaned up 6 empty switches in `\controller.$proc$controller.sv:0$56'.
+Removing empty process `controller.$proc$controller.sv:0$56'.
+Found and cleaned up 1 empty switch in `\controller.$proc$controller.sv:54$55'.
+Removing empty process `controller.$proc$controller.sv:54$55'.
+Cleaned up 31 empty switches.
+
+6.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mm_top.
+<suppressed ~7 debug messages>
+Optimizing module input_buffer.
+Optimizing module rom_coeff.
+Optimizing module mac_unit.
+<suppressed ~2 debug messages>
+Optimizing module controller.
+<suppressed ~4 debug messages>
+
+7. Executing FLATTEN pass (flatten design).
+Deleting now unused module input_buffer.
+Deleting now unused module rom_coeff.
+Deleting now unused module mac_unit.
+Deleting now unused module controller.
+<suppressed ~7 debug messages>
+
+8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mm_top..
+Removed 15 unused cells and 193 unused wires.
+<suppressed ~87 debug messages>

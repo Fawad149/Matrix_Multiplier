@@ -1,0 +1,384 @@
+
+Magic 8.3 revision 528 - Compiled on Sat Jun 21 19:19:56 UTC 2025.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology ihp-sg13g2 ...
+2 Magic internal units = 1 Lambda
+Input style sg13g2(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    fillfet sealcont difffill nemitter hvnemitter hvisodiffres sealvia1 sealvia2 sealvia3 sealvia4 sealvia5 sealvia6 pad seal thruvia 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading "/nix/store/m14ar4akyh801bihjgbvb3k669h95ig3-python3-3.12.10-env/lib/python3.12/site-packages/librelane/scripts/magic/wrapper.tcl" from command line.
+> gds read /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 5.0
+Library name: sg13g2_stdcell
+Reading "sg13g2_a21o_1".
+Reading "sg13g2_a21o_2".
+Reading "sg13g2_a21oi_1".
+CIF file read warning: CIF style sg13g2(): units rescaled by factor of 5 / 1
+Reading "sg13g2_a21oi_2".
+Reading "sg13g2_a221oi_1".
+Reading "sg13g2_a22oi_1".
+Reading "sg13g2_and2_1".
+Reading "sg13g2_and2_2".
+Reading "sg13g2_and3_1".
+Reading "sg13g2_and3_2".
+Reading "sg13g2_and4_1".
+Reading "sg13g2_and4_2".
+Reading "sg13g2_antennanp".
+Reading "sg13g2_buf_1".
+Reading "sg13g2_buf_16".
+Reading "sg13g2_buf_2".
+Reading "sg13g2_buf_4".
+Reading "sg13g2_buf_8".
+Reading "sg13g2_decap_4".
+Reading "sg13g2_decap_8".
+Reading "sg13g2_dfrbp_1".
+Reading "sg13g2_dfrbp_2".
+Reading "sg13g2_dfrbpq_1".
+Reading "sg13g2_dfrbpq_2".
+Reading "sg13g2_dlhq_1".
+Reading "sg13g2_dlhr_1".
+Reading "sg13g2_dlhrq_1".
+Reading "sg13g2_dllr_1".
+Reading "sg13g2_dllrq_1".
+Reading "sg13g2_dlygate4sd1_1".
+Reading "sg13g2_dlygate4sd2_1".
+Reading "sg13g2_dlygate4sd3_1".
+Reading "sg13g2_ebufn_2".
+Reading "sg13g2_ebufn_4".
+Reading "sg13g2_ebufn_8".
+Reading "sg13g2_einvn_2".
+Reading "sg13g2_einvn_4".
+Reading "sg13g2_einvn_8".
+Reading "sg13g2_fill_1".
+Reading "sg13g2_fill_2".
+Reading "sg13g2_fill_4".
+Reading "sg13g2_fill_8".
+Reading "sg13g2_inv_1".
+Reading "sg13g2_inv_16".
+Reading "sg13g2_inv_2".
+Reading "sg13g2_inv_4".
+Reading "sg13g2_inv_8".
+Reading "sg13g2_lgcp_1".
+Reading "sg13g2_mux2_1".
+Reading "sg13g2_mux2_2".
+Reading "sg13g2_mux4_1".
+Reading "sg13g2_nand2_1".
+Reading "sg13g2_nand2_2".
+Reading "sg13g2_nand2b_1".
+Reading "sg13g2_nand2b_2".
+Reading "sg13g2_nand3_1".
+Reading "sg13g2_nand3b_1".
+Reading "sg13g2_nand4_1".
+Reading "sg13g2_nor2_1".
+Reading "sg13g2_nor2_2".
+Reading "sg13g2_nor2b_1".
+Reading "sg13g2_nor2b_2".
+Reading "sg13g2_nor3_1".
+Reading "sg13g2_nor3_2".
+Reading "sg13g2_nor4_1".
+Reading "sg13g2_nor4_2".
+Reading "sg13g2_o21ai_1".
+Reading "sg13g2_or2_1".
+Reading "sg13g2_or2_2".
+Reading "sg13g2_or3_1".
+Reading "sg13g2_or3_2".
+Reading "sg13g2_or4_1".
+Reading "sg13g2_or4_2".
+Reading "sg13g2_sdfbbp_1".
+Reading "sg13g2_sdfrbp_1".
+Reading "sg13g2_sdfrbp_2".
+Reading "sg13g2_sdfrbpq_1".
+Reading "sg13g2_sdfrbpq_2".
+Reading "sg13g2_sighold".
+Reading "sg13g2_slgcp_1".
+Reading "sg13g2_tiehi".
+Reading "sg13g2_tielo".
+Reading "sg13g2_xnor2_1".
+Reading "sg13g2_xor2_1".
+Cell RM_IHPSG13_1P_512x32_c2_bm_bist couldn't be read
+No such file or directory
+Creating new cell
+{FIXED_BBOX 0 0 83328 38268} {GDS_FILE /home/fawad/matrixMul/Matrix_Multiplier/macros/RM_IHPSG13_1P_512x32_c2_bm_bist.gds} {GDS_START 0} {LEFview true}
+> set GDS_FILE of RM_IHPSG13_1P_512x32_c2_bm_bist to /home/fawad/matrixMul/Matrix_Multiplier/macros/RM_IHPSG13_1P_512x32_c2_bm_bist.gds
+Cell (NEWCELL) couldn't be read
+No such file or directory
+Creating new cell
+> lef read /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_tech.lef
+Reading LEF data from file /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_tech.lef.
+This action cannot be undone.
+LEF read, Line 79 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 80 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 81 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 87 (Message): Unknown keyword "MINIMUMCUT" in LEF file; ignoring.
+LEF read, Line 91 (Message): Unknown keyword "ANTENNACUMAREARATIO" in LEF file; ignoring.
+LEF read, Line 92 (Message): Unknown keyword "ANTENNACUMDIFFAREARATIO" in LEF file; ignoring.
+LEF read, Line 121 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 122 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 123 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 129 (Message): Unknown keyword "MINIMUMCUT" in LEF file; ignoring.
+LEF read, Line 134 (Message): Unknown keyword "ANTENNACUMAREARATIO" in LEF file; ignoring.
+LEF read, Line 135 (Message): Unknown keyword "ANTENNACUMDIFFAREARATIO" in LEF file; ignoring.
+LEF read, Line 163 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 164 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 165 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 171 (Message): Unknown keyword "MINIMUMCUT" in LEF file; ignoring.
+LEF read, Line 176 (Message): Unknown keyword "ANTENNACUMAREARATIO" in LEF file; ignoring.
+LEF read, Line 177 (Message): Unknown keyword "ANTENNACUMDIFFAREARATIO" in LEF file; ignoring.
+LEF read, Line 205 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 206 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 207 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 213 (Message): Unknown keyword "MINIMUMCUT" in LEF file; ignoring.
+LEF read, Line 218 (Message): Unknown keyword "ANTENNACUMAREARATIO" in LEF file; ignoring.
+LEF read, Line 219 (Message): Unknown keyword "ANTENNACUMDIFFAREARATIO" in LEF file; ignoring.
+LEF read, Line 246 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 247 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 248 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 254 (Message): Unknown keyword "MINIMUMCUT" in LEF file; ignoring.
+LEF read, Line 259 (Message): Unknown keyword "ANTENNACUMAREARATIO" in LEF file; ignoring.
+LEF read, Line 260 (Message): Unknown keyword "ANTENNACUMDIFFAREARATIO" in LEF file; ignoring.
+LEF read, Line 286 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 287 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 288 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 293 (Message): Unknown keyword "ANTENNACUMAREARATIO" in LEF file; ignoring.
+LEF read, Line 294 (Message): Unknown keyword "ANTENNACUMDIFFAREARATIO" in LEF file; ignoring.
+LEF read, Line 320 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 321 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 322 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 327 (Message): Unknown keyword "ANTENNACUMAREARATIO" in LEF file; ignoring.
+LEF read, Line 328 (Message): Unknown keyword "ANTENNACUMDIFFAREARATIO" in LEF file; ignoring.
+LEF read: Processed 1197 lines.
+> def read /home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/53-odb-cellfrequencytables/mm_top.def -noblockage -labels
+Reading DEF data from file /home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/53-odb-cellfrequencytables/mm_top.def.
+This action cannot be undone.
+  Processed 6 vias total.
+  Processed 34571 subcell instances total.
+  Processed 24 pins total.
+  Processed 4 special nets total.
+  Processed 4353 nets total.
+DEF read: Processed 101640 lines.
+Moving label "_0530_" from metal2 to via2 in cell mm_top.
+Moving label "_0559_" from metal2 to via2 in cell mm_top.
+Moving label "_1036_" from metal3 to via2 in cell mm_top.
+Moving label "_1199_" from metal2 to via1 in cell mm_top.
+Moving label "_1452_" from metal3 to via2 in cell mm_top.
+Moving label "_1467_" from metal3 to via2 in cell mm_top.
+Moving label "_1800_" from metal2 to via2 in cell mm_top.
+Moving label "_1877_" from metal2 to via2 in cell mm_top.
+Moving label "_1882_" from metal3 to via2 in cell mm_top.
+Moving label "_2031_" from metal2 to via2 in cell mm_top.
+Moving label "_2054_" from metal2 to via1 in cell mm_top.
+Moving label "_2351_" from metal2 to via1 in cell mm_top.
+Moving label "_2380_" from metal2 to via1 in cell mm_top.
+Moving label "_2422_" from metal3 to via2 in cell mm_top.
+Moving label "_2450_" from metal2 to via2 in cell mm_top.
+Moving label "clk" from metal2 to via2 in cell mm_top.
+Moving label "net16" from metal5 to via5 in cell mm_top.
+Moving label "net599" from metal2 to via2 in cell mm_top.
+Moving label "net652" from metal2 to via2 in cell mm_top.
+Moving label "net9" from metal5 to via5 in cell mm_top.
+Moving label "u_input_buffer.mem\[23\]\[1\]" from metal3 to via2 in cell mm_top.
+Moving label "u_input_buffer.mem\[31\]\[4\]" from metal2 to via1 in cell mm_top.
+Moving label "u_input_buffer.mem\[3\]\[5\]" from metal3 to via2 in cell mm_top.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  726.010 x 744.730  ( 0.000,  0.000), ( 726.010,  744.730)  540681.375
+lambda:   72601.00 x 74473.00  (  0.00,  0.00 ), ( 72601.00,  74473.00)  5406814208.00
+internal: 145202 x 148946  (     0,  0    ), ( 145202,  148946)  21627257092
+   Copying output for cell sg13g2_decap_8 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_fill_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_dfrbpq_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_fill_2 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_tiehi from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_decap_4 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_buf_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_buf_2 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_nor2_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_a21oi_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_dlygate4sd3_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_mux2_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_buf_8 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_nand2_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_o21ai_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_a22oi_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_inv_2 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_a21o_2 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_a21oi_2 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_nand2_2 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_nor2_2 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_nor2b_2 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_or2_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_dfrbpq_2 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_nor4_2 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_and2_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_nand3b_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_nor2b_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_nor3_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_nand2b_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_nand3_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_inv_4 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_a221oi_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_inv_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_or4_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_and3_2 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_nor3_2 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_nand2b_2 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_nor4_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_or3_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_nand4_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_a21o_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_and3_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_xnor2_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_xor2_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_and4_1 from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell sg13g2_tielo from /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+   Copying output for cell RM_IHPSG13_1P_512x32_c2_bm_bist from /home/fawad/matrixMul/Matrix_Multiplier/macros/RM_IHPSG13_1P_512x32_c2_bm_bist.gds
+Reading "VIA_M1_Activ_db_0x02835b9b".
+Reading "VIA_M1_GatPoly_db_0x0283451d".
+Reading "lvsres_db_0x0283509a".
+Reading "lvsres_db_0x02834b9a".
+Reading "RM_IHPSG13_1P_BITKIT_CELL_SUB".
+Reading "RM_IHPSG13_1P_BITKIT_CELL".
+Reading "RM_IHPSG13_1P_BITKIT_TAP".
+Reading "RM_IHPSG13_1P_BITKIT_CELL_2x1".
+Reading "VIA_M2_M1_db_0x0283be9b".
+Reading "VIA_M2_M1_db_0x0283beab".
+Reading "RSC_IHPSG13_INVX4".
+Reading "RSC_IHPSG13_FILLCAP4".
+Reading "VIA_M3_M2_db_0x0283059e".
+Reading "VIA_M2_M1_db_0x0283059f".
+Reading "RSC_IHPSG13_CINVX2".
+Reading "RSC_IHPSG13_INVX2".
+Reading "RSC_IHPSG13_FILLCAP8".
+Reading "RSC_IHPSG13_FILL1".
+Reading "VIA_M3_M2_db_0x0400d39e".
+Reading "VIA_M4_M3_db_0x0283a69b".
+Reading "RSC_IHPSG13_FILL2".
+Reading "RSC_IHPSG13_NAND3X2".
+Reading "VIA_M3_M2_db_0x0400d921".
+Reading "RSC_IHPSG13_LHPQX2".
+Reading "RSC_IHPSG13_NOR3X2".
+Reading "RSC_IHPSG13_NAND2X2".
+Reading "lvsres_db_0x0400b71a".
+Reading "VIA_M3_M2_db_0x0400ab9c".
+Reading "RM_IHPSG13_1P_BITKIT_16x2_SRAM".
+Reading "RM_IHPSG13_1P_BITKIT_16x2_TAP".
+Reading "RM_IHPSG13_1P_BITKIT_16x2_EDGE_TB".
+Reading "RM_IHPSG13_1P_BITKIT_EDGE_LR".
+Reading "RM_IHPSG13_1P_BITKIT_CELL_CORNER".
+Reading "VIA_M4_M3_db_0x0283361c".
+Reading "RSC_IHPSG13_DFPQD_MSAFFX2N_half".
+Reading "VIA_M2_M1_db_0x0283059b".
+Reading "VIA_M2_M1_db_0x0283059c".
+Reading "VIA_M3_M2_db_0x028305a0".
+Reading "VIA_M3_M2_db_0x028305a1".
+Reading "VIA_M2_M1_db_0x028305a2".
+Reading "VIA_M2_M1_db_0x028305a3".
+Reading "VIA_M3_M2_db_0x028305a4".
+Reading "VIA_M2_M1_db_0x028305a5".
+Reading "VIA_M3_M2_db_0x0283a69d".
+Reading "VIA_M4_M3_db_0x0283a69e".
+Reading "VIA_M3_M2_db_0x0283a69f".
+Reading "VIA_M3_M2_db_0x0400d91e".
+Reading "VIA_M3_M2_db_0x0400ab9b".
+Reading "lvsres_db_0x04007e9a".
+Reading "VIA_M2_M1_db_0x0283bea0".
+Reading "VIA_M3_M2_db_0x0283bea2".
+Reading "VIA_M3_M2_db_0x043aeda0".
+Reading "VIA_M2_M1_db_0x0283bea5".
+Reading "RSC_IHPSG13_DFNQMX2IX1".
+Reading "RSC_IHPSG13_AND2X2".
+Reading "RSC_IHPSG13_CBUFX2".
+Reading "VIA_M3_M2_db_0x02839d23".
+Reading "VIA_M3_M2_db_0x0283959d".
+Reading "RSC_IHPSG13_CINVX8".
+Reading "VIA_M2_M1_db_0x02838424".
+Reading "VIA_M2_M1_db_0x02838425".
+Reading "RSC_IHPSG13_CDLYX2".
+Reading "RSC_IHPSG13_MX2X2".
+Reading "RSC_IHPSG13_CGATEPX4".
+Reading "RSC_IHPSG13_CINVX4".
+Reading "RSC_IHPSG13_XOR2X2".
+Reading "RSC_IHPSG13_DFNQX2".
+Reading "RSC_IHPSG13_TIEL".
+Reading "RSC_IHPSG13_OA12X1".
+Reading "RSC_IHPSG13_CBUFX8".
+Reading "RSC_IHPSG13_CNAND2X2".
+Reading "RM_IHPSG13_1P_BITKIT_16x2_LE_con_edge_lr".
+Reading "RM_IHPSG13_1P_BITKIT_16x2_EDGE_LR".
+Reading "RM_IHPSG13_1P_BITKIT_16x2_POWER_ramblk".
+Reading "RM_IHPSG13_1P_BITKIT_16x2_LE_con_tap_lr".
+Reading "RM_IHPSG13_1P_BITKIT_16x2_TAP_LR".
+Reading "RM_IHPSG13_1P_BITKIT_16x2_POWER_ramtap".
+Reading "RM_IHPSG13_1P_BITKIT_16x2_LE_con_corner".
+Reading "RM_IHPSG13_1P_BITKIT_16x2_CORNER".
+Reading "VIA_M2_M1_db_0x0283be9d".
+Reading "VIA_M3_M2_db_0x0283be9e".
+Reading "VIA_M3_M2_db_0x0283be9f".
+Reading "VIA_M3_M2_db_0x0283bea1".
+Reading "VIA_M2_M1_db_0x0283bea3".
+Reading "VIA_M2_M1_db_0x0283bea4".
+Reading "VIA_M2_M1_db_0x0283bea7".
+Reading "VIA_M3_M2_db_0x0283bea8".
+Reading "VIA_M4_M3_db_0x0283bea9".
+Reading "VIA_M2_M1_db_0x0283beaa".
+Reading "VIA_M3_M2_db_0x0283beac".
+Reading "VIA_M3_M2_db_0x0283beae".
+Reading "VIA_M3_M2_db_0x0283beaf".
+Reading "VIA_M3_M2_db_0x0283beb0".
+Reading "VIA_M3_M2_db_0x0283beb1".
+Reading "RSC_IHPSG13_DFPQD_MSAFFX2N".
+Reading "lvsres_db_0x0283151a".
+Reading "RSC_IHPSG13_NOR2X2".
+Reading "RSC_IHPSG13_CINVX4_WN".
+Reading "RM_IHPSG13_1P_BLDRV".
+Reading "RSC_IHPSG13_TIEH".
+Reading "VIA_M3_M2_db_0x02839d1b".
+Reading "VIA_M3_M2_db_0x02839d1d".
+Reading "RM_IHPSG13_1P_ROWDEC0".
+Reading "RM_IHPSG13_1P_DEC_LE_l1wire".
+Reading "RM_IHPSG13_1P_DEC_LE_tap".
+Reading "RM_IHPSG13_1P_DEC02".
+Reading "RM_IHPSG13_1P_DEC_LE_l2empty".
+Reading "RM_IHPSG13_1P_DEC03".
+Reading "RM_IHPSG13_1P_DEC_LE_l0wire".
+Reading "RM_IHPSG13_1P_DEC01".
+Reading "RM_IHPSG13_1P_DEC_LE_l1empty".
+Reading "RM_IHPSG13_1P_DEC04".
+Reading "RM_IHPSG13_1P_DEC00".
+Reading "RM_IHPSG13_1P_ROWREG0".
+Reading "VIA_M3_M2_db_0x02838420".
+Reading "VIA_M4_M3_db_0x02837622".
+Reading "VIA_M3_M2_db_0x0283701f".
+Reading "RSC_IHPSG13_MX2IX1".
+Reading "RSC_IHPSG13_CDLYX1".
+Reading "RSC_IHPSG13_CDLYX1_DUMMY".
+Reading "RSC_IHPSG13_CBUFX4".
+Reading "VIA_M2_M1_db_0x043aed9b".
+Reading "VIA_M2_M1_db_0x043aeda3".
+Reading "RSC_IHPSG13_WLDRVX4".
+Reading "RM_IHPSG13_1P_COLUMN_128".
+Reading "RM_IHPSG13_1P_COLCTRL2_end".
+Reading "RM_IHPSG13_1P_COLCTRL2".
+Reading "RM_IHPSG13_1P_COLDRV13_FILL4".
+Reading "RM_IHPSG13_1P_COLDRV13_FILL1C2".
+Reading "RM_IHPSG13_1P_COLDRV13_FILL4C2".
+Reading "RM_IHPSG13_1P_CTRL".
+Reading "RM_IHPSG13_1P_COLDEC2".
+Reading "RM_IHPSG13_1P_DLY_MUX".
+Reading "RM_IHPSG13_1P_DLY_2".
+Reading "RM_IHPSG13_1P_COLDRV13X4".
+Reading "RM_IHPSG13_1P_COLDRV13_FILL1".
+Reading "RM_IHPSG13_1P_WLDRV16X4".
+Reading "RM_IHPSG13_1P_WLDRV16X4_tap".
+Reading "RM_IHPSG13_1P_ROWDEC7".
+Reading "RM_IHPSG13_1P_ROWREG7".
+Reading "RM_IHPSG13_1P_MATRIX_128x64".
+Reading "RM_IHPSG13_1P_512x32_c2_bm_bist".
+   Generating output for cell mm_top
+[INFO] GDS Write Complete

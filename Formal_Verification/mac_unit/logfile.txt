@@ -1,0 +1,12 @@
+SBY  0:57:53 [mac_unit] Removing directory '/home/fawad/ICdesign/Functional/matrix_multiplier/mac_unit'.
+SBY  0:57:53 [mac_unit] Copy '/home/fawad/ICdesign/Functional/matrix_multiplier/mac_unit.sv' to '/home/fawad/ICdesign/Functional/matrix_multiplier/mac_unit/src/mac_unit.sv'.
+SBY  0:57:53 [mac_unit] engine_0: smtbmc
+SBY  0:57:53 [mac_unit] base: starting process "cd mac_unit/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY  0:57:53 [mac_unit] base: mac_unit.sv:45: ERROR: syntax error, unexpected '(', expecting TOK_PROPERTY
+SBY  0:57:53 [mac_unit] base: finished (returncode=1)
+SBY  0:57:53 [mac_unit] base: task failed. ERROR.
+SBY  0:57:53 [mac_unit] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  0:57:53 [mac_unit] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  0:57:53 [mac_unit] summary: engine_0 (smtbmc) did not return a status
+SBY  0:57:53 [mac_unit] summary: engine_0 did not produce any traces
+SBY  0:57:53 [mac_unit] DONE (ERROR, rc=16)

@@ -1,0 +1,67 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.60+95 (git sha1 991e70489, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design_prep.il
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `controller'. Setting top module to controller.
+
+2.1. Analyzing design hierarchy..
+Top module:  \controller
+
+2.2. Analyzing design hierarchy..
+Top module:  \controller
+Removed 0 unused modules.
+Module controller directly or indirectly contains formal properties -> setting "keep" attribute.
+
+3. Executing FORMALFF pass.
+
+4. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+5. Printing statistics.
+
+=== controller ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      128 wires
+      262 wire bits
+       26 public wires
+       99 public wire bits
+       15 ports
+       54 port bits
+      132 cells
+        4   $add
+        4   $anyinit
+       14   $assert
+        2   $assume
+       14   $eq
+       28   $ff
+        1   $le
+        4   $logic_and
+        6   $logic_not
+       11   $logic_or
+       38   $mux
+        2   $ne
+        1   $not
+        1   $pmux
+        2   $reduce_bool
+
+6. Executing SMT2 backend.
+
+6.1. Executing BMUXMAP pass.
+
+6.2. Executing DEMUXMAP pass.
+Creating SMT-LIBv2 representation of module controller.
+
+End of script. Logfile hash: f9f49970a6, CPU: user 0.01s system 0.00s, MEM: 16.48 MB peak
+Yosys 0.60+95 (git sha1 991e70489, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)
+Time spent: 65% 2x write_smt2 (0 sec), 20% 2x read_rtlil (0 sec), ...

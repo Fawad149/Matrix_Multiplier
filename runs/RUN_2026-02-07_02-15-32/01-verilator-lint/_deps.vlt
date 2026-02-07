@@ -1,0 +1,5 @@
+`verilator_config
+lint_off -rule DECLFILENAME
+lint_off -rule EOFNEWLINE
+lint_off -rule UNDRIVEN -file "/home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/tmp/07ca3edb9aa544d787a09962913cc1ee.bb.v"
+lint_off -rule UNUSEDSIGNAL -file "/home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/tmp/07ca3edb9aa544d787a09962913cc1ee.bb.v"

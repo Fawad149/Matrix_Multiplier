@@ -1,0 +1,65 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.60+95 (git sha1 991e70489, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design_prep.il
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `mac_unit'. Setting top module to mac_unit.
+
+2.1. Analyzing design hierarchy..
+Top module:  \mac_unit
+
+2.2. Analyzing design hierarchy..
+Top module:  \mac_unit
+Removed 0 unused modules.
+Module mac_unit directly or indirectly contains formal properties -> setting "keep" attribute.
+
+3. Executing FORMALFF pass.
+
+4. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+5. Printing statistics.
+
+=== mac_unit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       35 wires
+      192 wire bits
+       12 public wires
+      104 public wire bits
+        7 ports
+       37 port bits
+       32 cells
+        2   $add
+        2   $anyinit
+        2   $assert
+        2   $assume
+        1   $eq
+        7   $ff
+        3   $logic_and
+        2   $logic_not
+        1   $logic_or
+        1   $mul
+        6   $mux
+        1   $not
+        2   $reduce_bool
+
+6. Executing SMT2 backend.
+
+6.1. Executing BMUXMAP pass.
+
+6.2. Executing DEMUXMAP pass.
+Creating SMT-LIBv2 representation of module mac_unit.
+
+End of script. Logfile hash: 2a5d1933de, CPU: user 0.00s system 0.00s, MEM: 16.51 MB peak
+Yosys 0.60+95 (git sha1 991e70489, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)
+Time spent: 67% 2x write_smt2 (0 sec), 14% 2x read_rtlil (0 sec), ...

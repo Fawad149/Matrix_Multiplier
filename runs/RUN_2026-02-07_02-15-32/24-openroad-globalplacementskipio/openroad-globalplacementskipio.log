@@ -1,0 +1,103 @@
+Reading timing models for corner nom_typ_1p20V_25C…
+Reading timing library for the 'nom_typ_1p20V_25C' corner at '/home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_typ_1p20V_25C.lib'…
+Reading OpenROAD database at '/home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/21-openroad-generatepdn/mm_top.odb'…
+Reading design constraints file at '/nix/store/m14ar4akyh801bihjgbvb3k669h95ig3-python3-3.12.10-env/lib/python3.12/site-packages/librelane/scripts/base.sdc'…
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 2
+[INFO] Setting input delay to: 2
+[INFO] Setting load to: 0.006
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.15
+[INFO] Setting timing derate to: 5%
++ global_placement -density 0.350111 -skip_io -pad_right 0 -pad_left 0 -init_wirelength_coef 0.25
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.480  3.780 ) um
+[INFO GPL-0004] CoreBBox: (  5.760 15.120 ) ( 720.000 729.540 ) um
+[INFO GPL-0006] Number of instances:              3576
+[INFO GPL-0007] Movable instances:                3466
+[INFO GPL-0008] Fixed instances:                     1
+[INFO GPL-0009] Dummy instances:                   109
+[INFO GPL-0010] Number of nets:                   3510
+[INFO GPL-0011] Number of pins:                  11266
+[INFO GPL-0012] Die BBox:  (  0.000  0.000 ) ( 726.010 744.730 ) um
+[INFO GPL-0013] Core BBox: (  5.760 15.120 ) ( 720.000 729.540 ) um
+[INFO GPL-0016] Core area:                  510267.341 um^2
+[INFO GPL-0017] Fixed instances area:        94112.928 um^2
+[INFO GPL-0018] Movable instances area:      47903.789 um^2
+[INFO GPL-0019] Utilization:                    11.511 %
+[INFO GPL-0020] Standard cells area:         47903.789 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[INFO GPL-0023] Placement target density:       0.3501
+[INFO GPL-0024] Movable insts average area:     13.821 um^2
+[INFO GPL-0025] Ideal bin area:                 39.476 um^2
+[INFO GPL-0026] Ideal bin count:                 12925
+[INFO GPL-0027] Total bin area:             510267.341 um^2
+[INFO GPL-0028] Bin count (X, Y):          64 ,     64
+[INFO GPL-0029] Bin size (W * H):      11.160 * 11.163 um
+[INFO GPL-0030] Number of bins:                   4096
+[INFO GPL-0031] HPWL: Half-Perimeter Wirelength
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+        1 |   0.9857 |  1.979298e+07 |   +0.00% |  5.64e-15 |      
+       10 |   0.9600 |  2.088844e+07 |   +5.53% |  8.75e-15 |      
+       20 |   0.9573 |  1.989060e+07 |   -4.78% |  1.42e-14 |      
+       30 |   0.9585 |  2.042580e+07 |   +2.69% |  2.32e-14 |      
+       40 |   0.9554 |  2.070272e+07 |   +1.36% |  3.78e-14 |      
+       50 |   0.9574 |  2.031759e+07 |   -1.86% |  6.16e-14 |      
+       60 |   0.9586 |  1.954436e+07 |   -3.81% |  1.00e-13 |      
+       70 |   0.9629 |  1.864262e+07 |   -4.61% |  1.63e-13 |      
+       80 |   0.9677 |  1.772210e+07 |   -4.94% |  2.66e-13 |      
+       90 |   0.9723 |  1.692917e+07 |   -4.47% |  4.33e-13 |      
+      100 |   0.9758 |  1.652168e+07 |   -2.41% |  7.06e-13 |      
+      110 |   0.9806 |  1.681580e+07 |   +1.78% |  1.15e-12 |      
+      120 |   0.9791 |  1.812881e+07 |   +7.81% |  1.87e-12 |      
+      130 |   0.9747 |  2.048738e+07 |  +13.01% |  3.05e-12 |      
+      140 |   0.9634 |  2.370110e+07 |  +15.69% |  4.97e-12 |      
+      150 |   0.9435 |  2.726532e+07 |  +15.04% |  8.09e-12 |      
+      160 |   0.9251 |  3.077042e+07 |  +12.86% |  1.32e-11 |      
+      170 |   0.8948 |  3.447193e+07 |  +12.03% |  2.14e-11 |      
+      180 |   0.8554 |  3.805790e+07 |  +10.40% |  3.49e-11 |      
+      190 |   0.8219 |  4.179241e+07 |   +9.81% |  5.68e-11 |      
+      200 |   0.7840 |  4.626942e+07 |  +10.71% |  9.25e-11 |      
+      210 |   0.7468 |  5.084840e+07 |   +9.90% |  1.51e-10 |      
+      220 |   0.7046 |  5.486996e+07 |   +7.91% |  2.45e-10 |      
+      230 |   0.6568 |  5.889148e+07 |   +7.33% |  3.99e-10 |      
+      240 |   0.6092 |  6.334917e+07 |   +7.57% |  6.50e-10 |      
+      250 |   0.5603 |  6.724489e+07 |   +6.15% |  1.06e-09 |      
+      260 |   0.5101 |  6.928264e+07 |   +3.03% |  1.72e-09 |      
+      270 |   0.4541 |  7.072455e+07 |   +2.08% |  2.81e-09 |      
+      280 |   0.4073 |  7.132627e+07 |   +0.85% |  4.57e-09 |      
+      290 |   0.3636 |  7.110595e+07 |   -0.31% |  7.45e-09 |      
+      300 |   0.3233 |  7.123847e+07 |   +0.19% |  1.14e-08 |      
+      310 |   0.3035 |  7.129083e+07 |   +0.07% |  1.68e-08 |      
+      320 |   0.2672 |  7.111586e+07 |   -0.25% |  2.48e-08 |      
+      330 |   0.2385 |  7.117352e+07 |   +0.08% |  3.65e-08 |      
+      340 |   0.2109 |  7.130064e+07 |   +0.18% |  5.38e-08 |      
+      350 |   0.1890 |  7.130828e+07 |   +0.01% |  7.92e-08 |      
+      360 |   0.1656 |  7.148713e+07 |   +0.25% |  1.17e-07 |      
+      370 |   0.1479 |  7.158411e+07 |   +0.14% |  1.72e-07 |      
+      380 |   0.1304 |  7.173293e+07 |   +0.21% |  2.53e-07 |      
+      390 |   0.1174 |  7.221428e+07 |   +0.67% |  3.73e-07 |      
+[INFO GPL-1001] Finished with Overflow: 0.099923
+[INFO GPL-1002] Placed Cell Area            47903.7888
+[INFO GPL-1003] Available Free Area         416154.4128
+[INFO GPL-1004] Minimum Feasible Density        0.1200 (cell_area / free_area)
+[INFO GPL-1006]   Suggested Target Densities:
+[INFO GPL-1007]     - For 90% usage of free space: 0.1279
+[INFO GPL-1008]     - For 80% usage of free space: 0.1439
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+u_ram matched with u_ram
+u_ram matched with u_ram
+Updating metrics…
+Cell type report:                       Count       Area
+  Macro                                     1   79719.90
+  Inverter                                 58     315.71
+  Sequential cell                         376   18419.79
+  Multi-Input combinational cell         3032   29168.29
+  Total                                  3467  127623.69
+Writing OpenROAD database to '/home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/24-openroad-globalplacementskipio/mm_top.odb'…
+Writing netlist to '/home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/24-openroad-globalplacementskipio/mm_top.nl.v'…
+Writing powered netlist to '/home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/24-openroad-globalplacementskipio/mm_top.pnl.v'…
+Writing layout to '/home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/24-openroad-globalplacementskipio/mm_top.def'…
+Writing timing constraints to '/home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/24-openroad-globalplacementskipio/mm_top.sdc'…

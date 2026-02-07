@@ -1,0 +1,6 @@
+[WARNING ORD-0039] .openroad ignored with -python
+Placing the following macros:
+{'u_ram': ['u_ram', 230000, 480000, 'N']}
+Design name: mm_top
+Placing u_ram
+Successfully placed 1 instances.

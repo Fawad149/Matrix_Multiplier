@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-02-07T02:03:57" hostname="fawad-laptop" package="controller" id="0" name="default" tests="14" errors="0" failures="0" time="0" skipped="0">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="default" name="build execution" time="0">
+</testcase>
+<testcase classname="default" name="Property ASSERT in controller at controller.sv:191.9-198.10" time="0" type="ASSERT" location="controller.sv:191.9-198.10" id="_witness_.check_assert_controller_sv_191_37">
+</testcase>
+<testcase classname="default" name="Property ASSERT in controller at controller.sv:207.21-207.76" time="0" type="ASSERT" location="controller.sv:207.21-207.76" id="_witness_.check_assert_controller_sv_207_51">
+</testcase>
+<testcase classname="default" name="Property ASSERT in controller at controller.sv:210.21-210.83" time="0" type="ASSERT" location="controller.sv:210.21-210.83" id="_witness_.check_assert_controller_sv_210_55">
+</testcase>
+<testcase classname="default" name="Property ASSERT in controller at controller.sv:213.21-213.83" time="0" type="ASSERT" location="controller.sv:213.21-213.83" id="_witness_.check_assert_controller_sv_213_59">
+</testcase>
+<testcase classname="default" name="Property ASSERT in controller at controller.sv:216.21-216.84" time="0" type="ASSERT" location="controller.sv:216.21-216.84" id="_witness_.check_assert_controller_sv_216_63">
+</testcase>
+<testcase classname="default" name="Property ASSERT in controller at controller.sv:219.21-219.76" time="0" type="ASSERT" location="controller.sv:219.21-219.76" id="_witness_.check_assert_controller_sv_219_67">
+</testcase>
+<testcase classname="default" name="Property ASSERT in controller at controller.sv:222.21-222.47" time="0" type="ASSERT" location="controller.sv:222.21-222.47" id="_witness_.check_assert_controller_sv_222_71">
+</testcase>
+<testcase classname="default" name="Property ASSERT in controller at controller.sv:231.13-231.35" time="0" type="ASSERT" location="controller.sv:231.13-231.35" id="_witness_.check_assert_controller_sv_231_77">
+</testcase>
+<testcase classname="default" name="Property ASSERT in controller at controller.sv:236.13-236.31" time="0" type="ASSERT" location="controller.sv:236.13-236.31" id="_witness_.check_assert_controller_sv_236_83">
+</testcase>
+<testcase classname="default" name="Property ASSERT in controller at controller.sv:242.9-242.49" time="0" type="ASSERT" location="controller.sv:242.9-242.49" id="_witness_.check_assert_controller_sv_242_86">
+</testcase>
+<testcase classname="default" name="Property ASSERT in controller at controller.sv:259.17-259.45" time="0" type="ASSERT" location="controller.sv:259.17-259.45" id="_witness_.check_assert_controller_sv_259_91">
+</testcase>
+<testcase classname="default" name="Property ASSERT in controller at controller.sv:261.17-261.38" time="0" type="ASSERT" location="controller.sv:261.17-261.38" id="_witness_.check_assert_controller_sv_261_93">
+</testcase>
+<testcase classname="default" name="Property ASSERT in controller at controller.sv:267.10-267.76" time="0" type="ASSERT" location="controller.sv:267.10-267.76" id="_witness_.check_assert_controller_sv_267_97">
+</testcase>
+<testcase classname="default" name="Property ASSERT in controller at controller.sv:272.6-272.34" time="0" type="ASSERT" location="controller.sv:272.6-272.34" id="_witness_.check_assert_controller_sv_272_103">
+</testcase>
+<system-out>SBY  2:03:56 [controller] Removing directory '/home/fawad/matrixMul/Matrix_Multiplier/controller'.
+SBY  2:03:56 [controller] Copy '/home/fawad/matrixMul/Matrix_Multiplier/controller.sv' to '/home/fawad/matrixMul/Matrix_Multiplier/controller/src/controller.sv'.
+SBY  2:03:56 [controller] engine_0: smtbmc
+SBY  2:03:56 [controller] base: starting process &quot;cd controller/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY  2:03:56 [controller] base: finished (returncode=0)
+SBY  2:03:56 [controller] prep: starting process &quot;cd controller/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY  2:03:56 [controller] prep: finished (returncode=0)
+SBY  2:03:56 [controller] smt2: starting process &quot;cd controller/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY  2:03:56 [controller] smt2: finished (returncode=0)
+SBY  2:03:56 [controller] engine_0.basecase: starting process &quot;cd controller; yosys-smtbmc --presat --unroll --noprogress -t 100  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY  2:03:56 [controller] engine_0.induction: starting process &quot;cd controller; yosys-smtbmc --presat --unroll -i --noprogress -t 100  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2&quot;
+SBY  2:03:56 [controller] engine_0.basecase: ##   0:00:00  Solver: yices
+SBY  2:03:56 [controller] engine_0.induction: ##   0:00:00  Solver: yices
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY  2:03:57 [controller] engine_0.induction: ##   0:00:00  Trying induction in step 100..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 1..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 1..
+SBY  2:03:57 [controller] engine_0.induction: ##   0:00:00  Trying induction in step 99..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 2..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 2..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 3..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 3..
+SBY  2:03:57 [controller] engine_0.induction: ##   0:00:00  Trying induction in step 98..
+SBY  2:03:57 [controller] engine_0.induction: ##   0:00:00  Temporal induction successful.
+SBY  2:03:57 [controller] engine_0.induction: ##   0:00:00  Status: passed
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 4..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 4..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 5..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 5..
+SBY  2:03:57 [controller] engine_0.induction: finished (returncode=0)
+SBY  2:03:57 [controller] engine_0.induction: Status returned by engine for induction: pass
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 6..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 6..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 7..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 7..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 8..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 8..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 9..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 9..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 10..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 10..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 11..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 11..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 12..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 12..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 13..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 13..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 14..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 14..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 15..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 15..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 16..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 16..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 17..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 17..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 18..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 18..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 19..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 19..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 20..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 20..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 21..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 21..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 22..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 22..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 23..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 23..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 24..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 24..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 25..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 25..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 26..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 26..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 27..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 27..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 28..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 28..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 29..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 29..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 30..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 30..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 31..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 31..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 32..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 32..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 33..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 33..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 34..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 34..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 35..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 35..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 36..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 36..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 37..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 37..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 38..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 38..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 39..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 39..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 40..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 40..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 41..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 41..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 42..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 42..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 43..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 43..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 44..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 44..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 45..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 45..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 46..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 46..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 47..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 47..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 48..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 48..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 49..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 49..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 50..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 50..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 51..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 51..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 52..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 52..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 53..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 53..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 54..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 54..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 55..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 55..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 56..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 56..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 57..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 57..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 58..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 58..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 59..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 59..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 60..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 60..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 61..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 61..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 62..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 62..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 63..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 63..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 64..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 64..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 65..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 65..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 66..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 66..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 67..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 67..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 68..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 68..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 69..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 69..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 70..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 70..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 71..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 71..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 72..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 72..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 73..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 73..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 74..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 74..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 75..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 75..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 76..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 76..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 77..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 77..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 78..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 78..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 79..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 79..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 80..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 80..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 81..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 81..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 82..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 82..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 83..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 83..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 84..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 84..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 85..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 85..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 86..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 86..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 87..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 87..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 88..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 88..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 89..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 89..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 90..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 90..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 91..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 91..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 92..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 92..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 93..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 93..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 94..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 94..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 95..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 95..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 96..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 96..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 97..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 97..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 98..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 98..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assumptions in step 99..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Checking assertions in step 99..
+SBY  2:03:57 [controller] engine_0.basecase: ##   0:00:00  Status: passed
+SBY  2:03:57 [controller] engine_0.basecase: finished (returncode=0)
+SBY  2:03:57 [controller] engine_0.basecase: Status returned by engine for basecase: pass
+SBY  2:03:57 [controller] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  2:03:57 [controller] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  2:03:57 [controller] summary: engine_0 (smtbmc) returned pass for basecase
+SBY  2:03:57 [controller] summary: engine_0 (smtbmc) returned pass for induction
+SBY  2:03:57 [controller] summary: engine_0 did not produce any traces
+SBY  2:03:57 [controller] summary: successful proof by k-induction.
+SBY  2:03:57 [controller] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

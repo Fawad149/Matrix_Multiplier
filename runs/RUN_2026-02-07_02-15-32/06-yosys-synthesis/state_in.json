@@ -1,0 +1,9 @@
+{
+    "json_h": "/home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/05-yosys-jsonheader/mm_top.h.json",
+    "metrics": {
+        "design__lint_error__count": 0,
+        "design__lint_timing_construct__count": 0,
+        "design__lint_warning__count": 23,
+        "design__inferred_latch__count": 0
+    }
+}

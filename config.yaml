@@ -1,0 +1,65 @@
+DESIGN_NAME: mm_top
+
+VERILOG_FILES:
+  - dir::./RTL/mm_top.sv
+  - dir::./RTL/RM_IHPSG13_1P_512x32_c2_stub.v
+
+CLOCK_PORT: clk
+CLOCK_PERIOD: 10
+
+STD_CELL_LIBRARY: sg13g2_stdcell
+
+VERILOG_POWER_DEFINE: USE_POWER_PINS
+FP_MACRO_HORIZONTAL_HALO: 10
+FP_MACRO_VERTICAL_HALO: 10
+
+MACROS:
+  RM_IHPSG13_1P_512x32_c2_bm_bist: {
+      "instances": {
+          "u_ram": {
+              "location": [
+                  230,
+                  480
+              ],
+              "orientation": "N"
+          }
+      },
+      "gds": [
+          "dir::./macros/RM_IHPSG13_1P_512x32_c2_bm_bist.gds"
+      ],
+      "lef": [
+          "dir::./macros/RM_IHPSG13_1P_512x32_c2_bm_bist.lef"
+      ],
+      "nl": [],
+      "spef": {},
+      "lib": {
+        typ_1p20V_25C:
+         "dir::./macros/IHP130_sramcell_512x32.lib"
+      },
+      "spice": [],
+      "sdf": {}
+  }
+# RUN_KLAYOUT_STREAMOUT: false
+# RUN_MAGIC_STREAMOUT: false
+# RUN_MAGIC_WRITE_LEF: false
+# MAGIC_EXT_USE_GDS: false
+
+# ---- Floorplan & congestion fixes ----
+FP_CORE_UTIL: 25
+
+
+# ---- Routing robustness ----
+GRT_OVERFLOW_ITERS: 100
+GRT_ALLOW_CONGESTION: false
+PDN_HORIZONTAL_HALO: 10
+PDN_CONNECT_MACROS_TO_GRID: true
+PDN_MACRO_CONNECTIONS:
+  - "u_ram VDD VSS VDD! VSS!"
+  - "u_ram VDD VSS VDDARRAY! VSS!"
+
+
+
+
+
+
+

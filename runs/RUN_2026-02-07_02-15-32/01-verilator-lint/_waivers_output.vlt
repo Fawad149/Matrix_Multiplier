@@ -1,0 +1,55 @@
+// DESCRIPTION: Verilator output: Waivers generated with --waiver-output
+
+`verilator_config
+
+// Below are suggested waivers. You have three options:
+//   1. Fix the reason for the linter warning in the Verilog sources
+//   2. Keep the waiver permanently if you are sure it is okay
+//   3. Keep the waiver temporarily to suppress the output
+
+// lint_off -rule WIDTHEXPAND -file "*mac_unit.sv" -match "Operator ADD expects 18 bits on the RHS, but RHS's VARREF 'prod' generates 15 bits.*"
+
+// lint_off -rule WIDTHEXPAND -file "*/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv" -match "Output port connection 'A_DOUT' expects 32 bits on the pin connection, but pin connection's VARREF 'read_shift' generates 18 bits.*"
+
+// lint_off -rule PROCASSINIT -file "*mac_unit.sv" -match "Procedural assignment to declaration with initial value: 'temp_res'*"
+
+// lint_off -rule PROCASSINIT -file "*controller.sv" -match "Procedural assignment to declaration with initial value: 'input_cnt'*"
+
+// lint_off -rule PROCASSINIT -file "*controller.sv" -match "Procedural assignment to declaration with initial value: 'k_cnt'*"
+
+// lint_off -rule UNUSEDSIGNAL -file "*controller.sv" -match "Signal is not driven, nor used: 'read_addr'*"
+
+// lint_off -rule UNUSEDSIGNAL -file "*/home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v" -match "Signal is not used: 'A_CLK'*"
+
+// lint_off -rule UNUSEDSIGNAL -file "*/home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v" -match "Signal is not used: 'A_MEN'*"
+
+// lint_off -rule UNUSEDSIGNAL -file "*/home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v" -match "Signal is not used: 'A_WEN'*"
+
+// lint_off -rule UNUSEDSIGNAL -file "*/home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v" -match "Signal is not used: 'A_REN'*"
+
+// lint_off -rule UNUSEDSIGNAL -file "*/home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v" -match "Signal is not used: 'A_ADDR'*"
+
+// lint_off -rule UNUSEDSIGNAL -file "*/home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v" -match "Signal is not used: 'A_DIN'*"
+
+// lint_off -rule UNUSEDSIGNAL -file "*/home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v" -match "Signal is not used: 'A_DLY'*"
+
+// lint_off -rule UNDRIVEN -file "*/home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v" -match "Signal is not driven: 'A_DOUT'*"
+
+// lint_off -rule UNUSEDSIGNAL -file "*/home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v" -match "Signal is not used: 'A_BM'*"
+
+// lint_off -rule UNUSEDSIGNAL -file "*/home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v" -match "Signal is not used: 'A_BIST_CLK'*"
+
+// lint_off -rule UNUSEDSIGNAL -file "*/home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v" -match "Signal is not used: 'A_BIST_EN'*"
+
+// lint_off -rule UNUSEDSIGNAL -file "*/home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v" -match "Signal is not used: 'A_BIST_MEN'*"
+
+// lint_off -rule UNUSEDSIGNAL -file "*/home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v" -match "Signal is not used: 'A_BIST_WEN'*"
+
+// lint_off -rule UNUSEDSIGNAL -file "*/home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v" -match "Signal is not used: 'A_BIST_REN'*"
+
+// lint_off -rule UNUSEDSIGNAL -file "*/home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v" -match "Signal is not used: 'A_BIST_ADDR'*"
+
+// lint_off -rule UNUSEDSIGNAL -file "*/home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v" -match "Signal is not used: 'A_BIST_DIN'*"
+
+// lint_off -rule UNUSEDSIGNAL -file "*/home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v" -match "Signal is not used: 'A_BIST_BM'*"
+

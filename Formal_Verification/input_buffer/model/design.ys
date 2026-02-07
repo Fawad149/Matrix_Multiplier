@@ -1,0 +1,8 @@
+# running in input_buffer/src/
+read -formal input_buffer.sv
+prep -top input_buffer
+
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il
