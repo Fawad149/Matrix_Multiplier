@@ -183,12 +183,12 @@ module controller(clk, rst, start, coeff_data, ram_write_cnt, inbuf_wr_en, inbuf
   );
   sg13g2_and2_1 _089_ (
     .A(input_cnt[1]),
-    .B(input_cnt[3]),
+    .B(input_cnt[2]),
     .X(_069_)
   );
   sg13g2_nand4_1 _090_ (
     .A(input_cnt[0]),
-    .B(input_cnt[2]),
+    .B(input_cnt[3]),
     .C(input_cnt[4]),
     .D(_069_),
     .Y(_070_)
@@ -258,13 +258,13 @@ module controller(clk, rst, start, coeff_data, ram_write_cnt, inbuf_wr_en, inbuf
     .Y(_006_)
   );
   sg13g2_and2_1 _102_ (
-    .A(save_result),
-    .B(res_index[0]),
+    .A(res_index[0]),
+    .B(save_result),
     .X(_028_)
   );
   sg13g2_nor2_1 _103_ (
-    .A(save_result),
-    .B(res_index[0]),
+    .A(res_index[0]),
+    .B(save_result),
     .Y(_029_)
   );
   sg13g2_nor3_1 _104_ (
@@ -292,15 +292,15 @@ module controller(clk, rst, start, coeff_data, ram_write_cnt, inbuf_wr_en, inbuf
     .Y(_031_)
   );
   sg13g2_and4_1 _108_ (
-    .A(save_result),
-    .B(res_index[0]),
+    .A(res_index[0]),
+    .B(save_result),
     .C(res_index[1]),
     .D(res_index[2]),
     .X(_032_)
   );
   sg13g2_nand4_1 _109_ (
-    .A(save_result),
-    .B(res_index[0]),
+    .A(res_index[0]),
+    .B(save_result),
     .C(res_index[1]),
     .D(res_index[2]),
     .Y(_033_)
@@ -519,15 +519,15 @@ module controller(clk, rst, start, coeff_data, ram_write_cnt, inbuf_wr_en, inbuf
     .B(_056_),
     .Y(_023_)
   );
-  sg13g2_nor2_1 _148_ (
-    .A(input_cnt[3]),
-    .B(_073_),
+  sg13g2_o21ai_1 _148_ (
+    .A1(input_cnt[3]),
+    .A2(_073_),
+    .B1(_059_),
     .Y(_057_)
   );
-  sg13g2_nor3_1 _149_ (
-    .A(rst),
-    .B(_074_),
-    .C(_057_),
+  sg13g2_nor2_1 _149_ (
+    .A(_074_),
+    .B(_057_),
     .Y(_024_)
   );
   sg13g2_o21ai_1 _150_ (
@@ -13946,7 +13946,17 @@ module mm_top(clk, rst, input_data, start, read_ram, read_data_out, finish);
   wire _147_;
   wire _148_;
   wire _149_;
-  wire [13:0] _150_;
+  wire _150_;
+  wire _151_;
+  wire _152_;
+  wire _153_;
+  wire _154_;
+  wire _155_;
+  wire _156_;
+  wire _157_;
+  wire _158_;
+  wire _159_;
+  wire [13:0] _160_;
   wire [6:0] a_mac;
   wire half_sel;
   wire [17:0] \mac_acc[0] ;
@@ -13973,886 +13983,922 @@ module mm_top(clk, rst, input_data, start, read_ram, read_data_out, finish);
   wire [7:0] x2;
   wire [7:0] x3;
   wire [7:0] x4;
-  sg13g2_inv_1 _151_ (
-    .A(read_index[2]),
+  sg13g2_inv_1 _161_ (
+    .A(read_index[0]),
     .Y(_022_)
   );
-  sg13g2_inv_1 _152_ (
-    .A(read_index[3]),
+  sg13g2_inv_1 _162_ (
+    .A(read_ram),
     .Y(_023_)
   );
-  sg13g2_inv_1 _153_ (
-    .A(read_index[4]),
+  sg13g2_inv_1 _163_ (
+    .A(read_index[2]),
     .Y(_024_)
   );
-  sg13g2_inv_1 _154_ (
-    .A(read_index[5]),
+  sg13g2_inv_1 _164_ (
+    .A(read_index[4]),
     .Y(_025_)
   );
-  sg13g2_inv_1 _155_ (
-    .A(read_index[7]),
+  sg13g2_inv_1 _165_ (
+    .A(read_index[6]),
     .Y(_026_)
   );
-  sg13g2_inv_1 _156_ (
+  sg13g2_inv_1 _166_ (
     .A(rst),
     .Y(_027_)
   );
-  sg13g2_inv_1 _157_ (
+  sg13g2_inv_1 _167_ (
     .A(save_result),
     .Y(_028_)
   );
-  sg13g2_nand2_1 _158_ (
-    .A(read_index[0]),
-    .B(half_sel),
+  sg13g2_inv_1 _168_ (
+    .A(read_shift[0]),
     .Y(_029_)
   );
-  sg13g2_xor2_1 _159_ (
-    .A(read_index[0]),
-    .B(half_sel),
-    .X(_030_)
+  sg13g2_inv_1 _169_ (
+    .A(read_shift[1]),
+    .Y(_030_)
   );
-  sg13g2_xor2_1 _160_ (
-    .A(read_index[1]),
-    .B(_029_),
-    .X(_031_)
+  sg13g2_inv_1 _170_ (
+    .A(read_shift[2]),
+    .Y(_031_)
   );
-  sg13g2_nand2_1 _161_ (
-    .A(save_result),
-    .B(res_index[1]),
+  sg13g2_inv_1 _171_ (
+    .A(read_shift[3]),
     .Y(_032_)
   );
-  sg13g2_nand3_1 _162_ (
-    .A(read_index[0]),
-    .B(read_index[1]),
-    .C(read_index[2]),
+  sg13g2_inv_1 _172_ (
+    .A(read_shift[4]),
     .Y(_033_)
   );
-  sg13g2_a21o_1 _163_ (
-    .A1(read_index[0]),
-    .A2(read_index[1]),
-    .B1(read_index[2]),
-    .X(_034_)
+  sg13g2_inv_1 _173_ (
+    .A(read_shift[5]),
+    .Y(_034_)
   );
-  sg13g2_and2_1 _164_ (
-    .A(_033_),
-    .B(_034_),
-    .X(_035_)
+  sg13g2_inv_1 _174_ (
+    .A(read_shift[6]),
+    .Y(_035_)
   );
-  sg13g2_nor2_1 _165_ (
-    .A(_022_),
-    .B(half_sel),
+  sg13g2_inv_1 _175_ (
+    .A(read_shift[7]),
     .Y(_036_)
   );
-  sg13g2_a21oi_1 _166_ (
-    .A1(half_sel),
-    .A2(_035_),
-    .B1(_036_),
+  sg13g2_inv_1 _176_ (
+    .A(read_shift[8]),
     .Y(_037_)
   );
-  sg13g2_nand2_1 _167_ (
-    .A(save_result),
-    .B(res_index[2]),
+  sg13g2_nand2_1 _177_ (
+    .A(res_index[0]),
+    .B(save_result),
     .Y(_038_)
   );
-  sg13g2_and4_1 _168_ (
-    .A(read_index[0]),
-    .B(read_index[1]),
-    .C(read_index[2]),
-    .D(read_index[3]),
-    .X(_039_)
-  );
-  sg13g2_xnor2_1 _169_ (
-    .A(read_index[3]),
-    .B(_033_),
-    .Y(_040_)
-  );
-  sg13g2_nor2_1 _170_ (
-    .A(_023_),
-    .B(half_sel),
-    .Y(_041_)
-  );
-  sg13g2_a21oi_1 _171_ (
-    .A1(half_sel),
-    .A2(_040_),
-    .B1(_041_),
-    .Y(_042_)
-  );
-  sg13g2_nand2_1 _172_ (
+  sg13g2_nand2_1 _178_ (
     .A(save_result),
-    .B(res_index[3]),
-    .Y(_043_)
+    .B(res_index[2]),
+    .Y(_039_)
   );
-  sg13g2_xnor2_1 _173_ (
-    .A(_024_),
-    .B(_039_),
-    .Y(_044_)
-  );
-  sg13g2_nor2_1 _174_ (
-    .A(_024_),
-    .B(half_sel),
-    .Y(_045_)
-  );
-  sg13g2_a21oi_1 _175_ (
-    .A1(half_sel),
-    .A2(_044_),
-    .B1(_045_),
-    .Y(_046_)
-  );
-  sg13g2_nand2_1 _176_ (
+  sg13g2_nand2_1 _179_ (
     .A(save_result),
     .B(res_index[4]),
-    .Y(_047_)
+    .Y(_040_)
   );
-  sg13g2_nand3_1 _177_ (
-    .A(read_index[4]),
-    .B(read_index[5]),
-    .C(_039_),
-    .Y(_048_)
-  );
-  sg13g2_a21o_1 _178_ (
-    .A1(read_index[4]),
-    .A2(_039_),
-    .B1(read_index[5]),
-    .X(_049_)
-  );
-  sg13g2_and2_1 _179_ (
-    .A(_048_),
-    .B(_049_),
-    .X(_050_)
-  );
-  sg13g2_nor2_1 _180_ (
-    .A(_025_),
-    .B(half_sel),
-    .Y(_051_)
-  );
-  sg13g2_a21oi_1 _181_ (
-    .A1(half_sel),
-    .A2(_050_),
-    .B1(_051_),
-    .Y(_052_)
-  );
-  sg13g2_nand2_1 _182_ (
+  sg13g2_nand2_1 _180_ (
     .A(save_result),
-    .B(res_index[5]),
-    .Y(_053_)
+    .B(res_index[6]),
+    .Y(_041_)
   );
-  sg13g2_nand4_1 _183_ (
-    .A(read_index[4]),
-    .B(read_index[5]),
-    .C(read_index[6]),
-    .D(_039_),
-    .Y(_054_)
-  );
-  sg13g2_xor2_1 _184_ (
-    .A(read_index[6]),
-    .B(_048_),
-    .X(_055_)
-  );
-  sg13g2_o21ai_1 _185_ (
-    .A1(read_index[6]),
-    .A2(half_sel),
-    .B1(_028_),
-    .Y(_056_)
-  );
-  sg13g2_a21oi_1 _186_ (
-    .A1(half_sel),
-    .A2(_055_),
-    .B1(_056_),
-    .Y(_057_)
-  );
-  sg13g2_xnor2_1 _187_ (
-    .A(_026_),
-    .B(_054_),
-    .Y(_058_)
-  );
-  sg13g2_o21ai_1 _188_ (
-    .A1(read_index[7]),
-    .A2(half_sel),
-    .B1(_028_),
-    .Y(_059_)
-  );
-  sg13g2_a21oi_1 _189_ (
-    .A1(half_sel),
-    .A2(_058_),
-    .B1(_059_),
-    .Y(_060_)
-  );
-  sg13g2_nand2_1 _190_ (
-    .A(save_result),
-    .B(res_index[8]),
-    .Y(_061_)
-  );
-  sg13g2_o21ai_1 _191_ (
-    .A1(_026_),
-    .A2(_054_),
-    .B1(read_index[8]),
-    .Y(_062_)
-  );
-  sg13g2_or3_1 _192_ (
-    .A(_026_),
-    .B(read_index[8]),
-    .C(_054_),
-    .X(_063_)
-  );
-  sg13g2_and3_1 _193_ (
-    .A(half_sel),
-    .B(_062_),
-    .C(_063_),
-    .X(_064_)
-  );
-  sg13g2_o21ai_1 _194_ (
-    .A1(read_index[8]),
-    .A2(half_sel),
-    .B1(_028_),
-    .Y(_065_)
-  );
-  sg13g2_nor2b_1 _195_ (
+  sg13g2_nor2b_1 _181_ (
     .A(ram_wrcnt[0]),
     .B_N(ram_wrcnt[1]),
-    .Y(_066_)
+    .Y(_042_)
   );
-  sg13g2_nor2b_1 _196_ (
+  sg13g2_nor2b_1 _182_ (
     .A(ram_wrcnt[1]),
     .B_N(ram_wrcnt[0]),
-    .Y(_067_)
+    .Y(_043_)
   );
-  sg13g2_and2_1 _197_ (
+  sg13g2_and2_1 _183_ (
     .A(ram_wrcnt[0]),
     .B(ram_wrcnt[1]),
-    .X(_068_)
+    .X(_044_)
   );
-  sg13g2_nor2_1 _198_ (
+  sg13g2_nor2_1 _184_ (
     .A(ram_wrcnt[0]),
     .B(ram_wrcnt[1]),
-    .Y(_069_)
+    .Y(_045_)
+  );
+  sg13g2_a22oi_1 _185_ (
+    .A1(\mac_acc[2] [0]),
+    .A2(_042_),
+    .B1(_044_),
+    .B2(\mac_acc[3] [0]),
+    .Y(_046_)
+  );
+  sg13g2_a22oi_1 _186_ (
+    .A1(\mac_acc[1] [0]),
+    .A2(_043_),
+    .B1(_045_),
+    .B2(\mac_acc[0] [0]),
+    .Y(_047_)
+  );
+  sg13g2_a22oi_1 _187_ (
+    .A1(\mac_acc[2] [1]),
+    .A2(_042_),
+    .B1(_044_),
+    .B2(\mac_acc[3] [1]),
+    .Y(_048_)
+  );
+  sg13g2_a22oi_1 _188_ (
+    .A1(\mac_acc[1] [1]),
+    .A2(_043_),
+    .B1(_045_),
+    .B2(\mac_acc[0] [1]),
+    .Y(_049_)
+  );
+  sg13g2_a22oi_1 _189_ (
+    .A1(\mac_acc[2] [2]),
+    .A2(_042_),
+    .B1(_044_),
+    .B2(\mac_acc[3] [2]),
+    .Y(_050_)
+  );
+  sg13g2_a22oi_1 _190_ (
+    .A1(\mac_acc[1] [2]),
+    .A2(_043_),
+    .B1(_045_),
+    .B2(\mac_acc[0] [2]),
+    .Y(_051_)
+  );
+  sg13g2_a22oi_1 _191_ (
+    .A1(\mac_acc[2] [3]),
+    .A2(_042_),
+    .B1(_044_),
+    .B2(\mac_acc[3] [3]),
+    .Y(_052_)
+  );
+  sg13g2_a22oi_1 _192_ (
+    .A1(\mac_acc[1] [3]),
+    .A2(_043_),
+    .B1(_045_),
+    .B2(\mac_acc[0] [3]),
+    .Y(_053_)
+  );
+  sg13g2_a22oi_1 _193_ (
+    .A1(\mac_acc[2] [4]),
+    .A2(_042_),
+    .B1(_044_),
+    .B2(\mac_acc[3] [4]),
+    .Y(_054_)
+  );
+  sg13g2_a22oi_1 _194_ (
+    .A1(\mac_acc[1] [4]),
+    .A2(_043_),
+    .B1(_045_),
+    .B2(\mac_acc[0] [4]),
+    .Y(_055_)
+  );
+  sg13g2_a22oi_1 _195_ (
+    .A1(\mac_acc[2] [5]),
+    .A2(_042_),
+    .B1(_044_),
+    .B2(\mac_acc[3] [5]),
+    .Y(_056_)
+  );
+  sg13g2_a22oi_1 _196_ (
+    .A1(\mac_acc[1] [5]),
+    .A2(_043_),
+    .B1(_045_),
+    .B2(\mac_acc[0] [5]),
+    .Y(_057_)
+  );
+  sg13g2_a22oi_1 _197_ (
+    .A1(\mac_acc[2] [6]),
+    .A2(_042_),
+    .B1(_044_),
+    .B2(\mac_acc[3] [6]),
+    .Y(_058_)
+  );
+  sg13g2_a22oi_1 _198_ (
+    .A1(\mac_acc[1] [6]),
+    .A2(_043_),
+    .B1(_045_),
+    .B2(\mac_acc[0] [6]),
+    .Y(_059_)
   );
   sg13g2_a22oi_1 _199_ (
-    .A1(\mac_acc[2] [0]),
-    .A2(_066_),
-    .B1(_068_),
-    .B2(\mac_acc[3] [0]),
-    .Y(_070_)
+    .A1(\mac_acc[2] [7]),
+    .A2(_042_),
+    .B1(_044_),
+    .B2(\mac_acc[3] [7]),
+    .Y(_060_)
   );
   sg13g2_a22oi_1 _200_ (
-    .A1(\mac_acc[1] [0]),
-    .A2(_067_),
-    .B1(_069_),
-    .B2(\mac_acc[0] [0]),
-    .Y(_071_)
+    .A1(\mac_acc[1] [7]),
+    .A2(_043_),
+    .B1(_045_),
+    .B2(\mac_acc[0] [7]),
+    .Y(_061_)
   );
   sg13g2_a22oi_1 _201_ (
-    .A1(\mac_acc[2] [1]),
-    .A2(_066_),
-    .B1(_068_),
-    .B2(\mac_acc[3] [1]),
-    .Y(_072_)
+    .A1(\mac_acc[2] [8]),
+    .A2(_042_),
+    .B1(_044_),
+    .B2(\mac_acc[3] [8]),
+    .Y(_062_)
   );
   sg13g2_a22oi_1 _202_ (
-    .A1(\mac_acc[1] [1]),
-    .A2(_067_),
-    .B1(_069_),
-    .B2(\mac_acc[0] [1]),
-    .Y(_073_)
+    .A1(\mac_acc[1] [8]),
+    .A2(_043_),
+    .B1(_045_),
+    .B2(\mac_acc[0] [8]),
+    .Y(_063_)
   );
   sg13g2_a22oi_1 _203_ (
-    .A1(\mac_acc[2] [2]),
-    .A2(_066_),
-    .B1(_068_),
-    .B2(\mac_acc[3] [2]),
-    .Y(_074_)
+    .A1(\mac_acc[2] [9]),
+    .A2(_042_),
+    .B1(_044_),
+    .B2(\mac_acc[3] [9]),
+    .Y(_064_)
   );
   sg13g2_a22oi_1 _204_ (
-    .A1(\mac_acc[1] [2]),
-    .A2(_067_),
-    .B1(_069_),
-    .B2(\mac_acc[0] [2]),
-    .Y(_075_)
+    .A1(\mac_acc[1] [9]),
+    .A2(_043_),
+    .B1(_045_),
+    .B2(\mac_acc[0] [9]),
+    .Y(_065_)
   );
   sg13g2_a22oi_1 _205_ (
-    .A1(\mac_acc[2] [3]),
-    .A2(_066_),
-    .B1(_068_),
-    .B2(\mac_acc[3] [3]),
-    .Y(_076_)
+    .A1(\mac_acc[2] [10]),
+    .A2(_042_),
+    .B1(_044_),
+    .B2(\mac_acc[3] [10]),
+    .Y(_066_)
   );
   sg13g2_a22oi_1 _206_ (
-    .A1(\mac_acc[1] [3]),
-    .A2(_067_),
-    .B1(_069_),
-    .B2(\mac_acc[0] [3]),
-    .Y(_077_)
+    .A1(\mac_acc[1] [10]),
+    .A2(_043_),
+    .B1(_045_),
+    .B2(\mac_acc[0] [10]),
+    .Y(_067_)
   );
   sg13g2_a22oi_1 _207_ (
-    .A1(\mac_acc[2] [4]),
-    .A2(_066_),
-    .B1(_068_),
-    .B2(\mac_acc[3] [4]),
-    .Y(_078_)
+    .A1(\mac_acc[2] [11]),
+    .A2(_042_),
+    .B1(_044_),
+    .B2(\mac_acc[3] [11]),
+    .Y(_068_)
   );
   sg13g2_a22oi_1 _208_ (
-    .A1(\mac_acc[1] [4]),
-    .A2(_067_),
-    .B1(_069_),
-    .B2(\mac_acc[0] [4]),
-    .Y(_079_)
+    .A1(\mac_acc[1] [11]),
+    .A2(_043_),
+    .B1(_045_),
+    .B2(\mac_acc[0] [11]),
+    .Y(_069_)
   );
   sg13g2_a22oi_1 _209_ (
-    .A1(\mac_acc[2] [5]),
-    .A2(_066_),
-    .B1(_068_),
-    .B2(\mac_acc[3] [5]),
-    .Y(_080_)
+    .A1(\mac_acc[2] [12]),
+    .A2(_042_),
+    .B1(_044_),
+    .B2(\mac_acc[3] [12]),
+    .Y(_070_)
   );
   sg13g2_a22oi_1 _210_ (
-    .A1(\mac_acc[1] [5]),
-    .A2(_067_),
-    .B1(_069_),
-    .B2(\mac_acc[0] [5]),
-    .Y(_081_)
+    .A1(\mac_acc[1] [12]),
+    .A2(_043_),
+    .B1(_045_),
+    .B2(\mac_acc[0] [12]),
+    .Y(_071_)
   );
   sg13g2_a22oi_1 _211_ (
-    .A1(\mac_acc[2] [6]),
-    .A2(_066_),
-    .B1(_068_),
-    .B2(\mac_acc[3] [6]),
-    .Y(_082_)
+    .A1(\mac_acc[2] [13]),
+    .A2(_042_),
+    .B1(_044_),
+    .B2(\mac_acc[3] [13]),
+    .Y(_072_)
   );
   sg13g2_a22oi_1 _212_ (
-    .A1(\mac_acc[1] [6]),
-    .A2(_067_),
-    .B1(_069_),
-    .B2(\mac_acc[0] [6]),
-    .Y(_083_)
+    .A1(\mac_acc[1] [13]),
+    .A2(_043_),
+    .B1(_045_),
+    .B2(\mac_acc[0] [13]),
+    .Y(_073_)
   );
   sg13g2_a22oi_1 _213_ (
-    .A1(\mac_acc[2] [7]),
-    .A2(_066_),
-    .B1(_068_),
-    .B2(\mac_acc[3] [7]),
-    .Y(_084_)
+    .A1(\mac_acc[2] [14]),
+    .A2(_042_),
+    .B1(_044_),
+    .B2(\mac_acc[3] [14]),
+    .Y(_074_)
   );
   sg13g2_a22oi_1 _214_ (
-    .A1(\mac_acc[1] [7]),
-    .A2(_067_),
-    .B1(_069_),
-    .B2(\mac_acc[0] [7]),
-    .Y(_085_)
+    .A1(\mac_acc[1] [14]),
+    .A2(_043_),
+    .B1(_045_),
+    .B2(\mac_acc[0] [14]),
+    .Y(_075_)
   );
   sg13g2_a22oi_1 _215_ (
-    .A1(\mac_acc[2] [8]),
-    .A2(_066_),
-    .B1(_068_),
-    .B2(\mac_acc[3] [8]),
-    .Y(_086_)
+    .A1(\mac_acc[2] [15]),
+    .A2(_042_),
+    .B1(_044_),
+    .B2(\mac_acc[3] [15]),
+    .Y(_076_)
   );
   sg13g2_a22oi_1 _216_ (
-    .A1(\mac_acc[1] [8]),
-    .A2(_067_),
-    .B1(_069_),
-    .B2(\mac_acc[0] [8]),
-    .Y(_087_)
+    .A1(\mac_acc[1] [15]),
+    .A2(_043_),
+    .B1(_045_),
+    .B2(\mac_acc[0] [15]),
+    .Y(_077_)
   );
   sg13g2_a22oi_1 _217_ (
-    .A1(\mac_acc[2] [9]),
-    .A2(_066_),
-    .B1(_068_),
-    .B2(\mac_acc[3] [9]),
-    .Y(_088_)
+    .A1(\mac_acc[2] [16]),
+    .A2(_042_),
+    .B1(_044_),
+    .B2(\mac_acc[3] [16]),
+    .Y(_078_)
   );
   sg13g2_a22oi_1 _218_ (
-    .A1(\mac_acc[1] [9]),
-    .A2(_067_),
-    .B1(_069_),
-    .B2(\mac_acc[0] [9]),
-    .Y(_089_)
+    .A1(\mac_acc[1] [16]),
+    .A2(_043_),
+    .B1(_045_),
+    .B2(\mac_acc[0] [16]),
+    .Y(_079_)
   );
   sg13g2_a22oi_1 _219_ (
-    .A1(\mac_acc[2] [10]),
-    .A2(_066_),
-    .B1(_068_),
-    .B2(\mac_acc[3] [10]),
-    .Y(_090_)
+    .A1(\mac_acc[2] [17]),
+    .A2(_042_),
+    .B1(_044_),
+    .B2(\mac_acc[3] [17]),
+    .Y(_080_)
   );
   sg13g2_a22oi_1 _220_ (
-    .A1(\mac_acc[1] [10]),
-    .A2(_067_),
-    .B1(_069_),
-    .B2(\mac_acc[0] [10]),
-    .Y(_091_)
-  );
-  sg13g2_a22oi_1 _221_ (
-    .A1(\mac_acc[2] [11]),
-    .A2(_066_),
-    .B1(_068_),
-    .B2(\mac_acc[3] [11]),
-    .Y(_092_)
-  );
-  sg13g2_a22oi_1 _222_ (
-    .A1(\mac_acc[1] [11]),
-    .A2(_067_),
-    .B1(_069_),
-    .B2(\mac_acc[0] [11]),
-    .Y(_093_)
-  );
-  sg13g2_a22oi_1 _223_ (
-    .A1(\mac_acc[2] [12]),
-    .A2(_066_),
-    .B1(_068_),
-    .B2(\mac_acc[3] [12]),
-    .Y(_094_)
-  );
-  sg13g2_a22oi_1 _224_ (
-    .A1(\mac_acc[1] [12]),
-    .A2(_067_),
-    .B1(_069_),
-    .B2(\mac_acc[0] [12]),
-    .Y(_095_)
-  );
-  sg13g2_a22oi_1 _225_ (
-    .A1(\mac_acc[2] [13]),
-    .A2(_066_),
-    .B1(_068_),
-    .B2(\mac_acc[3] [13]),
-    .Y(_096_)
-  );
-  sg13g2_a22oi_1 _226_ (
-    .A1(\mac_acc[1] [13]),
-    .A2(_067_),
-    .B1(_069_),
-    .B2(\mac_acc[0] [13]),
-    .Y(_097_)
-  );
-  sg13g2_a22oi_1 _227_ (
-    .A1(\mac_acc[2] [14]),
-    .A2(_066_),
-    .B1(_068_),
-    .B2(\mac_acc[3] [14]),
-    .Y(_098_)
-  );
-  sg13g2_a22oi_1 _228_ (
-    .A1(\mac_acc[1] [14]),
-    .A2(_067_),
-    .B1(_069_),
-    .B2(\mac_acc[0] [14]),
-    .Y(_099_)
-  );
-  sg13g2_a22oi_1 _229_ (
-    .A1(\mac_acc[2] [15]),
-    .A2(_066_),
-    .B1(_068_),
-    .B2(\mac_acc[3] [15]),
-    .Y(_100_)
-  );
-  sg13g2_a22oi_1 _230_ (
-    .A1(\mac_acc[1] [15]),
-    .A2(_067_),
-    .B1(_069_),
-    .B2(\mac_acc[0] [15]),
-    .Y(_101_)
-  );
-  sg13g2_a22oi_1 _231_ (
-    .A1(\mac_acc[2] [16]),
-    .A2(_066_),
-    .B1(_068_),
-    .B2(\mac_acc[3] [16]),
-    .Y(_102_)
-  );
-  sg13g2_a22oi_1 _232_ (
-    .A1(\mac_acc[1] [16]),
-    .A2(_067_),
-    .B1(_069_),
-    .B2(\mac_acc[0] [16]),
-    .Y(_103_)
-  );
-  sg13g2_a22oi_1 _233_ (
-    .A1(\mac_acc[2] [17]),
-    .A2(_066_),
-    .B1(_068_),
-    .B2(\mac_acc[3] [17]),
-    .Y(_104_)
-  );
-  sg13g2_a22oi_1 _234_ (
     .A1(\mac_acc[1] [17]),
-    .A2(_067_),
-    .B1(_069_),
+    .A2(_043_),
+    .B1(_045_),
     .B2(\mac_acc[0] [17]),
-    .Y(_105_)
+    .Y(_081_)
   );
-  sg13g2_nor2b_1 _235_ (
-    .A(rst),
-    .B_N(read_ram),
+  sg13g2_nor2_1 _221_ (
+    .A(_023_),
+    .B(rst),
     .Y(_019_)
   );
-  sg13g2_nor2b_1 _236_ (
-    .A(half_sel),
-    .B_N(read_shift[0]),
-    .Y(_106_)
-  );
-  sg13g2_a21oi_1 _237_ (
-    .A1(half_sel),
-    .A2(read_shift[9]),
-    .B1(_106_),
-    .Y(_107_)
-  );
-  sg13g2_o21ai_1 _238_ (
+  sg13g2_o21ai_1 _222_ (
     .A1(read_count),
     .A2(read_data_out[0]),
     .B1(_019_),
-    .Y(_108_)
+    .Y(_082_)
   );
-  sg13g2_a21oi_1 _239_ (
-    .A1(read_count),
-    .A2(_107_),
-    .B1(_108_),
+  sg13g2_o21ai_1 _223_ (
+    .A1(half_sel),
+    .A2(_029_),
+    .B1(read_count),
+    .Y(_083_)
+  );
+  sg13g2_a21oi_1 _224_ (
+    .A1(half_sel),
+    .A2(read_shift[9]),
+    .B1(_083_),
+    .Y(_084_)
+  );
+  sg13g2_nor2_1 _225_ (
+    .A(_082_),
+    .B(_084_),
     .Y(_000_)
   );
-  sg13g2_nor2b_1 _240_ (
-    .A(half_sel),
-    .B_N(read_shift[1]),
-    .Y(_109_)
-  );
-  sg13g2_a21oi_1 _241_ (
-    .A1(half_sel),
-    .A2(read_shift[10]),
-    .B1(_109_),
-    .Y(_110_)
-  );
-  sg13g2_o21ai_1 _242_ (
+  sg13g2_o21ai_1 _226_ (
     .A1(read_count),
     .A2(read_data_out[1]),
     .B1(_019_),
-    .Y(_111_)
+    .Y(_085_)
   );
-  sg13g2_a21oi_1 _243_ (
-    .A1(read_count),
-    .A2(_110_),
-    .B1(_111_),
+  sg13g2_o21ai_1 _227_ (
+    .A1(half_sel),
+    .A2(_030_),
+    .B1(read_count),
+    .Y(_086_)
+  );
+  sg13g2_a21oi_1 _228_ (
+    .A1(half_sel),
+    .A2(read_shift[10]),
+    .B1(_086_),
+    .Y(_087_)
+  );
+  sg13g2_nor2_1 _229_ (
+    .A(_085_),
+    .B(_087_),
     .Y(_001_)
   );
-  sg13g2_nor2b_1 _244_ (
-    .A(half_sel),
-    .B_N(read_shift[2]),
-    .Y(_112_)
-  );
-  sg13g2_a21oi_1 _245_ (
-    .A1(half_sel),
-    .A2(read_shift[11]),
-    .B1(_112_),
-    .Y(_113_)
-  );
-  sg13g2_o21ai_1 _246_ (
+  sg13g2_o21ai_1 _230_ (
     .A1(read_count),
     .A2(read_data_out[2]),
     .B1(_019_),
-    .Y(_114_)
+    .Y(_088_)
   );
-  sg13g2_a21oi_1 _247_ (
-    .A1(read_count),
-    .A2(_113_),
-    .B1(_114_),
+  sg13g2_o21ai_1 _231_ (
+    .A1(half_sel),
+    .A2(_031_),
+    .B1(read_count),
+    .Y(_089_)
+  );
+  sg13g2_a21oi_1 _232_ (
+    .A1(half_sel),
+    .A2(read_shift[11]),
+    .B1(_089_),
+    .Y(_090_)
+  );
+  sg13g2_nor2_1 _233_ (
+    .A(_088_),
+    .B(_090_),
     .Y(_002_)
   );
-  sg13g2_nor2b_1 _248_ (
-    .A(half_sel),
-    .B_N(read_shift[3]),
-    .Y(_115_)
-  );
-  sg13g2_a21oi_1 _249_ (
-    .A1(half_sel),
-    .A2(read_shift[12]),
-    .B1(_115_),
-    .Y(_116_)
-  );
-  sg13g2_o21ai_1 _250_ (
+  sg13g2_o21ai_1 _234_ (
     .A1(read_count),
     .A2(read_data_out[3]),
     .B1(_019_),
-    .Y(_117_)
+    .Y(_091_)
   );
-  sg13g2_a21oi_1 _251_ (
-    .A1(read_count),
-    .A2(_116_),
-    .B1(_117_),
+  sg13g2_o21ai_1 _235_ (
+    .A1(half_sel),
+    .A2(_032_),
+    .B1(read_count),
+    .Y(_092_)
+  );
+  sg13g2_a21oi_1 _236_ (
+    .A1(half_sel),
+    .A2(read_shift[12]),
+    .B1(_092_),
+    .Y(_093_)
+  );
+  sg13g2_nor2_1 _237_ (
+    .A(_091_),
+    .B(_093_),
     .Y(_003_)
   );
-  sg13g2_nor2b_1 _252_ (
-    .A(half_sel),
-    .B_N(read_shift[4]),
-    .Y(_118_)
-  );
-  sg13g2_a21oi_1 _253_ (
-    .A1(half_sel),
-    .A2(read_shift[13]),
-    .B1(_118_),
-    .Y(_119_)
-  );
-  sg13g2_o21ai_1 _254_ (
+  sg13g2_o21ai_1 _238_ (
     .A1(read_count),
     .A2(read_data_out[4]),
     .B1(_019_),
-    .Y(_120_)
+    .Y(_094_)
   );
-  sg13g2_a21oi_1 _255_ (
-    .A1(read_count),
-    .A2(_119_),
-    .B1(_120_),
+  sg13g2_o21ai_1 _239_ (
+    .A1(half_sel),
+    .A2(_033_),
+    .B1(read_count),
+    .Y(_095_)
+  );
+  sg13g2_a21oi_1 _240_ (
+    .A1(half_sel),
+    .A2(read_shift[13]),
+    .B1(_095_),
+    .Y(_096_)
+  );
+  sg13g2_nor2_1 _241_ (
+    .A(_094_),
+    .B(_096_),
     .Y(_004_)
   );
-  sg13g2_nor2b_1 _256_ (
-    .A(half_sel),
-    .B_N(read_shift[5]),
-    .Y(_121_)
-  );
-  sg13g2_a21oi_1 _257_ (
-    .A1(half_sel),
-    .A2(read_shift[14]),
-    .B1(_121_),
-    .Y(_122_)
-  );
-  sg13g2_o21ai_1 _258_ (
+  sg13g2_o21ai_1 _242_ (
     .A1(read_count),
     .A2(read_data_out[5]),
     .B1(_019_),
-    .Y(_123_)
+    .Y(_097_)
   );
-  sg13g2_a21oi_1 _259_ (
-    .A1(read_count),
-    .A2(_122_),
-    .B1(_123_),
+  sg13g2_o21ai_1 _243_ (
+    .A1(half_sel),
+    .A2(_034_),
+    .B1(read_count),
+    .Y(_098_)
+  );
+  sg13g2_a21oi_1 _244_ (
+    .A1(half_sel),
+    .A2(read_shift[14]),
+    .B1(_098_),
+    .Y(_099_)
+  );
+  sg13g2_nor2_1 _245_ (
+    .A(_097_),
+    .B(_099_),
     .Y(_005_)
   );
-  sg13g2_nor2b_1 _260_ (
-    .A(half_sel),
-    .B_N(read_shift[6]),
-    .Y(_124_)
-  );
-  sg13g2_a21oi_1 _261_ (
-    .A1(half_sel),
-    .A2(read_shift[15]),
-    .B1(_124_),
-    .Y(_125_)
-  );
-  sg13g2_o21ai_1 _262_ (
+  sg13g2_o21ai_1 _246_ (
     .A1(read_count),
     .A2(read_data_out[6]),
     .B1(_019_),
-    .Y(_126_)
+    .Y(_100_)
   );
-  sg13g2_a21oi_1 _263_ (
-    .A1(read_count),
-    .A2(_125_),
-    .B1(_126_),
+  sg13g2_o21ai_1 _247_ (
+    .A1(half_sel),
+    .A2(_035_),
+    .B1(read_count),
+    .Y(_101_)
+  );
+  sg13g2_a21oi_1 _248_ (
+    .A1(half_sel),
+    .A2(read_shift[15]),
+    .B1(_101_),
+    .Y(_102_)
+  );
+  sg13g2_nor2_1 _249_ (
+    .A(_100_),
+    .B(_102_),
     .Y(_006_)
   );
-  sg13g2_nor2b_1 _264_ (
-    .A(half_sel),
-    .B_N(read_shift[7]),
-    .Y(_127_)
-  );
-  sg13g2_a21oi_1 _265_ (
-    .A1(half_sel),
-    .A2(read_shift[16]),
-    .B1(_127_),
-    .Y(_128_)
-  );
-  sg13g2_o21ai_1 _266_ (
+  sg13g2_o21ai_1 _250_ (
     .A1(read_count),
     .A2(read_data_out[7]),
     .B1(_019_),
-    .Y(_129_)
+    .Y(_103_)
   );
-  sg13g2_a21oi_1 _267_ (
-    .A1(read_count),
-    .A2(_128_),
-    .B1(_129_),
+  sg13g2_o21ai_1 _251_ (
+    .A1(half_sel),
+    .A2(_036_),
+    .B1(read_count),
+    .Y(_104_)
+  );
+  sg13g2_a21oi_1 _252_ (
+    .A1(half_sel),
+    .A2(read_shift[16]),
+    .B1(_104_),
+    .Y(_105_)
+  );
+  sg13g2_nor2_1 _253_ (
+    .A(_103_),
+    .B(_105_),
     .Y(_007_)
   );
-  sg13g2_nor2b_1 _268_ (
-    .A(half_sel),
-    .B_N(read_shift[8]),
-    .Y(_130_)
-  );
-  sg13g2_a21oi_1 _269_ (
-    .A1(half_sel),
-    .A2(read_shift[17]),
-    .B1(_130_),
-    .Y(_131_)
-  );
-  sg13g2_o21ai_1 _270_ (
+  sg13g2_o21ai_1 _254_ (
     .A1(read_count),
     .A2(read_data_out[8]),
     .B1(_019_),
-    .Y(_132_)
+    .Y(_106_)
   );
-  sg13g2_a21oi_1 _271_ (
-    .A1(read_count),
-    .A2(_131_),
-    .B1(_132_),
+  sg13g2_o21ai_1 _255_ (
+    .A1(half_sel),
+    .A2(_037_),
+    .B1(read_count),
+    .Y(_107_)
+  );
+  sg13g2_a21oi_1 _256_ (
+    .A1(half_sel),
+    .A2(read_shift[17]),
+    .B1(_107_),
+    .Y(_108_)
+  );
+  sg13g2_nor2_1 _257_ (
+    .A(_106_),
+    .B(_108_),
     .Y(_008_)
   );
-  sg13g2_and3_1 _272_ (
-    .A(half_sel),
-    .B(read_ram),
-    .C(read_count),
-    .X(_133_)
+  sg13g2_nand2b_1 _258_ (
+    .A_N(half_sel),
+    .B(read_count),
+    .Y(_109_)
   );
-  sg13g2_nand3_1 _273_ (
-    .A(half_sel),
-    .B(read_ram),
-    .C(read_count),
-    .Y(_134_)
+  sg13g2_nor2_1 _259_ (
+    .A(read_index[2]),
+    .B(read_index[3]),
+    .Y(_110_)
   );
-  sg13g2_nand2_1 _274_ (
+  sg13g2_nor2_1 _260_ (
+    .A(_022_),
+    .B(read_index[1]),
+    .Y(_111_)
+  );
+  sg13g2_a21oi_1 _261_ (
+    .A1(_110_),
+    .A2(_111_),
+    .B1(read_ram),
+    .Y(_112_)
+  );
+  sg13g2_a21o_1 _262_ (
+    .A1(read_ram),
+    .A2(_109_),
+    .B1(_112_),
+    .X(_113_)
+  );
+  sg13g2_a21oi_1 _263_ (
+    .A1(read_ram),
+    .A2(_109_),
+    .B1(_112_),
+    .Y(_114_)
+  );
+  sg13g2_o21ai_1 _264_ (
+    .A1(read_index[0]),
+    .A2(_114_),
+    .B1(_027_),
+    .Y(_115_)
+  );
+  sg13g2_a21oi_1 _265_ (
+    .A1(read_index[0]),
+    .A2(_114_),
+    .B1(_115_),
+    .Y(_009_)
+  );
+  sg13g2_nor2b_1 _266_ (
+    .A(read_ram),
+    .B_N(read_index[1]),
+    .Y(_116_)
+  );
+  sg13g2_xnor2_1 _267_ (
+    .A(read_index[1]),
+    .B(read_ram),
+    .Y(_117_)
+  );
+  sg13g2_xnor2_1 _268_ (
     .A(read_index[0]),
-    .B(_133_),
-    .Y(_135_)
+    .B(_117_),
+    .Y(_118_)
+  );
+  sg13g2_o21ai_1 _269_ (
+    .A1(read_index[1]),
+    .A2(_114_),
+    .B1(_027_),
+    .Y(_119_)
+  );
+  sg13g2_a21oi_1 _270_ (
+    .A1(_114_),
+    .A2(_118_),
+    .B1(_119_),
+    .Y(_010_)
+  );
+  sg13g2_a21oi_1 _271_ (
+    .A1(read_index[0]),
+    .A2(_117_),
+    .B1(_116_),
+    .Y(_120_)
+  );
+  sg13g2_xor2_1 _272_ (
+    .A(read_ram),
+    .B(read_index[2]),
+    .X(_121_)
+  );
+  sg13g2_nor2_1 _273_ (
+    .A(_120_),
+    .B(_121_),
+    .Y(_122_)
+  );
+  sg13g2_xor2_1 _274_ (
+    .A(_120_),
+    .B(_121_),
+    .X(_123_)
   );
   sg13g2_o21ai_1 _275_ (
-    .A1(read_index[0]),
-    .A2(_133_),
+    .A1(_113_),
+    .A2(_123_),
+    .B1(_027_),
+    .Y(_124_)
+  );
+  sg13g2_a21oi_1 _276_ (
+    .A1(_024_),
+    .A2(_113_),
+    .B1(_124_),
+    .Y(_011_)
+  );
+  sg13g2_a21oi_1 _277_ (
+    .A1(_023_),
+    .A2(read_index[2]),
+    .B1(_122_),
+    .Y(_125_)
+  );
+  sg13g2_nor2_1 _278_ (
+    .A(_023_),
+    .B(read_index[3]),
+    .Y(_126_)
+  );
+  sg13g2_xor2_1 _279_ (
+    .A(read_ram),
+    .B(read_index[3]),
+    .X(_127_)
+  );
+  sg13g2_xnor2_1 _280_ (
+    .A(_125_),
+    .B(_127_),
+    .Y(_128_)
+  );
+  sg13g2_o21ai_1 _281_ (
+    .A1(read_index[3]),
+    .A2(_114_),
+    .B1(_027_),
+    .Y(_129_)
+  );
+  sg13g2_a21oi_1 _282_ (
+    .A1(_114_),
+    .A2(_128_),
+    .B1(_129_),
+    .Y(_012_)
+  );
+  sg13g2_nor3_1 _283_ (
+    .A(_120_),
+    .B(_121_),
+    .C(_126_),
+    .Y(_130_)
+  );
+  sg13g2_nor2_1 _284_ (
+    .A(read_ram),
+    .B(_110_),
+    .Y(_131_)
+  );
+  sg13g2_nor2_1 _285_ (
+    .A(_130_),
+    .B(_131_),
+    .Y(_132_)
+  );
+  sg13g2_xnor2_1 _286_ (
+    .A(read_ram),
+    .B(read_index[4]),
+    .Y(_133_)
+  );
+  sg13g2_o21ai_1 _287_ (
+    .A1(_130_),
+    .A2(_131_),
+    .B1(_133_),
+    .Y(_134_)
+  );
+  sg13g2_xor2_1 _288_ (
+    .A(_132_),
+    .B(_133_),
+    .X(_135_)
+  );
+  sg13g2_o21ai_1 _289_ (
+    .A1(read_index[4]),
+    .A2(_114_),
     .B1(_027_),
     .Y(_136_)
   );
-  sg13g2_nor2b_1 _276_ (
-    .A(_136_),
-    .B_N(_135_),
-    .Y(_009_)
+  sg13g2_a21oi_1 _290_ (
+    .A1(_114_),
+    .A2(_135_),
+    .B1(_136_),
+    .Y(_013_)
   );
-  sg13g2_xor2_1 _277_ (
-    .A(read_index[1]),
-    .B(_135_),
-    .X(_137_)
+  sg13g2_o21ai_1 _291_ (
+    .A1(read_ram),
+    .A2(_025_),
+    .B1(_134_),
+    .Y(_137_)
   );
-  sg13g2_nor2_1 _278_ (
-    .A(rst),
-    .B(_137_),
-    .Y(_010_)
+  sg13g2_xor2_1 _292_ (
+    .A(read_ram),
+    .B(read_index[5]),
+    .X(_138_)
   );
-  sg13g2_o21ai_1 _279_ (
-    .A1(_035_),
-    .A2(_134_),
-    .B1(_027_),
-    .Y(_138_)
+  sg13g2_xor2_1 _293_ (
+    .A(_137_),
+    .B(_138_),
+    .X(_139_)
   );
-  sg13g2_a21oi_1 _280_ (
-    .A1(_022_),
-    .A2(_134_),
-    .B1(_138_),
-    .Y(_011_)
-  );
-  sg13g2_o21ai_1 _281_ (
-    .A1(_040_),
-    .A2(_134_),
-    .B1(_027_),
-    .Y(_139_)
-  );
-  sg13g2_a21oi_1 _282_ (
-    .A1(_023_),
-    .A2(_134_),
-    .B1(_139_),
-    .Y(_012_)
-  );
-  sg13g2_o21ai_1 _283_ (
-    .A1(_044_),
-    .A2(_134_),
+  sg13g2_o21ai_1 _294_ (
+    .A1(read_index[5]),
+    .A2(_114_),
     .B1(_027_),
     .Y(_140_)
   );
-  sg13g2_a21oi_1 _284_ (
-    .A1(_024_),
-    .A2(_134_),
+  sg13g2_a21oi_1 _295_ (
+    .A1(_114_),
+    .A2(_139_),
     .B1(_140_),
-    .Y(_013_)
-  );
-  sg13g2_o21ai_1 _285_ (
-    .A1(_050_),
-    .A2(_134_),
-    .B1(_027_),
-    .Y(_141_)
-  );
-  sg13g2_a21oi_1 _286_ (
-    .A1(_025_),
-    .A2(_134_),
-    .B1(_141_),
     .Y(_014_)
   );
-  sg13g2_o21ai_1 _287_ (
-    .A1(read_index[6]),
-    .A2(_133_),
-    .B1(_027_),
-    .Y(_142_)
-  );
-  sg13g2_a21oi_1 _288_ (
-    .A1(_055_),
-    .A2(_133_),
-    .B1(_142_),
-    .Y(_015_)
-  );
-  sg13g2_o21ai_1 _289_ (
-    .A1(read_index[7]),
-    .A2(_133_),
-    .B1(_027_),
-    .Y(_143_)
-  );
-  sg13g2_a21oi_1 _290_ (
-    .A1(_058_),
-    .A2(_133_),
-    .B1(_143_),
-    .Y(_016_)
-  );
-  sg13g2_nand3_1 _291_ (
-    .A(_062_),
-    .B(_063_),
-    .C(_133_),
-    .Y(_144_)
-  );
-  sg13g2_o21ai_1 _292_ (
-    .A1(read_index[8]),
-    .A2(_133_),
-    .B1(_027_),
-    .Y(_145_)
-  );
-  sg13g2_nor2b_1 _293_ (
-    .A(_145_),
-    .B_N(_144_),
-    .Y(_017_)
-  );
-  sg13g2_o21ai_1 _294_ (
-    .A1(half_sel),
-    .A2(read_count),
-    .B1(_019_),
-    .Y(_146_)
-  );
-  sg13g2_a21oi_1 _295_ (
-    .A1(half_sel),
-    .A2(read_count),
-    .B1(_146_),
-    .Y(_018_)
-  );
-  sg13g2_nand2_1 _296_ (
-    .A(ram_wrcnt[0]),
-    .B(save_result),
-    .Y(_147_)
+  sg13g2_o21ai_1 _296_ (
+    .A1(read_index[4]),
+    .A2(read_index[5]),
+    .B1(_023_),
+    .Y(_141_)
   );
   sg13g2_o21ai_1 _297_ (
+    .A1(_134_),
+    .A2(_138_),
+    .B1(_141_),
+    .Y(_142_)
+  );
+  sg13g2_inv_1 _298_ (
+    .A(_142_),
+    .Y(_143_)
+  );
+  sg13g2_xor2_1 _299_ (
+    .A(read_ram),
+    .B(read_index[6]),
+    .X(_144_)
+  );
+  sg13g2_nand2b_1 _300_ (
+    .A_N(_144_),
+    .B(_142_),
+    .Y(_145_)
+  );
+  sg13g2_a21oi_1 _301_ (
+    .A1(_143_),
+    .A2(_144_),
+    .B1(_113_),
+    .Y(_146_)
+  );
+  sg13g2_a22oi_1 _302_ (
+    .A1(read_index[6]),
+    .A2(_113_),
+    .B1(_145_),
+    .B2(_146_),
+    .Y(_147_)
+  );
+  sg13g2_nor2_1 _303_ (
+    .A(rst),
+    .B(_147_),
+    .Y(_015_)
+  );
+  sg13g2_o21ai_1 _304_ (
+    .A1(read_ram),
+    .A2(_026_),
+    .B1(_145_),
+    .Y(_148_)
+  );
+  sg13g2_xnor2_1 _305_ (
+    .A(read_ram),
+    .B(read_index[7]),
+    .Y(_149_)
+  );
+  sg13g2_xnor2_1 _306_ (
+    .A(_148_),
+    .B(_149_),
+    .Y(_150_)
+  );
+  sg13g2_o21ai_1 _307_ (
+    .A1(read_index[7]),
+    .A2(_114_),
+    .B1(_027_),
+    .Y(_151_)
+  );
+  sg13g2_a21oi_1 _308_ (
+    .A1(_114_),
+    .A2(_150_),
+    .B1(_151_),
+    .Y(_016_)
+  );
+  sg13g2_o21ai_1 _309_ (
+    .A1(read_index[6]),
+    .A2(_142_),
+    .B1(_023_),
+    .Y(_152_)
+  );
+  sg13g2_a21o_1 _310_ (
+    .A1(read_index[6]),
+    .A2(_142_),
+    .B1(_023_),
+    .X(_153_)
+  );
+  sg13g2_and4_1 _311_ (
+    .A(_114_),
+    .B(_149_),
+    .C(_152_),
+    .D(_153_),
+    .X(_154_)
+  );
+  sg13g2_o21ai_1 _312_ (
+    .A1(read_index[8]),
+    .A2(_154_),
+    .B1(_027_),
+    .Y(_155_)
+  );
+  sg13g2_a21oi_1 _313_ (
+    .A1(read_index[8]),
+    .A2(_154_),
+    .B1(_155_),
+    .Y(_017_)
+  );
+  sg13g2_xnor2_1 _314_ (
+    .A(half_sel),
+    .B(read_count),
+    .Y(_156_)
+  );
+  sg13g2_nor3_1 _315_ (
+    .A(_023_),
+    .B(rst),
+    .C(_156_),
+    .Y(_018_)
+  );
+  sg13g2_nand2_1 _316_ (
+    .A(ram_wrcnt[0]),
+    .B(save_result),
+    .Y(_157_)
+  );
+  sg13g2_o21ai_1 _317_ (
     .A1(ram_wrcnt[0]),
     .A2(save_result),
     .B1(_027_),
-    .Y(_148_)
+    .Y(_158_)
   );
-  sg13g2_nor2b_1 _298_ (
-    .A(_148_),
-    .B_N(_147_),
+  sg13g2_nor2b_1 _318_ (
+    .A(_158_),
+    .B_N(_157_),
     .Y(_020_)
   );
-  sg13g2_xor2_1 _299_ (
+  sg13g2_xor2_1 _319_ (
     .A(ram_wrcnt[1]),
-    .B(_147_),
-    .X(_149_)
+    .B(_157_),
+    .X(_159_)
   );
-  sg13g2_nor2_1 _300_ (
+  sg13g2_nor2_1 _320_ (
     .A(rst),
-    .B(_149_),
+    .B(_159_),
     .Y(_021_)
   );
   sg13g2_dfrbpq_1 \half_sel\sg13g2_dfrbpq_1  (
@@ -14861,59 +14907,59 @@ module mm_top(clk, rst, input_data, start, read_ram, read_data_out, finish);
     .Q(half_sel),
     .RESET_B(1'h1)
   );
-  sg13g2_mux2_1 \ram_addr[0]\sg13g2_mux2_1  (
-    .A0(res_index[0]),
-    .A1(_030_),
-    .S(_028_),
-    .X(ram_addr[0])
+  sg13g2_o21ai_1 \ram_addr[0]\sg13g2_o21ai_1  (
+    .A1(_022_),
+    .A2(save_result),
+    .B1(_038_),
+    .Y(ram_addr[0])
   );
-  sg13g2_o21ai_1 \ram_addr[1]\sg13g2_o21ai_1  (
-    .A1(save_result),
-    .A2(_031_),
-    .B1(_032_),
-    .Y(ram_addr[1])
+  sg13g2_mux2_1 \ram_addr[1]\sg13g2_mux2_1  (
+    .A0(read_index[1]),
+    .A1(res_index[1]),
+    .S(save_result),
+    .X(ram_addr[1])
   );
   sg13g2_o21ai_1 \ram_addr[2]\sg13g2_o21ai_1  (
-    .A1(save_result),
-    .A2(_037_),
-    .B1(_038_),
+    .A1(_024_),
+    .A2(save_result),
+    .B1(_039_),
     .Y(ram_addr[2])
   );
-  sg13g2_o21ai_1 \ram_addr[3]\sg13g2_o21ai_1  (
-    .A1(save_result),
-    .A2(_042_),
-    .B1(_043_),
-    .Y(ram_addr[3])
+  sg13g2_mux2_1 \ram_addr[3]\sg13g2_mux2_1  (
+    .A0(read_index[3]),
+    .A1(res_index[3]),
+    .S(save_result),
+    .X(ram_addr[3])
   );
   sg13g2_o21ai_1 \ram_addr[4]\sg13g2_o21ai_1  (
-    .A1(save_result),
-    .A2(_046_),
-    .B1(_047_),
+    .A1(_025_),
+    .A2(save_result),
+    .B1(_040_),
     .Y(ram_addr[4])
   );
-  sg13g2_o21ai_1 \ram_addr[5]\sg13g2_o21ai_1  (
-    .A1(save_result),
-    .A2(_052_),
-    .B1(_053_),
-    .Y(ram_addr[5])
+  sg13g2_mux2_1 \ram_addr[5]\sg13g2_mux2_1  (
+    .A0(read_index[5]),
+    .A1(res_index[5]),
+    .S(save_result),
+    .X(ram_addr[5])
   );
-  sg13g2_a21o_1 \ram_addr[6]\sg13g2_a21o_1  (
-    .A1(save_result),
-    .A2(res_index[6]),
-    .B1(_057_),
-    .X(ram_addr[6])
+  sg13g2_o21ai_1 \ram_addr[6]\sg13g2_o21ai_1  (
+    .A1(_026_),
+    .A2(save_result),
+    .B1(_041_),
+    .Y(ram_addr[6])
   );
-  sg13g2_a21o_1 \ram_addr[7]\sg13g2_a21o_1  (
-    .A1(save_result),
-    .A2(res_index[7]),
-    .B1(_060_),
+  sg13g2_mux2_1 \ram_addr[7]\sg13g2_mux2_1  (
+    .A0(read_index[7]),
+    .A1(res_index[7]),
+    .S(save_result),
     .X(ram_addr[7])
   );
-  sg13g2_o21ai_1 \ram_addr[8]\sg13g2_o21ai_1  (
-    .A1(_064_),
-    .A2(_065_),
-    .B1(_061_),
-    .Y(ram_addr[8])
+  sg13g2_mux2_1 \ram_addr[8]\sg13g2_mux2_1  (
+    .A0(read_index[8]),
+    .A1(res_index[8]),
+    .S(save_result),
+    .X(ram_addr[8])
   );
   sg13g2_dfrbpq_1 \ram_wrcnt[0]\sg13g2_dfrbpq_1  (
     .CLK(clk),
@@ -15042,110 +15088,110 @@ module mm_top(clk, rst, input_data, start, read_ram, read_data_out, finish);
     .RESET_B(1'h1)
   );
   sg13g2_a21oi_1 \result_ram[0]\sg13g2_a21oi_1  (
-    .A1(_070_),
-    .A2(_071_),
+    .A1(_046_),
+    .A2(_047_),
     .B1(_028_),
     .Y(result_ram[0])
   );
   sg13g2_a21oi_1 \result_ram[10]\sg13g2_a21oi_1  (
-    .A1(_090_),
-    .A2(_091_),
+    .A1(_066_),
+    .A2(_067_),
     .B1(_028_),
     .Y(result_ram[10])
   );
   sg13g2_a21oi_1 \result_ram[11]\sg13g2_a21oi_1  (
-    .A1(_092_),
-    .A2(_093_),
+    .A1(_068_),
+    .A2(_069_),
     .B1(_028_),
     .Y(result_ram[11])
   );
   sg13g2_a21oi_1 \result_ram[12]\sg13g2_a21oi_1  (
-    .A1(_094_),
-    .A2(_095_),
+    .A1(_070_),
+    .A2(_071_),
     .B1(_028_),
     .Y(result_ram[12])
   );
   sg13g2_a21oi_1 \result_ram[13]\sg13g2_a21oi_1  (
-    .A1(_096_),
-    .A2(_097_),
+    .A1(_072_),
+    .A2(_073_),
     .B1(_028_),
     .Y(result_ram[13])
   );
   sg13g2_a21oi_1 \result_ram[14]\sg13g2_a21oi_1  (
-    .A1(_098_),
-    .A2(_099_),
+    .A1(_074_),
+    .A2(_075_),
     .B1(_028_),
     .Y(result_ram[14])
   );
   sg13g2_a21oi_1 \result_ram[15]\sg13g2_a21oi_1  (
-    .A1(_100_),
-    .A2(_101_),
+    .A1(_076_),
+    .A2(_077_),
     .B1(_028_),
     .Y(result_ram[15])
   );
   sg13g2_a21oi_1 \result_ram[16]\sg13g2_a21oi_1  (
-    .A1(_102_),
-    .A2(_103_),
+    .A1(_078_),
+    .A2(_079_),
     .B1(_028_),
     .Y(result_ram[16])
   );
   sg13g2_a21oi_1 \result_ram[17]\sg13g2_a21oi_1  (
-    .A1(_104_),
-    .A2(_105_),
+    .A1(_080_),
+    .A2(_081_),
     .B1(_028_),
     .Y(result_ram[17])
   );
   sg13g2_a21oi_1 \result_ram[1]\sg13g2_a21oi_1  (
-    .A1(_072_),
-    .A2(_073_),
+    .A1(_048_),
+    .A2(_049_),
     .B1(_028_),
     .Y(result_ram[1])
   );
   sg13g2_a21oi_1 \result_ram[2]\sg13g2_a21oi_1  (
-    .A1(_074_),
-    .A2(_075_),
+    .A1(_050_),
+    .A2(_051_),
     .B1(_028_),
     .Y(result_ram[2])
   );
   sg13g2_a21oi_1 \result_ram[3]\sg13g2_a21oi_1  (
-    .A1(_076_),
-    .A2(_077_),
+    .A1(_052_),
+    .A2(_053_),
     .B1(_028_),
     .Y(result_ram[3])
   );
   sg13g2_a21oi_1 \result_ram[4]\sg13g2_a21oi_1  (
-    .A1(_078_),
-    .A2(_079_),
+    .A1(_054_),
+    .A2(_055_),
     .B1(_028_),
     .Y(result_ram[4])
   );
   sg13g2_a21oi_1 \result_ram[5]\sg13g2_a21oi_1  (
-    .A1(_080_),
-    .A2(_081_),
+    .A1(_056_),
+    .A2(_057_),
     .B1(_028_),
     .Y(result_ram[5])
   );
   sg13g2_a21oi_1 \result_ram[6]\sg13g2_a21oi_1  (
-    .A1(_082_),
-    .A2(_083_),
+    .A1(_058_),
+    .A2(_059_),
     .B1(_028_),
     .Y(result_ram[6])
   );
   sg13g2_a21oi_1 \result_ram[7]\sg13g2_a21oi_1  (
-    .A1(_084_),
-    .A2(_085_),
+    .A1(_060_),
+    .A2(_061_),
     .B1(_028_),
     .Y(result_ram[7])
   );
   sg13g2_a21oi_1 \result_ram[8]\sg13g2_a21oi_1  (
-    .A1(_086_),
-    .A2(_087_),
+    .A1(_062_),
+    .A2(_063_),
     .B1(_028_),
     .Y(result_ram[8])
   );
   sg13g2_a21oi_1 \result_ram[9]\sg13g2_a21oi_1  (
-    .A1(_088_),
-    .A2(_089_),
+    .A1(_064_),
+    .A2(_065_),
     .B1(_028_),
     .Y(result_ram[9])
   );
@@ -15226,7 +15272,7 @@ module mm_top(clk, rst, input_data, start, read_ram, read_data_out, finish);
     .A_CLK(clk),
     .A_DIN({ 14'h0000, result_ram[17:0] }),
     .A_DLY(1'h1),
-    .A_DOUT({ _150_, read_shift }),
+    .A_DOUT({ _160_, read_shift }),
     .A_MEN(1'h1),
     .A_REN(read_ram),
     .A_WEN(save_result)

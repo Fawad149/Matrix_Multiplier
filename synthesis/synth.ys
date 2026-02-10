@@ -4,8 +4,8 @@
 # https://yosyshq.readthedocs.io/projects/yosys/en/0.40/getting_started/example_synth.html
 
 # 1) Read cells from liberty file as modules into current design
-read_liberty -lib ../IHP130_sramcell_512x32.lib # <= Read cells from liberty file as modules into current design
-read_liberty -lib ../IHP130_stdcell.lib
+read_liberty -lib ../Lib_Files/IHP130_sramcell_512x32.lib # <= Read cells from liberty file as modules into current design
+read_liberty -lib ../Lib_Files/IHP130_stdcell.lib
 
 # 2) Read the design files
 read_verilog -sv ../RTL/mm_top.sv
@@ -42,14 +42,14 @@ hierarchy -check -top mm_top
 
 
 # 8) Map generic DFFs to the IHP130nm DFFs 
-dfflibmap -liberty ../IHP130_stdcell.lib
+dfflibmap -liberty ../Lib_Files/IHP130_stdcell.lib
 opt 
 
 # 9) Map the remaining gates to IHP130nm
 # Through this command, some area and timing optimizations can be done. 
 # Yosys page about ABC command: https://yosyshq.readthedocs.io/projects/yosys/en/0.40/cmd/abc.html
 # ABC project page: https://people.eecs.berkeley.edu/~alanmi/abc/
-abc -liberty ../IHP130_stdcell.lib
+abc -liberty ../Lib_Files/IHP130_stdcell.lib
 opt
 
 # 10) Check for any issues
@@ -57,7 +57,7 @@ check
 rename -wire
 # 11) Save area statistics
 tee -o area_stdcell.txt \
-    stat -liberty ../IHP130_stdcell.lib -liberty ../IHP130_sramcell_512x32.lib
+    stat -liberty ../Lib_Files/IHP130_stdcell.lib -liberty ../Lib_Files/IHP130_sramcell_512x32.lib
 
 # 12) Save Verilog Netlist
 write_verilog -noattr synthesized_design.v

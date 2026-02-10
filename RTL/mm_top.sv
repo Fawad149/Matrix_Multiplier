@@ -2,7 +2,7 @@
 `include "mac_unit.sv"
 `include "rom_coeff.sv"
 `include "controller.sv"
-// `include "RM_IHPSG13_1P_512x32_c2_bm_bist.v"
+// `include "RM_IHPSG13_1P_512x32_c2_bm_bistv.v"
 
 module mm_top (
     input  logic        clk,
@@ -169,12 +169,12 @@ module mm_top (
         2'd3: result_ram = {14'd0, mac_acc[3]};
         default: result_ram = 32'd0;
     endcase
-    end else begin
-        result_ram = 32'd0;
     end
+    else
+      result_ram=32'd0;
 end
   
-  assign ram_addr = (save_result== 1'b1) ? res_index : (!half_sel) ? (read_index) : (read_index+1);
+  assign ram_addr = (save_result== 1'b1) ? res_index : read_index;
 
   //-------Read Interface------------
     
@@ -189,10 +189,10 @@ end
        if (read_count == 1'b1) begin
             if (!half_sel) begin
                 read_data_out <= read_shift[8:0];
+                read_index <= read_index + 1;
                 half_sel <= 1'b1;
             end else begin
                 read_data_out <= read_shift[17:9];
-              	read_index <= read_index + 1;
                 half_sel <= 1'b0;
             end
         end
@@ -205,6 +205,8 @@ end
             half_sel <= 0;
             read_data_out <= 0;
           	read_count <= 0;
+          if(read_index % 16 == 9'd1)
+            read_index <= read_index - 1;
         end
 
    end
