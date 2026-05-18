@@ -1,0 +1,241 @@
+
+12. Printing statistics.
+
+=== controller ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       99        - wires
+      164        - wire bits
+       23        - public wires
+       88        - public wire bits
+       15        - ports
+       54        - port bits
+      110 2.09E+03 cells
+       11   99.792   sg13g2_a21oi_1
+        2   21.697   sg13g2_a22oi_1
+        6   54.432   sg13g2_and2_1
+        3   38.102   sg13g2_and3_1
+        2    29.03   sg13g2_and4_1
+       26 1.27E+03   sg13g2_dfrbpq_1
+        3    16.33   sg13g2_inv_1
+        7  127.008   sg13g2_mux2_1
+        7   50.803   sg13g2_nand2_1
+        2   18.144   sg13g2_nand3_1
+        2   21.773   sg13g2_nand4_1
+       15  108.864   sg13g2_nor2_1
+        2   18.144   sg13g2_nor2b_1
+        7   63.504   sg13g2_nor3_1
+        2   21.773   sg13g2_nor4_1
+       11   99.792   sg13g2_o21ai_1
+        2    29.03   sg13g2_xnor2_1
+
+   Chip area for module '\controller': 2091.927600
+     of which used for sequential elements: 1273.708800 (60.89%)
+
+=== input_buffer ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+     1258        - wires
+     1528        - wire bits
+       40        - public wires
+      310        - public wire bits
+        8        - ports
+       54        - port bits
+     1506 2.79E+04 cells
+        4   50.803   sg13g2_a21o_1
+      323 2.93E+03   sg13g2_a21oi_1
+       15  217.728   sg13g2_a221oi_1
+      119 1.29E+03   sg13g2_a22oi_1
+        5    45.36   sg13g2_and2_1
+      256 1.25E+04   sg13g2_dfrbpq_1
+        3    16.33   sg13g2_inv_1
+      222 4.03E+03   sg13g2_mux2_1
+       78 2.97E+03   sg13g2_mux4_1
+       70  508.032   sg13g2_nand2_1
+        7   63.504   sg13g2_nand2b_1
+       22  199.584   sg13g2_nand3_1
+        2   25.402   sg13g2_nand3b_1
+      252 1.83E+03   sg13g2_nor2_1
+       34  308.448   sg13g2_nor2b_1
+        4   36.288   sg13g2_nor3_1
+        3   32.659   sg13g2_nor4_1
+       68  616.896   sg13g2_o21ai_1
+        8   72.576   sg13g2_or2_1
+        1   14.515   sg13g2_or4_1
+       10  145.152   sg13g2_xnor2_1
+
+   Chip area for module '\input_buffer': 27944.519400
+     of which used for sequential elements: 12541.132800 (44.88%)
+
+=== mac_unit ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      410        - wires
+      457        - wire bits
+        8        - public wires
+       55        - public wire bits
+        7        - ports
+       37        - port bits
+      420 4.86E+03 cells
+       13   165.11   sg13g2_a21o_1
+       37  335.664   sg13g2_a21oi_1
+        1   14.515   sg13g2_a221oi_1
+       14   151.88   sg13g2_a22oi_1
+       11   99.792   sg13g2_and2_1
+       12   152.41   sg13g2_and3_1
+       10  145.152   sg13g2_and4_1
+       18  881.798   sg13g2_dfrbpq_1
+       24  130.637   sg13g2_inv_1
+       42  304.819   sg13g2_nand2_1
+       25    226.8   sg13g2_nand2b_1
+       21  190.512   sg13g2_nand3_1
+        5   63.504   sg13g2_nand3b_1
+        3   32.659   sg13g2_nand4_1
+       31  224.986   sg13g2_nor2_1
+       22  199.584   sg13g2_nor2b_1
+       10    90.72   sg13g2_nor3_1
+        3   32.659   sg13g2_nor4_1
+       38  344.736   sg13g2_o21ai_1
+       12  108.864   sg13g2_or2_1
+       12   152.41   sg13g2_or3_1
+       34  493.517   sg13g2_xnor2_1
+       22  319.334   sg13g2_xor2_1
+
+   Chip area for module '\mac_unit': 4862.062800
+     of which used for sequential elements: 881.798400 (18.14%)
+
+=== mm_top ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      194        - wires
+      452        - wire bits
+       33        - public wires
+      278        - public wire bits
+        7        - ports
+       22        - port bits
+      210 8.26E+04 cells
+        1 7.97E+04   RM_IHPSG13_1P_512x32_c2_bm_bist
+        2   25.402   sg13g2_a21o_1
+       40   362.88   sg13g2_a21oi_1
+       37  401.398   sg13g2_a22oi_1
+        1    9.072   sg13g2_and2_1
+        1   14.515   sg13g2_and4_1
+       22 1.08E+03   sg13g2_dfrbpq_1
+       17   92.534   sg13g2_inv_1
+        5    90.72   sg13g2_mux2_1
+        5   36.288   sg13g2_nand2_1
+        2   18.144   sg13g2_nand2b_1
+       19  137.894   sg13g2_nor2_1
+        4   36.288   sg13g2_nor2b_1
+        2   18.144   sg13g2_nor3_1
+       37  335.664   sg13g2_o21ai_1
+        7  101.606   sg13g2_xnor2_1
+        8  116.122   sg13g2_xor2_1
+        7        - submodules
+        1        -   controller
+        1        -   input_buffer
+        4        -   mac_unit
+        1        -   rom_coeff
+
+   Chip area for module '\mm_top': 82594.323000
+     of which used for sequential elements: 1077.753600 (1.30%)
+
+=== rom_coeff ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       26        - wires
+       42        - wire bits
+        3        - public wires
+       19        - public wire bits
+        3        - ports
+       19        - port bits
+       36  326.592 cells
+        1    9.072   sg13g2_a21oi_1
+        2   18.144   sg13g2_and2_1
+        1   12.701   sg13g2_and3_1
+        1    5.443   sg13g2_inv_1
+        6   43.546   sg13g2_nand2_1
+        7   63.504   sg13g2_nand2b_1
+        2   18.144   sg13g2_nand3_1
+        1   12.701   sg13g2_nand3b_1
+        1   10.886   sg13g2_nand4_1
+        3   21.773   sg13g2_nor2_1
+        2   18.144   sg13g2_nor2b_1
+        2   18.144   sg13g2_nor3_1
+        5    45.36   sg13g2_o21ai_1
+        1   14.515   sg13g2_xnor2_1
+        1   14.515   sg13g2_xor2_1
+
+   Chip area for module '\rom_coeff': 326.592000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+     3542 1.32E+05 mm_top
+      110 2.09E+03 controller
+     1506 2.79E+04 input_buffer
+      420 4.86E+03 mac_unit
+       36  326.592 rom_coeff
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+     3217        - wires
+     4014        - wire bits
+      131        - public wires
+      915        - public wire bits
+       61        - ports
+      297        - port bits
+        -        - memories
+        -        - memory bits
+        -        - processes
+     3542 1.32E+05 cells
+        1 7.97E+04   RM_IHPSG13_1P_512x32_c2_bm_bist
+       58  736.646   sg13g2_a21o_1
+      523 4.74E+03   sg13g2_a21oi_1
+       19  275.789   sg13g2_a221oi_1
+      214   2321.6   sg13g2_a22oi_1
+       58  526.176   sg13g2_and2_1
+       52  660.442   sg13g2_and3_1
+       43  624.154   sg13g2_and4_1
+      376 1.84E+04   sg13g2_dfrbpq_1
+      120  653.184   sg13g2_inv_1
+      234 4.25E+03   sg13g2_mux2_1
+       78 2.97E+03   sg13g2_mux4_1
+      256 1.86E+03   sg13g2_nand2_1
+      116 1.05E+03   sg13g2_nand2b_1
+      110   997.92   sg13g2_nand3_1
+       23  292.118   sg13g2_nand3b_1
+       15  163.296   sg13g2_nand4_1
+      413    3E+03   sg13g2_nor2_1
+      130  1179.36   sg13g2_nor2b_1
+       55   498.96   sg13g2_nor3_1
+       17  185.069   sg13g2_nor4_1
+      273 2.48E+03   sg13g2_o21ai_1
+       56  508.032   sg13g2_or2_1
+       48  609.638   sg13g2_or3_1
+        1   14.515   sg13g2_or4_1
+      156 2.26E+03   sg13g2_xnor2_1
+       97 1.41E+03   sg13g2_xor2_1
+        7 4.98E+04 submodules
+        1 2.09E+03   controller
+        1 2.79E+04   input_buffer
+        4 1.94E+04   mac_unit
+        1  326.592   rom_coeff
+
+   Chip area for top module '\mm_top': 132405.613200
+     of which used for sequential elements: 18419.788800 (13.91%)
+

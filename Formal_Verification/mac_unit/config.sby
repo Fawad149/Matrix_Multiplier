@@ -1,0 +1,13 @@
+[options]
+mode prove
+depth 250
+
+[engines]
+smtbmc
+
+[script]
+read -formal mac_unit.sv
+prep -top mac_unit
+
+[files]
+mac_unit.sv

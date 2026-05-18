@@ -1,0 +1,587 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.60+95 (git sha1 991e70489, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: input_buffer.sv
+Parsing formal SystemVerilog input from `input_buffer.sv' to AST representation.
+verilog frontend filename input_buffer.sv
+Storing AST representation for module `$abstract\input_buffer'.
+Successfully finished Verilog frontend.
+
+2. Executing PREP pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\input_buffer'.
+Generating RTLIL representation for module `\input_buffer'.
+
+2.2.1. Analyzing design hierarchy..
+Top module:  \input_buffer
+
+2.2.2. Analyzing design hierarchy..
+Top module:  \input_buffer
+Removing unused module `$abstract\input_buffer'.
+Removed 1 unused modules.
+Module input_buffer directly or indirectly contains formal properties -> setting "keep" attribute.
+
+2.3. Executing PROC pass (convert processes to netlists).
+
+2.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $proc$input_buffer.sv:18$70 in module input_buffer.
+Removed a total of 0 dead cases.
+
+2.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 2 redundant assignments.
+Promoted 76 assignments to connections.
+
+2.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\input_buffer.$proc$input_buffer.sv:31$411'.
+  Set init value: \f_past_valid = 1'0
+
+2.3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~37 debug messages>
+
+2.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:31$411'.
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$402'.
+     1/1: $assert$input_buffer.sv:57$407_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$393'.
+     1/1: $assert$input_buffer.sv:57$398_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$384'.
+     1/1: $assert$input_buffer.sv:57$389_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$375'.
+     1/1: $assert$input_buffer.sv:57$380_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$366'.
+     1/1: $assert$input_buffer.sv:57$371_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$357'.
+     1/1: $assert$input_buffer.sv:57$362_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$348'.
+     1/1: $assert$input_buffer.sv:57$353_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$339'.
+     1/1: $assert$input_buffer.sv:57$344_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$330'.
+     1/1: $assert$input_buffer.sv:57$335_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$321'.
+     1/1: $assert$input_buffer.sv:57$326_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$312'.
+     1/1: $assert$input_buffer.sv:57$317_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$303'.
+     1/1: $assert$input_buffer.sv:57$308_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$294'.
+     1/1: $assert$input_buffer.sv:57$299_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$285'.
+     1/1: $assert$input_buffer.sv:57$290_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$276'.
+     1/1: $assert$input_buffer.sv:57$281_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$267'.
+     1/1: $assert$input_buffer.sv:57$272_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$258'.
+     1/1: $assert$input_buffer.sv:57$263_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$249'.
+     1/1: $assert$input_buffer.sv:57$254_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$240'.
+     1/1: $assert$input_buffer.sv:57$245_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$231'.
+     1/1: $assert$input_buffer.sv:57$236_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$222'.
+     1/1: $assert$input_buffer.sv:57$227_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$213'.
+     1/1: $assert$input_buffer.sv:57$218_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$204'.
+     1/1: $assert$input_buffer.sv:57$209_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$195'.
+     1/1: $assert$input_buffer.sv:57$200_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$186'.
+     1/1: $assert$input_buffer.sv:57$191_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$177'.
+     1/1: $assert$input_buffer.sv:57$182_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$168'.
+     1/1: $assert$input_buffer.sv:57$173_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$159'.
+     1/1: $assert$input_buffer.sv:57$164_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$150'.
+     1/1: $assert$input_buffer.sv:57$155_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$141'.
+     1/1: $assert$input_buffer.sv:57$146_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$132'.
+     1/1: $assert$input_buffer.sv:57$137_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:55$123'.
+     1/1: $assert$input_buffer.sv:57$128_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:77$107'.
+     1/4: $assert$input_buffer.sv:82$119_EN
+     2/4: $assert$input_buffer.sv:81$115_EN
+     3/4: $assert$input_buffer.sv:80$111_EN
+     4/4: $assert$input_buffer.sv:79$108_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:69$103'.
+     1/1: $assert$input_buffer.sv:71$105_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:46$95'.
+     1/1: $assert$input_buffer.sv:48$100_EN
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:38$90'.
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:32$89'.
+Creating decoders for process `\input_buffer.$proc$input_buffer.sv:18$70'.
+     1/5: $1$memwr$\mem$input_buffer.sv:22$69_EN[7:0]$80
+     2/5: $1$memwr$\mem$input_buffer.sv:22$69_DATA[7:0]$79
+     3/5: $1$memwr$\mem$input_buffer.sv:22$69_ADDR[4:0]$78
+     4/5: $1$memwr$\mem$input_buffer.sv:20$68_EN[7:0]$77
+     5/5: $1$memwr$\mem$input_buffer.sv:20$68_ADDR[4:0]$76
+
+2.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$66$0' using process `\input_buffer.$proc$input_buffer.sv:55$402'.
+  created $dff cell `$procdff$503' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$67$0' using process `\input_buffer.$proc$input_buffer.sv:55$402'.
+  created $dff cell `$procdff$504' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$64$0' using process `\input_buffer.$proc$input_buffer.sv:55$393'.
+  created $dff cell `$procdff$505' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$65$0' using process `\input_buffer.$proc$input_buffer.sv:55$393'.
+  created $dff cell `$procdff$506' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$62$0' using process `\input_buffer.$proc$input_buffer.sv:55$384'.
+  created $dff cell `$procdff$507' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$63$0' using process `\input_buffer.$proc$input_buffer.sv:55$384'.
+  created $dff cell `$procdff$508' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$60$0' using process `\input_buffer.$proc$input_buffer.sv:55$375'.
+  created $dff cell `$procdff$509' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$61$0' using process `\input_buffer.$proc$input_buffer.sv:55$375'.
+  created $dff cell `$procdff$510' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$58$0' using process `\input_buffer.$proc$input_buffer.sv:55$366'.
+  created $dff cell `$procdff$511' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$59$0' using process `\input_buffer.$proc$input_buffer.sv:55$366'.
+  created $dff cell `$procdff$512' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$56$0' using process `\input_buffer.$proc$input_buffer.sv:55$357'.
+  created $dff cell `$procdff$513' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$57$0' using process `\input_buffer.$proc$input_buffer.sv:55$357'.
+  created $dff cell `$procdff$514' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$54$0' using process `\input_buffer.$proc$input_buffer.sv:55$348'.
+  created $dff cell `$procdff$515' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$55$0' using process `\input_buffer.$proc$input_buffer.sv:55$348'.
+  created $dff cell `$procdff$516' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$52$0' using process `\input_buffer.$proc$input_buffer.sv:55$339'.
+  created $dff cell `$procdff$517' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$53$0' using process `\input_buffer.$proc$input_buffer.sv:55$339'.
+  created $dff cell `$procdff$518' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$50$0' using process `\input_buffer.$proc$input_buffer.sv:55$330'.
+  created $dff cell `$procdff$519' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$51$0' using process `\input_buffer.$proc$input_buffer.sv:55$330'.
+  created $dff cell `$procdff$520' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$48$0' using process `\input_buffer.$proc$input_buffer.sv:55$321'.
+  created $dff cell `$procdff$521' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$49$0' using process `\input_buffer.$proc$input_buffer.sv:55$321'.
+  created $dff cell `$procdff$522' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$46$0' using process `\input_buffer.$proc$input_buffer.sv:55$312'.
+  created $dff cell `$procdff$523' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$47$0' using process `\input_buffer.$proc$input_buffer.sv:55$312'.
+  created $dff cell `$procdff$524' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$44$0' using process `\input_buffer.$proc$input_buffer.sv:55$303'.
+  created $dff cell `$procdff$525' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$45$0' using process `\input_buffer.$proc$input_buffer.sv:55$303'.
+  created $dff cell `$procdff$526' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$42$0' using process `\input_buffer.$proc$input_buffer.sv:55$294'.
+  created $dff cell `$procdff$527' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$43$0' using process `\input_buffer.$proc$input_buffer.sv:55$294'.
+  created $dff cell `$procdff$528' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$40$0' using process `\input_buffer.$proc$input_buffer.sv:55$285'.
+  created $dff cell `$procdff$529' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$41$0' using process `\input_buffer.$proc$input_buffer.sv:55$285'.
+  created $dff cell `$procdff$530' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$38$0' using process `\input_buffer.$proc$input_buffer.sv:55$276'.
+  created $dff cell `$procdff$531' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$39$0' using process `\input_buffer.$proc$input_buffer.sv:55$276'.
+  created $dff cell `$procdff$532' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$36$0' using process `\input_buffer.$proc$input_buffer.sv:55$267'.
+  created $dff cell `$procdff$533' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$37$0' using process `\input_buffer.$proc$input_buffer.sv:55$267'.
+  created $dff cell `$procdff$534' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$34$0' using process `\input_buffer.$proc$input_buffer.sv:55$258'.
+  created $dff cell `$procdff$535' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$35$0' using process `\input_buffer.$proc$input_buffer.sv:55$258'.
+  created $dff cell `$procdff$536' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$32$0' using process `\input_buffer.$proc$input_buffer.sv:55$249'.
+  created $dff cell `$procdff$537' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$33$0' using process `\input_buffer.$proc$input_buffer.sv:55$249'.
+  created $dff cell `$procdff$538' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$30$0' using process `\input_buffer.$proc$input_buffer.sv:55$240'.
+  created $dff cell `$procdff$539' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$31$0' using process `\input_buffer.$proc$input_buffer.sv:55$240'.
+  created $dff cell `$procdff$540' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$28$0' using process `\input_buffer.$proc$input_buffer.sv:55$231'.
+  created $dff cell `$procdff$541' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$29$0' using process `\input_buffer.$proc$input_buffer.sv:55$231'.
+  created $dff cell `$procdff$542' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$26$0' using process `\input_buffer.$proc$input_buffer.sv:55$222'.
+  created $dff cell `$procdff$543' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$27$0' using process `\input_buffer.$proc$input_buffer.sv:55$222'.
+  created $dff cell `$procdff$544' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$24$0' using process `\input_buffer.$proc$input_buffer.sv:55$213'.
+  created $dff cell `$procdff$545' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$25$0' using process `\input_buffer.$proc$input_buffer.sv:55$213'.
+  created $dff cell `$procdff$546' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$22$0' using process `\input_buffer.$proc$input_buffer.sv:55$204'.
+  created $dff cell `$procdff$547' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$23$0' using process `\input_buffer.$proc$input_buffer.sv:55$204'.
+  created $dff cell `$procdff$548' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$20$0' using process `\input_buffer.$proc$input_buffer.sv:55$195'.
+  created $dff cell `$procdff$549' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$21$0' using process `\input_buffer.$proc$input_buffer.sv:55$195'.
+  created $dff cell `$procdff$550' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$18$0' using process `\input_buffer.$proc$input_buffer.sv:55$186'.
+  created $dff cell `$procdff$551' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$19$0' using process `\input_buffer.$proc$input_buffer.sv:55$186'.
+  created $dff cell `$procdff$552' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$16$0' using process `\input_buffer.$proc$input_buffer.sv:55$177'.
+  created $dff cell `$procdff$553' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$17$0' using process `\input_buffer.$proc$input_buffer.sv:55$177'.
+  created $dff cell `$procdff$554' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$14$0' using process `\input_buffer.$proc$input_buffer.sv:55$168'.
+  created $dff cell `$procdff$555' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$15$0' using process `\input_buffer.$proc$input_buffer.sv:55$168'.
+  created $dff cell `$procdff$556' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$12$0' using process `\input_buffer.$proc$input_buffer.sv:55$159'.
+  created $dff cell `$procdff$557' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$13$0' using process `\input_buffer.$proc$input_buffer.sv:55$159'.
+  created $dff cell `$procdff$558' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$10$0' using process `\input_buffer.$proc$input_buffer.sv:55$150'.
+  created $dff cell `$procdff$559' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$11$0' using process `\input_buffer.$proc$input_buffer.sv:55$150'.
+  created $dff cell `$procdff$560' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$8$0' using process `\input_buffer.$proc$input_buffer.sv:55$141'.
+  created $dff cell `$procdff$561' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$9$0' using process `\input_buffer.$proc$input_buffer.sv:55$141'.
+  created $dff cell `$procdff$562' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$6$0' using process `\input_buffer.$proc$input_buffer.sv:55$132'.
+  created $dff cell `$procdff$563' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$7$0' using process `\input_buffer.$proc$input_buffer.sv:55$132'.
+  created $dff cell `$procdff$564' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:56$4$0' using process `\input_buffer.$proc$input_buffer.sv:55$123'.
+  created $dff cell `$procdff$565' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:57$5$0' using process `\input_buffer.$proc$input_buffer.sv:55$123'.
+  created $dff cell `$procdff$566' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:47$1$0' using process `\input_buffer.$proc$input_buffer.sv:46$95'.
+  created $dff cell `$procdff$567' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:48$2$0' using process `\input_buffer.$proc$input_buffer.sv:46$95'.
+  created $dff cell `$procdff$568' with positive edge clock.
+Creating register for signal `\input_buffer.$past$input_buffer.sv:48$3$0' using process `\input_buffer.$proc$input_buffer.sv:46$95'.
+  created $dff cell `$procdff$569' with positive edge clock.
+Creating register for signal `\input_buffer.\f_past_valid' using process `\input_buffer.$proc$input_buffer.sv:32$89'.
+  created $dff cell `$procdff$570' with positive edge clock.
+Creating register for signal `\input_buffer.$memwr$\mem$input_buffer.sv:20$68_ADDR' using process `\input_buffer.$proc$input_buffer.sv:18$70'.
+  created $dff cell `$procdff$571' with positive edge clock.
+Creating register for signal `\input_buffer.$memwr$\mem$input_buffer.sv:20$68_EN' using process `\input_buffer.$proc$input_buffer.sv:18$70'.
+  created $dff cell `$procdff$572' with positive edge clock.
+Creating register for signal `\input_buffer.$memwr$\mem$input_buffer.sv:22$69_ADDR' using process `\input_buffer.$proc$input_buffer.sv:18$70'.
+  created $dff cell `$procdff$573' with positive edge clock.
+Creating register for signal `\input_buffer.$memwr$\mem$input_buffer.sv:22$69_DATA' using process `\input_buffer.$proc$input_buffer.sv:18$70'.
+  created $dff cell `$procdff$574' with positive edge clock.
+Creating register for signal `\input_buffer.$memwr$\mem$input_buffer.sv:22$69_EN' using process `\input_buffer.$proc$input_buffer.sv:18$70'.
+  created $dff cell `$procdff$575' with positive edge clock.
+
+2.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `input_buffer.$proc$input_buffer.sv:31$411'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$402'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$402'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$393'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$393'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$384'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$384'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$375'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$375'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$366'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$366'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$357'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$357'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$348'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$348'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$339'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$339'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$330'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$330'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$321'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$321'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$312'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$312'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$303'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$303'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$294'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$294'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$285'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$285'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$276'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$276'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$267'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$267'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$258'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$258'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$249'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$249'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$240'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$240'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$231'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$231'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$222'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$222'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$213'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$213'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$204'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$204'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$195'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$195'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$186'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$186'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$177'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$177'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$168'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$168'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$159'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$159'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$150'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$150'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$141'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$141'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$132'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$132'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:55$123'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:55$123'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:77$107'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:77$107'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:69$103'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:69$103'.
+Found and cleaned up 1 empty switch in `\input_buffer.$proc$input_buffer.sv:46$95'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:46$95'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:38$90'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:32$89'.
+Found and cleaned up 2 empty switches in `\input_buffer.$proc$input_buffer.sv:18$70'.
+Removing empty process `input_buffer.$proc$input_buffer.sv:18$70'.
+Cleaned up 37 empty switches.
+
+2.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module input_buffer.
+<suppressed ~2 debug messages>
+
+2.4. Executing FUTURE pass.
+
+2.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module input_buffer.
+
+2.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \input_buffer..
+Removed 6 unused cells and 169 unused wires.
+<suppressed ~7 debug messages>
+
+2.7. Executing CHECK pass (checking for obvious problems).
+Checking module input_buffer...
+Found and reported 0 problems.
+
+2.8. Executing OPT pass (performing simple optimizations).
+
+2.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module input_buffer.
+
+2.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\input_buffer'.
+Computing hashes of 338 cells of `\input_buffer'.
+Finding duplicate cells in `\input_buffer'.
+Computing hashes of 302 cells of `\input_buffer'.
+Finding duplicate cells in `\input_buffer'.
+Computing hashes of 299 cells of `\input_buffer'.
+Finding duplicate cells in `\input_buffer'.
+<suppressed ~117 debug messages>
+Removed a total of 39 cells.
+
+2.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \input_buffer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~88 debug messages>
+
+2.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \input_buffer.
+    Consolidated identical input bits for $mux cell $procmux$489:
+      Old ports: A=8'00000000, B=8'11111111, Y=$0$memwr$\mem$input_buffer.sv:22$69_EN[7:0]$75
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\mem$input_buffer.sv:22$69_EN[7:0]$75 [0]
+      New connections: $0$memwr$\mem$input_buffer.sv:22$69_EN[7:0]$75 [7:1] = { $0$memwr$\mem$input_buffer.sv:22$69_EN[7:0]$75 [0] $0$memwr$\mem$input_buffer.sv:22$69_EN[7:0]$75 [0] $0$memwr$\mem$input_buffer.sv:22$69_EN[7:0]$75 [0] $0$memwr$\mem$input_buffer.sv:22$69_EN[7:0]$75 [0] $0$memwr$\mem$input_buffer.sv:22$69_EN[7:0]$75 [0] $0$memwr$\mem$input_buffer.sv:22$69_EN[7:0]$75 [0] $0$memwr$\mem$input_buffer.sv:22$69_EN[7:0]$75 [0] }
+    Consolidated identical input bits for $mux cell $procmux$498:
+      Old ports: A=8'00000000, B=8'11111111, Y=$0$memwr$\mem$input_buffer.sv:20$68_EN[7:0]$72
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\mem$input_buffer.sv:20$68_EN[7:0]$72 [0]
+      New connections: $0$memwr$\mem$input_buffer.sv:20$68_EN[7:0]$72 [7:1] = { $0$memwr$\mem$input_buffer.sv:20$68_EN[7:0]$72 [0] $0$memwr$\mem$input_buffer.sv:20$68_EN[7:0]$72 [0] $0$memwr$\mem$input_buffer.sv:20$68_EN[7:0]$72 [0] $0$memwr$\mem$input_buffer.sv:20$68_EN[7:0]$72 [0] $0$memwr$\mem$input_buffer.sv:20$68_EN[7:0]$72 [0] $0$memwr$\mem$input_buffer.sv:20$68_EN[7:0]$72 [0] $0$memwr$\mem$input_buffer.sv:20$68_EN[7:0]$72 [0] }
+  Optimizing cells in module \input_buffer.
+Performed a total of 2 changes.
+
+2.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\input_buffer'.
+Computing hashes of 299 cells of `\input_buffer'.
+Finding duplicate cells in `\input_buffer'.
+Computing hashes of 296 cells of `\input_buffer'.
+Finding duplicate cells in `\input_buffer'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+2.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \input_buffer..
+Removed 0 unused cells and 42 unused wires.
+<suppressed ~1 debug messages>
+
+2.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module input_buffer.
+
+2.8.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.8.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \input_buffer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~82 debug messages>
+
+2.8.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \input_buffer.
+Performed a total of 0 changes.
+
+2.8.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\input_buffer'.
+Computing hashes of 296 cells of `\input_buffer'.
+Finding duplicate cells in `\input_buffer'.
+Removed a total of 0 cells.
+
+2.8.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \input_buffer..
+
+2.8.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module input_buffer.
+
+2.8.14. Finished fast OPT passes. (There is nothing left to do.)
+
+2.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:27$81 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:27$83 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:27$85 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$129 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$138 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$147 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$156 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$165 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$174 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$183 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$192 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$201 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$210 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$219 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$228 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$237 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$246 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$255 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$264 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$273 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$282 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$291 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$300 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$309 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$318 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$327 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$336 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$345 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$354 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$363 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$372 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$381 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$390 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$399 (mem).
+Removed top 27 address bits (of 32) from memory read port input_buffer.$memrd$\mem$input_buffer.sv:57$408 (mem).
+Removed top 30 bits (of 32) from port B of cell input_buffer.$add$input_buffer.sv:27$82 ($add).
+Removed top 27 bits (of 32) from port Y of cell input_buffer.$add$input_buffer.sv:27$82 ($add).
+Removed top 30 bits (of 32) from port B of cell input_buffer.$add$input_buffer.sv:27$84 ($add).
+Removed top 27 bits (of 32) from port Y of cell input_buffer.$add$input_buffer.sv:27$84 ($add).
+Removed top 31 bits (of 32) from port B of cell input_buffer.$add$input_buffer.sv:27$86 ($add).
+Removed top 27 bits (of 32) from port Y of cell input_buffer.$add$input_buffer.sv:27$86 ($add).
+Removed top 26 bits (of 32) from port B of cell input_buffer.$lt$input_buffer.sv:39$92 ($lt).
+Removed top 27 bits (of 32) from port B of cell input_buffer.$lt$input_buffer.sv:40$94 ($lt).
+Removed top 27 bits (of 32) from wire input_buffer.$add$input_buffer.sv:27$82_Y.
+Removed top 27 bits (of 32) from wire input_buffer.$add$input_buffer.sv:27$84_Y.
+Removed top 27 bits (of 32) from wire input_buffer.$add$input_buffer.sv:27$86_Y.
+Removed top 7 bits (of 8) from wire input_buffer.$past$input_buffer.sv:57$25$0.
+
+2.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \input_buffer..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~1 debug messages>
+
+2.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.12. Executing OPT pass (performing simple optimizations).
+
+2.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module input_buffer.
+
+2.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\input_buffer'.
+Computing hashes of 258 cells of `\input_buffer'.
+Finding duplicate cells in `\input_buffer'.
+Removed a total of 0 cells.
+
+2.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \input_buffer..
+
+2.12.4. Finished fast OPT passes.
+
+2.13. Printing statistics.
+
+=== input_buffer ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      261 wires
+      842 wire bits
+        9 public wires
+       55 public wire bits
+        8 ports
+       54 port bits
+      258 cells
+        3   $add
+       40   $check
+       68   $dff
+       37   $eq
+       33   $logic_and
+       33   $logic_not
+        2   $lt
+        1   $mem_v2
+       41   $mux
+
+2.14. Executing CHECK pass (checking for obvious problems).
+Checking module input_buffer...
+Found and reported 0 problems.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `input_buffer'. Setting top module to input_buffer.
+
+3.1. Analyzing design hierarchy..
+Top module:  \input_buffer
+
+3.2. Analyzing design hierarchy..
+Top module:  \input_buffer
+Removed 0 unused modules.
+Module input_buffer directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4. Executing jny backend.
+
+5. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: 5d01a19ec9, CPU: user 0.03s system 0.01s, MEM: 19.77 MB peak
+Yosys 0.60+95 (git sha1 991e70489, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)
+Time spent: 25% 5x opt_clean (0 sec), 18% 2x hierarchy (0 sec), ...

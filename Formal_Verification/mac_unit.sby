@@ -1,0 +1,18 @@
+[tasks]
+prf
+cvr
+
+[options]
+cvr: mode cover
+prf: mode prove
+depth 100
+
+[engines]
+smtbmc
+
+[script]
+read -formal mac_unit.sv
+prep -top mac_unit
+
+[files]
+mac_unit.sv

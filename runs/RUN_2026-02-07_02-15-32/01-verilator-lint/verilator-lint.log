@@ -1,0 +1,123 @@
+%Warning-WIDTHEXPAND: mac_unit.sv:24:28: Operator ADD expects 18 bits on the RHS, but RHS's VARREF 'prod' generates 15 bits.
+                                       : ... note: In instance 'mm_top.u_mac_4'
+   24 |       temp_res <= temp_res + prod;
+      |                            ^
+                      /home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:3:1: ... note: In file included from 'mm_top.sv'
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.038
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: /home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:140:9: Output port connection 'A_DOUT' expects 32 bits on the pin connection, but pin connection's VARREF 'read_shift' generates 18 bits.
+                                                                             : ... note: In instance 'mm_top'
+  140 |        .A_DOUT(read_shift),      
+      |         ^~~~~~
+%Warning-PROCASSINIT: mac_unit.sv:15:25: Procedural assignment to declaration with initial value: 'temp_res'
+                                       : ... note: In instance 'mm_top.u_mac_4'
+                                       : ... Location of variable initialization
+   15 |   logic [17:0] temp_res=18'd0;
+      |                         ^~~~~
+                      /home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:3:1: ... note: In file included from 'mm_top.sv'
+                      mac_unit.sv:22:7: ... Location of variable process write
+                                      : ... Perhaps should initialize instead using a reset in this process
+   22 |       temp_res <= 18'd0;
+      |       ^~~~~~~~
+                      ... For warning description see https://verilator.org/warn/PROCASSINIT?v=5.038
+                      ... Use "/* verilator lint_off PROCASSINIT */" and lint_on around source to disable this message.
+%Warning-PROCASSINIT: controller.sv:39:27: Procedural assignment to declaration with initial value: 'input_cnt'
+                                         : ... note: In instance 'mm_top.u_ctrl'
+                                         : ... Location of variable initialization
+   39 |     logic [4:0] input_cnt=5'd0;
+      |                           ^~~~
+                      /home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:5:1: ... note: In file included from 'mm_top.sv'
+                      controller.sv:112:10: ... Location of variable process write
+                                          : ... Perhaps should initialize instead using a reset in this process
+  112 |          input_cnt <= 0;
+      |          ^~~~~~~~~
+%Warning-PROCASSINIT: controller.sv:41:23: Procedural assignment to declaration with initial value: 'k_cnt'
+                                         : ... note: In instance 'mm_top.u_ctrl'
+                                         : ... Location of variable initialization
+   41 |     logic [2:0] k_cnt=3'd0;
+      |                       ^~~~
+                      /home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:5:1: ... note: In file included from 'mm_top.sv'
+                      controller.sv:129:13: ... Location of variable process write
+                                          : ... Perhaps should initialize instead using a reset in this process
+  129 |             k_cnt <= 3'd0;
+      |             ^~~~~
+%Warning-UNUSEDSIGNAL: controller.sv:47:16: Signal is not driven, nor used: 'read_addr'
+                                          : ... note: In instance 'mm_top.u_ctrl'
+   47 |    logic [3:0] read_addr;
+      |                ^~~~~~~~~
+                       /home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:5:1: ... note: In file included from 'mm_top.sv'
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.038
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: /home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v:32:11: Signal is not used: 'A_CLK'
+                                                                                                   : ... note: In instance 'mm_top.u_ram'
+   32 |     input A_CLK;
+      |           ^~~~~
+%Warning-UNUSEDSIGNAL: /home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v:33:11: Signal is not used: 'A_MEN'
+                                                                                                   : ... note: In instance 'mm_top.u_ram'
+   33 |     input A_MEN;
+      |           ^~~~~
+%Warning-UNUSEDSIGNAL: /home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v:34:11: Signal is not used: 'A_WEN'
+                                                                                                   : ... note: In instance 'mm_top.u_ram'
+   34 |     input A_WEN;
+      |           ^~~~~
+%Warning-UNUSEDSIGNAL: /home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v:35:11: Signal is not used: 'A_REN'
+                                                                                                   : ... note: In instance 'mm_top.u_ram'
+   35 |     input A_REN;
+      |           ^~~~~
+%Warning-UNUSEDSIGNAL: /home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v:36:17: Signal is not used: 'A_ADDR'
+                                                                                                   : ... note: In instance 'mm_top.u_ram'
+   36 |     input [8:0] A_ADDR;
+      |                 ^~~~~~
+%Warning-UNUSEDSIGNAL: /home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v:37:18: Signal is not used: 'A_DIN'
+                                                                                                   : ... note: In instance 'mm_top.u_ram'
+   37 |     input [31:0] A_DIN;
+      |                  ^~~~~
+%Warning-UNUSEDSIGNAL: /home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v:38:11: Signal is not used: 'A_DLY'
+                                                                                                   : ... note: In instance 'mm_top.u_ram'
+   38 |     input A_DLY;
+      |           ^~~~~
+%Warning-UNDRIVEN: /home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v:39:19: Signal is not driven: 'A_DOUT'
+                                                                                               : ... note: In instance 'mm_top.u_ram'
+   39 |     output [31:0] A_DOUT;
+      |                   ^~~~~~
+                   ... For warning description see https://verilator.org/warn/UNDRIVEN?v=5.038
+                   ... Use "/* verilator lint_off UNDRIVEN */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: /home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v:40:18: Signal is not used: 'A_BM'
+                                                                                                   : ... note: In instance 'mm_top.u_ram'
+   40 |     input [31:0] A_BM;
+      |                  ^~~~
+%Warning-UNUSEDSIGNAL: /home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v:41:11: Signal is not used: 'A_BIST_CLK'
+                                                                                                   : ... note: In instance 'mm_top.u_ram'
+   41 |     input A_BIST_CLK;
+      |           ^~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v:42:11: Signal is not used: 'A_BIST_EN'
+                                                                                                   : ... note: In instance 'mm_top.u_ram'
+   42 |     input A_BIST_EN;
+      |           ^~~~~~~~~
+%Warning-UNUSEDSIGNAL: /home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v:43:11: Signal is not used: 'A_BIST_MEN'
+                                                                                                   : ... note: In instance 'mm_top.u_ram'
+   43 |     input A_BIST_MEN;
+      |           ^~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v:44:11: Signal is not used: 'A_BIST_WEN'
+                                                                                                   : ... note: In instance 'mm_top.u_ram'
+   44 |     input A_BIST_WEN;
+      |           ^~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v:45:11: Signal is not used: 'A_BIST_REN'
+                                                                                                   : ... note: In instance 'mm_top.u_ram'
+   45 |     input A_BIST_REN;
+      |           ^~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v:46:17: Signal is not used: 'A_BIST_ADDR'
+                                                                                                   : ... note: In instance 'mm_top.u_ram'
+   46 |     input [8:0] A_BIST_ADDR;
+      |                 ^~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v:47:18: Signal is not used: 'A_BIST_DIN'
+                                                                                                   : ... note: In instance 'mm_top.u_ram'
+   47 |     input [31:0] A_BIST_DIN;
+      |                  ^~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /home/fawad/matrixMul/Matrix_Multiplier/RM_IHPSG13_1P_512x32_c2_stub.v:48:18: Signal is not used: 'A_BIST_BM'
+                                                                                                   : ... note: In instance 'mm_top.u_ram'
+   48 |     input [31:0] A_BIST_BM;
+      |                  ^~~~~~~~~
+- V e r i l a t i o n   R e p o r t: Verilator 5.038 2025-07-08 rev v5.038
+- Verilator: Built from 0.150 MB sources in 91 modules, into 0.024 MB in 5 C++ files needing 0.000 MB
+- Verilator: Walltime 0.020 s (elab=0.002, cvt=0.008, bld=0.000); cpu 0.020 s on 1 threads; alloced 11.285 MB

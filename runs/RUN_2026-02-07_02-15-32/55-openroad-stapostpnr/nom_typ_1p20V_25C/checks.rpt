@@ -1,0 +1,492 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= nom_typ_1p20V_25C Corner ===================================
+
+Startpoint: u_ctrl.k_cnt[2]$_SDFFE_PP0P_
+            (rising edge-triggered flip-flop clocked by clk)
+Endpoint: u_mac_1.temp_res[17]$_SDFF_PP0_
+          (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                                  0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock source latency
+     2    0.096731    0.107649    0.088791    0.088791 ^ clk (in)
+                                                         clk (net)
+                      0.121239    0.000000    0.088791 ^ clkbuf_regs_0_clk/A (sg13g2_buf_8)
+     1    0.009071    0.023246    0.104705    0.193496 ^ clkbuf_regs_0_clk/X (sg13g2_buf_8)
+                                                         clk_regs (net)
+                      0.023248    0.000370    0.193866 ^ clkbuf_0_clk_regs/A (sg13g2_buf_8)
+     8    0.168969    0.097053    0.118364    0.312230 ^ clkbuf_0_clk_regs/X (sg13g2_buf_8)
+                                                         clknet_0_clk_regs (net)
+                      0.097410    0.004908    0.317138 ^ clkbuf_3_4__f_clk_regs/A (sg13g2_buf_8)
+     7    0.136771    0.083105    0.139001    0.456139 ^ clkbuf_3_4__f_clk_regs/X (sg13g2_buf_8)
+                                                         clknet_3_4__leaf_clk_regs (net)
+                      0.087736    0.015252    0.471391 ^ clkbuf_leaf_39_clk_regs/A (sg13g2_buf_8)
+     8    0.045483    0.037204    0.106426    0.577817 ^ clkbuf_leaf_39_clk_regs/X (sg13g2_buf_8)
+                                                         clknet_leaf_39_clk_regs (net)
+                      0.037480    0.002099    0.579916 ^ u_ctrl.k_cnt[2]$_SDFFE_PP0P_/CLK (sg13g2_dfrbpq_2)
+     4    0.018297    0.040786    0.198952    0.778868 v u_ctrl.k_cnt[2]$_SDFFE_PP0P_/Q (sg13g2_dfrbpq_2)
+                                                         u_ctrl.k_cnt[2] (net)
+                      0.040790    0.000470    0.779337 v hold373/A (sg13g2_dlygate4sd3_1)
+     1    0.008718    0.053174    0.397927    1.177264 v hold373/X (sg13g2_dlygate4sd3_1)
+                                                         net1174 (net)
+                      0.053174    0.000355    1.177619 v fanout807/A (sg13g2_buf_8)
+     8    0.045718    0.032576    0.093582    1.271201 v fanout807/X (sg13g2_buf_8)
+                                                         net807 (net)
+                      0.034036    0.005263    1.276465 v _3699_/A (sg13g2_nor2_1)
+     1    0.009110    0.091497    0.094172    1.370636 ^ _3699_/Y (sg13g2_nor2_1)
+                                                         _0786_ (net)
+                      0.091506    0.000722    1.371358 ^ fanout743/A (sg13g2_buf_8)
+     6    0.079001    0.053694    0.118989    1.490347 ^ fanout743/X (sg13g2_buf_8)
+                                                         net743 (net)
+                      0.054551    0.005316    1.495663 ^ fanout741/A (sg13g2_buf_8)
+     8    0.068177    0.046710    0.097715    1.593378 ^ fanout741/X (sg13g2_buf_8)
+                                                         net741 (net)
+                      0.047390    0.004351    1.597730 ^ fanout739/A (sg13g2_buf_8)
+     8    0.064955    0.044954    0.093253    1.690983 ^ fanout739/X (sg13g2_buf_8)
+                                                         net739 (net)
+                      0.045272    0.002922    1.693905 ^ _3703_/A1 (sg13g2_a22oi_1)
+     1    0.006958    0.067560    0.081367    1.775272 v _3703_/Y (sg13g2_a22oi_1)
+                                                         _0790_ (net)
+                      0.067561    0.000532    1.775804 v _3707_/A1 (sg13g2_a21oi_2)
+     7    0.078986    0.343238    0.282688    2.058492 ^ _3707_/Y (sg13g2_a21oi_2)
+                                                         _0794_ (net)
+                      0.344048    0.013708    2.072200 ^ _3863_/B1 (sg13g2_o21ai_1)
+     1    0.021528    0.207495    0.237822    2.310023 v _3863_/Y (sg13g2_o21ai_1)
+                                                         _0949_ (net)
+                      0.207513    0.001833    2.311856 v _3866_/B (sg13g2_xor2_1)
+     2    0.018064    0.185263    0.214505    2.526361 ^ _3866_/X (sg13g2_xor2_1)
+                                                         _0952_ (net)
+                      0.185271    0.001355    2.527716 ^ _3893_/B (sg13g2_xnor2_1)
+     2    0.012904    0.152036    0.179381    2.707097 ^ _3893_/Y (sg13g2_xnor2_1)
+                                                         _0979_ (net)
+                      0.152047    0.001021    2.708118 ^ _3901_/B (sg13g2_xor2_1)
+     2    0.010269    0.112030    0.175204    2.883322 ^ _3901_/X (sg13g2_xor2_1)
+                                                         _0987_ (net)
+                      0.112032    0.000662    2.883984 ^ _3927_/B (sg13g2_xor2_1)
+     2    0.010608    0.115566    0.166070    3.050054 ^ _3927_/X (sg13g2_xor2_1)
+                                                         _1013_ (net)
+                      0.115622    0.000976    3.051030 ^ _3930_/B (sg13g2_xnor2_1)
+     2    0.010143    0.120228    0.138703    3.189733 ^ _3930_/Y (sg13g2_xnor2_1)
+                                                         _1016_ (net)
+                      0.120229    0.000566    3.190299 ^ _3952_/B (sg13g2_xor2_1)
+     2    0.010160    0.117616    0.165733    3.356032 ^ _3952_/X (sg13g2_xor2_1)
+                                                         _1038_ (net)
+                      0.117621    0.000938    3.356970 ^ _3954_/B (sg13g2_xnor2_1)
+     2    0.009278    0.114199    0.133800    3.490770 ^ _3954_/Y (sg13g2_xnor2_1)
+                                                         _1040_ (net)
+                      0.114199    0.000326    3.491096 ^ _3959_/B (sg13g2_xor2_1)
+     2    0.011088    0.117417    0.169464    3.660560 ^ _3959_/X (sg13g2_xor2_1)
+                                                         _1045_ (net)
+                      0.117469    0.000854    3.661414 ^ _4001_/A (sg13g2_xnor2_1)
+     3    0.016343    0.170289    0.181656    3.843070 ^ _4001_/Y (sg13g2_xnor2_1)
+                                                         _1087_ (net)
+                      0.170291    0.000518    3.843587 ^ _4026_/B (sg13g2_xor2_1)
+     2    0.009644    0.117415    0.176561    4.020148 ^ _4026_/X (sg13g2_xor2_1)
+                                                         _1112_ (net)
+                      0.117417    0.000705    4.020853 ^ _4051_/B (sg13g2_xor2_1)
+     3    0.012553    0.127880    0.178930    4.199783 ^ _4051_/X (sg13g2_xor2_1)
+                                                         _1137_ (net)
+                      0.127887    0.000730    4.200513 ^ _4052_/A2 (sg13g2_a21oi_1)
+     3    0.015133    0.123161    0.148058    4.348570 v _4052_/Y (sg13g2_a21oi_1)
+                                                         _1138_ (net)
+                      0.123169    0.001068    4.349638 v _4054_/A1 (sg13g2_o21ai_1)
+     4    0.016697    0.196955    0.215651    4.565289 ^ _4054_/Y (sg13g2_o21ai_1)
+                                                         _1140_ (net)
+                      0.196967    0.001290    4.566580 ^ _4057_/B1 (sg13g2_a221oi_1)
+     2    0.008294    0.112426    0.142815    4.709394 v _4057_/Y (sg13g2_a221oi_1)
+                                                         _1143_ (net)
+                      0.112426    0.000499    4.709893 v _4059_/C (sg13g2_or3_1)
+     4    0.013890    0.067460    0.189096    4.898989 v _4059_/X (sg13g2_or3_1)
+                                                         _1145_ (net)
+                      0.067467    0.000707    4.899696 v _4108_/B2 (sg13g2_a221oi_1)
+     1    0.004864    0.129392    0.159993    5.059689 ^ _4108_/Y (sg13g2_a221oi_1)
+                                                         _1192_ (net)
+                      0.129392    0.000343    5.060032 ^ _4130_/A1 (sg13g2_o21ai_1)
+     3    0.012623    0.098840    0.136520    5.196552 v _4130_/Y (sg13g2_o21ai_1)
+                                                         _1212_ (net)
+                      0.098841    0.000548    5.197100 v _4133_/A2 (sg13g2_o21ai_1)
+     3    0.011642    0.150974    0.166288    5.363389 ^ _4133_/Y (sg13g2_o21ai_1)
+                                                         _1214_ (net)
+                      0.150978    0.000671    5.364060 ^ _4135_/B (sg13g2_and2_1)
+     3    0.013083    0.065894    0.154182    5.518242 ^ _4135_/X (sg13g2_and2_1)
+                                                         _1216_ (net)
+                      0.065902    0.000768    5.519010 ^ _4140_/A2 (sg13g2_a21oi_1)
+     1    0.002663    0.043092    0.068560    5.587570 v _4140_/Y (sg13g2_a21oi_1)
+                                                         _1219_ (net)
+                      0.043092    0.000176    5.587747 v hold323/A (sg13g2_dlygate4sd3_1)
+     1    0.004096    0.039950    0.383201    5.970948 v hold323/X (sg13g2_dlygate4sd3_1)
+                                                         net1124 (net)
+                      0.039950    0.000287    5.971235 v _4142_/B (sg13g2_nor3_1)
+     1    0.003815    0.086867    0.103281    6.074516 ^ _4142_/Y (sg13g2_nor3_1)
+                                                         _0312_ (net)
+                      0.086867    0.000204    6.074720 ^ hold324/A (sg13g2_dlygate4sd3_1)
+     1    0.001617    0.029721    0.382741    6.457461 ^ hold324/X (sg13g2_dlygate4sd3_1)
+                                                         net1125 (net)
+                      0.029721    0.000062    6.457523 ^ u_mac_1.temp_res[17]$_SDFF_PP0_/D (sg13g2_dfrbpq_2)
+                                              6.457523   data arrival time
+
+                                 10.000000   10.000000   clock clk (rise edge)
+                                  0.000000   10.000000   clock source latency
+     2    0.096731    0.107649    0.088791   10.088792 ^ clk (in)
+                                                         clk (net)
+                      0.121239    0.000000   10.088792 ^ clkbuf_regs_0_clk/A (sg13g2_buf_8)
+     1    0.009071    0.023246    0.104705   10.193496 ^ clkbuf_regs_0_clk/X (sg13g2_buf_8)
+                                                         clk_regs (net)
+                      0.023248    0.000370   10.193867 ^ clkbuf_0_clk_regs/A (sg13g2_buf_8)
+     8    0.168969    0.097053    0.118364   10.312230 ^ clkbuf_0_clk_regs/X (sg13g2_buf_8)
+                                                         clknet_0_clk_regs (net)
+                      0.097410    0.004908   10.317139 ^ clkbuf_3_4__f_clk_regs/A (sg13g2_buf_8)
+     7    0.136771    0.083105    0.139001   10.456140 ^ clkbuf_3_4__f_clk_regs/X (sg13g2_buf_8)
+                                                         clknet_3_4__leaf_clk_regs (net)
+                      0.083251    0.003077   10.459216 ^ clkbuf_leaf_11_clk_regs/A (sg13g2_buf_8)
+     8    0.047593    0.037991    0.105237   10.564453 ^ clkbuf_leaf_11_clk_regs/X (sg13g2_buf_8)
+                                                         clknet_leaf_11_clk_regs (net)
+                      0.038054    0.001287   10.565740 ^ u_mac_1.temp_res[17]$_SDFF_PP0_/CLK (sg13g2_dfrbpq_2)
+                                 -0.250000   10.315740   clock uncertainty
+                                  0.000000   10.315740   clock reconvergence pessimism
+                                 -0.113201   10.202538   library setup time
+                                             10.202538   data required time
+---------------------------------------------------------------------------------------------
+                                             10.202538   data required time
+                                             -6.457523   data arrival time
+---------------------------------------------------------------------------------------------
+                                              3.745016   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= nom_typ_1p20V_25C Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= nom_typ_1p20V_25C Corner ===================================
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 11 unannotated drivers.
+ clkload0/X
+ clkload1/X
+ clkload10/Y
+ clkload2/X
+ clkload3/X
+ clkload4/X
+ clkload5/Y
+ clkload6/X
+ clkload7/Y
+ clkload8/Y
+ clkload9/Y
+Found 144 partially unannotated drivers.
+ _5463_/Y
+  u_ram/A_ADDR[8]
+ _5467_/Y
+  u_ram/A_ADDR[7]
+ _5471_/Y
+  u_ram/A_ADDR[6]
+ _5475_/Y
+  u_ram/A_ADDR[5]
+ _5487_/Y
+  u_ram/A_ADDR[3]
+ _5493_/Y
+  u_ram/A_ADDR[2]
+ _5499_/Y
+  u_ram/A_ADDR[1]
+ _5504_/Y
+  u_ram/A_ADDR[0]
+ _5576_/Y
+  u_ram/A_DIN[31]
+ _5580_/Y
+  u_ram/A_DIN[21]
+ _5584_/Y
+  u_ram/A_DIN[20]
+ _5588_/Y
+  u_ram/A_DIN[19]
+ _5592_/Y
+  u_ram/A_DIN[18]
+ _5596_/Y
+  u_ram/A_DIN[17]
+ _5600_/Y
+  u_ram/A_DIN[16]
+ _5604_/Y
+  u_ram/A_DIN[15]
+ _5608_/Y
+  u_ram/A_DIN[14]
+ _5612_/Y
+  u_ram/A_DIN[30]
+ _5616_/Y
+  u_ram/A_DIN[29]
+ _5620_/Y
+  u_ram/A_DIN[28]
+ _5624_/Y
+  u_ram/A_DIN[27]
+ _5628_/Y
+  u_ram/A_DIN[26]
+ _5632_/Y
+  u_ram/A_DIN[25]
+ _5636_/Y
+  u_ram/A_DIN[24]
+ _5640_/Y
+  u_ram/A_DIN[23]
+ _5644_/Y
+  u_ram/A_DIN[22]
+ u_ram_100/L_LO
+  u_ram/A_DIN[12]
+ u_ram_101/L_LO
+  u_ram/A_DIN[11]
+ u_ram_102/L_LO
+  u_ram/A_DIN[10]
+ u_ram_103/L_LO
+  u_ram/A_DIN[9]
+ u_ram_104/L_LO
+  u_ram/A_DIN[8]
+ u_ram_105/L_LO
+  u_ram/A_DIN[7]
+ u_ram_106/L_LO
+  u_ram/A_DIN[6]
+ u_ram_107/L_LO
+  u_ram/A_DIN[5]
+ u_ram_108/L_LO
+  u_ram/A_DIN[4]
+ u_ram_109/L_LO
+  u_ram/A_DIN[3]
+ u_ram_110/L_LO
+  u_ram/A_DIN[2]
+ u_ram_111/L_LO
+  u_ram/A_DIN[1]
+ u_ram_112/L_LO
+  u_ram/A_DIN[0]
+ u_ram_21/L_LO
+  u_ram/A_BIST_ADDR[8]
+ u_ram_22/L_LO
+  u_ram/A_BIST_ADDR[7]
+ u_ram_23/L_LO
+  u_ram/A_BIST_ADDR[6]
+ u_ram_24/L_LO
+  u_ram/A_BIST_ADDR[5]
+ u_ram_26/L_LO
+  u_ram/A_BIST_ADDR[3]
+ u_ram_27/L_LO
+  u_ram/A_BIST_ADDR[2]
+ u_ram_28/L_LO
+  u_ram/A_BIST_ADDR[1]
+ u_ram_29/L_LO
+  u_ram/A_BIST_ADDR[0]
+ u_ram_30/L_LO
+  u_ram/A_BIST_BM[31]
+ u_ram_31/L_LO
+  u_ram/A_BIST_BM[30]
+ u_ram_32/L_LO
+  u_ram/A_BIST_BM[29]
+ u_ram_33/L_LO
+  u_ram/A_BIST_BM[28]
+ u_ram_34/L_LO
+  u_ram/A_BIST_BM[27]
+ u_ram_35/L_LO
+  u_ram/A_BIST_BM[26]
+ u_ram_36/L_LO
+  u_ram/A_BIST_BM[25]
+ u_ram_37/L_LO
+  u_ram/A_BIST_BM[24]
+ u_ram_38/L_LO
+  u_ram/A_BIST_BM[23]
+ u_ram_39/L_LO
+  u_ram/A_BIST_BM[22]
+ u_ram_40/L_LO
+  u_ram/A_BIST_BM[21]
+ u_ram_41/L_LO
+  u_ram/A_BIST_BM[20]
+ u_ram_42/L_LO
+  u_ram/A_BIST_BM[19]
+ u_ram_43/L_LO
+  u_ram/A_BIST_BM[18]
+ u_ram_44/L_LO
+  u_ram/A_BIST_BM[17]
+ u_ram_45/L_LO
+  u_ram/A_BIST_BM[16]
+ u_ram_46/L_LO
+  u_ram/A_BIST_BM[15]
+ u_ram_47/L_LO
+  u_ram/A_BIST_BM[14]
+ u_ram_48/L_LO
+  u_ram/A_BIST_BM[13]
+ u_ram_489/L_HI
+  u_ram/A_BM[31]
+ u_ram_49/L_LO
+  u_ram/A_BIST_BM[12]
+ u_ram_490/L_HI
+  u_ram/A_BM[30]
+ u_ram_491/L_HI
+  u_ram/A_BM[29]
+ u_ram_492/L_HI
+  u_ram/A_BM[28]
+ u_ram_493/L_HI
+  u_ram/A_BM[27]
+ u_ram_494/L_HI
+  u_ram/A_BM[26]
+ u_ram_495/L_HI
+  u_ram/A_BM[25]
+ u_ram_496/L_HI
+  u_ram/A_BM[24]
+ u_ram_497/L_HI
+  u_ram/A_BM[23]
+ u_ram_498/L_HI
+  u_ram/A_BM[22]
+ u_ram_499/L_HI
+  u_ram/A_BM[21]
+ u_ram_50/L_LO
+  u_ram/A_BIST_BM[11]
+ u_ram_500/L_HI
+  u_ram/A_BM[20]
+ u_ram_501/L_HI
+  u_ram/A_BM[19]
+ u_ram_502/L_HI
+  u_ram/A_BM[18]
+ u_ram_503/L_HI
+  u_ram/A_BM[17]
+ u_ram_504/L_HI
+  u_ram/A_BM[16]
+ u_ram_505/L_HI
+  u_ram/A_BM[15]
+ u_ram_506/L_HI
+  u_ram/A_BM[14]
+ u_ram_507/L_HI
+  u_ram/A_BM[13]
+ u_ram_508/L_HI
+  u_ram/A_BM[12]
+ u_ram_509/L_HI
+  u_ram/A_BM[11]
+ u_ram_51/L_LO
+  u_ram/A_BIST_BM[10]
+ u_ram_510/L_HI
+  u_ram/A_BM[10]
+ u_ram_511/L_HI
+  u_ram/A_BM[9]
+ u_ram_512/L_HI
+  u_ram/A_BM[8]
+ u_ram_513/L_HI
+  u_ram/A_BM[7]
+ u_ram_514/L_HI
+  u_ram/A_BM[6]
+ u_ram_515/L_HI
+  u_ram/A_BM[5]
+ u_ram_516/L_HI
+  u_ram/A_BM[4]
+ u_ram_517/L_HI
+  u_ram/A_BM[3]
+ u_ram_518/L_HI
+  u_ram/A_BM[2]
+ u_ram_519/L_HI
+  u_ram/A_BM[1]
+ u_ram_52/L_LO
+  u_ram/A_BIST_BM[9]
+ u_ram_520/L_HI
+  u_ram/A_BM[0]
+ u_ram_53/L_LO
+  u_ram/A_BIST_BM[8]
+ u_ram_54/L_LO
+  u_ram/A_BIST_BM[7]
+ u_ram_55/L_LO
+  u_ram/A_BIST_BM[6]
+ u_ram_56/L_LO
+  u_ram/A_BIST_BM[5]
+ u_ram_57/L_LO
+  u_ram/A_BIST_BM[4]
+ u_ram_58/L_LO
+  u_ram/A_BIST_BM[3]
+ u_ram_59/L_LO
+  u_ram/A_BIST_BM[2]
+ u_ram_60/L_LO
+  u_ram/A_BIST_BM[1]
+ u_ram_61/L_LO
+  u_ram/A_BIST_BM[0]
+ u_ram_63/L_LO
+  u_ram/A_BIST_DIN[31]
+ u_ram_64/L_LO
+  u_ram/A_BIST_DIN[30]
+ u_ram_65/L_LO
+  u_ram/A_BIST_DIN[29]
+ u_ram_66/L_LO
+  u_ram/A_BIST_DIN[28]
+ u_ram_67/L_LO
+  u_ram/A_BIST_DIN[27]
+ u_ram_68/L_LO
+  u_ram/A_BIST_DIN[26]
+ u_ram_69/L_LO
+  u_ram/A_BIST_DIN[25]
+ u_ram_70/L_LO
+  u_ram/A_BIST_DIN[24]
+ u_ram_71/L_LO
+  u_ram/A_BIST_DIN[23]
+ u_ram_72/L_LO
+  u_ram/A_BIST_DIN[22]
+ u_ram_73/L_LO
+  u_ram/A_BIST_DIN[21]
+ u_ram_74/L_LO
+  u_ram/A_BIST_DIN[20]
+ u_ram_75/L_LO
+  u_ram/A_BIST_DIN[19]
+ u_ram_76/L_LO
+  u_ram/A_BIST_DIN[18]
+ u_ram_77/L_LO
+  u_ram/A_BIST_DIN[17]
+ u_ram_78/L_LO
+  u_ram/A_BIST_DIN[16]
+ u_ram_79/L_LO
+  u_ram/A_BIST_DIN[15]
+ u_ram_80/L_LO
+  u_ram/A_BIST_DIN[14]
+ u_ram_81/L_LO
+  u_ram/A_BIST_DIN[13]
+ u_ram_82/L_LO
+  u_ram/A_BIST_DIN[12]
+ u_ram_83/L_LO
+  u_ram/A_BIST_DIN[11]
+ u_ram_84/L_LO
+  u_ram/A_BIST_DIN[10]
+ u_ram_85/L_LO
+  u_ram/A_BIST_DIN[9]
+ u_ram_86/L_LO
+  u_ram/A_BIST_DIN[8]
+ u_ram_87/L_LO
+  u_ram/A_BIST_DIN[7]
+ u_ram_88/L_LO
+  u_ram/A_BIST_DIN[6]
+ u_ram_89/L_LO
+  u_ram/A_BIST_DIN[5]
+ u_ram_90/L_LO
+  u_ram/A_BIST_DIN[4]
+ u_ram_91/L_LO
+  u_ram/A_BIST_DIN[3]
+ u_ram_92/L_LO
+  u_ram/A_BIST_DIN[2]
+ u_ram_93/L_LO
+  u_ram/A_BIST_DIN[1]
+ u_ram_94/L_LO
+  u_ram/A_BIST_DIN[0]
+ u_ram_99/L_LO
+  u_ram/A_DIN[13]
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================

@@ -1,0 +1,37 @@
+Reading technology LEF file at '/home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_tech.lef'…
+[INFO ODB-0227] LEF file: /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_tech.lef, created 19 layers, 70 vias
+Reading cell LEF file at '/home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_stdcell.lef'…
+[INFO ODB-0227] LEF file: /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_stdcell.lef, created 84 library cells
+Reading macro LEF file at '/home/fawad/matrixMul/Matrix_Multiplier/macros/RM_IHPSG13_1P_512x32_c2_bm_bist.lef'…
+[INFO ODB-0227] LEF file: /home/fawad/matrixMul/Matrix_Multiplier/macros/RM_IHPSG13_1P_512x32_c2_bm_bist.lef, created 1 library cells
+[INFO ODB-0127] Reading DEF file: /home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/53-odb-cellfrequencytables/mm_top.def
+[INFO ODB-0128] Design: mm_top
+[INFO ODB-0130]     Created 24 pins.
+[INFO ODB-0131]     Created 34571 components and 82117 component-terminals.
+[INFO ODB-0132]     Created 4 special nets and 69143 connections.
+[INFO ODB-0133]     Created 4353 nets and 12963 connections.
+[INFO ODB-0134] Finished DEF file: /home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/53-odb-cellfrequencytables/mm_top.def
+Using RCX ruleset '/home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.tech/librelane/IHP_rcx_patterns.rules'…
+[INFO RCX-0431] Defined process_corner CURRENT_CORNER with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner CURRENT_CORNER
++ extract_parasitics  -ext_model_file /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.tech/librelane/IHP_rcx_patterns.rules -lef_res
+[INFO RCX-0435] Reading extraction model file /home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.tech/librelane/IHP_rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation mm_top (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 16654 rc segments
+[INFO RCX-0439] Coupling Cap extraction mm_top ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 50% of 25574 wires extracted
+[INFO RCX-0442] 100% of 25574 wires extracted
+[INFO RCX-0045] Extract 4355 nets, 20993 rsegs, 20993 caps, 26770 ccs
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+u_ram matched with u_ram
+u_ram matched with u_ram
+Updating metrics…
+Cell type report:                       Count       Area
+  Macro                                     1   79719.90
+  Fill cell                             30250  351634.35
+  Standard cell                          4320   64520.06
+  Total                                 34571  495874.31
+Writing extracted parasitics to '/home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/54-openroad-rcx/nom/mm_top.nom.spef'…
+[INFO RCX-0443] 4353 nets finished

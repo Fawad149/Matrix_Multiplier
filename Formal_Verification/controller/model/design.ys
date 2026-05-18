@@ -1,0 +1,8 @@
+# running in controller/src/
+read -formal controller.sv
+prep -top controller
+
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

@@ -1,0 +1,21 @@
+initial
+assume (= [$auto$async2sync.cc:107:execute$78] false)
+assume (= [$auto$async2sync.cc:116:execute$82] true)
+assume (= [en_count] #b1000)
+assume (= [temp_res] #b000000000000000000)
+
+state 0
+assume (= [clk] false)
+assume (= [clr] false)
+assume (= [en] false)
+assume (= [rst] false)
+assume (= [w] #b0000000)
+assume (= [x] #b00000000)
+
+state 1
+assume (= [clk] false)
+assume (= [clr] false)
+assume (= [en] false)
+assume (= [rst] false)
+assume (= [w] #b0000000)
+assume (= [x] #b00000000)

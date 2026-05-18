@@ -1,0 +1,9 @@
+
+16. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\mm_top.\mac_acc[0]' from process `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:0$106'.
+No latch inferred for signal `\mm_top.\mac_acc[1]' from process `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:0$106'.
+No latch inferred for signal `\mm_top.\mac_acc[2]' from process `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:0$106'.
+No latch inferred for signal `\mm_top.\mac_acc[3]' from process `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:0$106'.
+No latch inferred for signal `\mm_top.\result_ram' from process `\mm_top.$proc$/home/fawad/matrixMul/Matrix_Multiplier/mm_top.sv:0$94'.
+No latch inferred for signal `\rom_coeff.\data' from process `\rom_coeff.$proc$rom_coeff.sv:0$33'.
+No latch inferred for signal `\controller.\next_state' from process `\controller.$proc$controller.sv:0$56'.

@@ -1,0 +1,8 @@
+# running in mac_unit/src/
+read -formal mac_unit.sv
+prep -top mac_unit
+
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

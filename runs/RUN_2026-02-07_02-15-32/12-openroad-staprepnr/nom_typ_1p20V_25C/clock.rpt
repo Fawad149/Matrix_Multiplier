@@ -1,0 +1,42 @@
+Clock: clk
+Sources: clk 
+Generated: no
+Virtual: no
+Propagated: no
+Period: 10.000000
+
+===========================================================================
+report_clock_properties
+============================================================================
+Clock                   Period          Waveform
+----------------------------------------------------
+clk                  10.000000    0.000000  5.000000
+
+===========================================================================
+report_clock_latency
+============================================================================
+Clock clk
+rise -> rise
+    min     max
+0.000000 0.000000 source latency
+0.787453         network latency half_sel$_SDFFE_PP0P_/CLK
+        0.787453 network latency half_sel$_SDFFE_PP0P_/CLK
+---------------
+0.787453 0.787453 latency
+        0.000000 skew
+
+fall -> fall
+    min     max
+0.000000 0.000000 source latency
+0.544981         network latency half_sel$_SDFFE_PP0P_/CLK
+        0.544981 network latency half_sel$_SDFFE_PP0P_/CLK
+---------------
+0.544981 0.544981 latency
+        0.000000 skew
+
+
+
+===========================================================================
+report_clock_min_period
+============================================================================
+clk period_min = 6.52 fmax = 153.38

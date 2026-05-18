@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-02-07T01:31:25" hostname="fawad-laptop" package="input_buffer" id="0" name="default" tests="38" errors="0" failures="2" time="0" skipped="37">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="FAIL"/>
+</properties>
+<testcase classname="default" name="build execution" time="0">
+<failure type="FAIL" message="Task returned status FAIL." />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:48.13-48.58" time="0" type="ASSERT" location="input_buffer.sv:48.13-48.58" id="_witness_.check_assert_input_buffer_sv_48_100">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_128" tracefile="engine_0/trace.vcd">
+<failure type="ASSERT" message="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52 failed. Trace file: engine_0/trace.vcd" />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_137">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_146">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_155">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_164">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_173">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_182">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_191">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_200">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_209">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_218">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_227">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_236">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_245">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_254">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_263">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_272">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_281">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_290">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_299">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_308">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_317">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_326">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_335">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_344">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_353">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_362">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_371">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_380">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_389">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_398">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:57.21-57.52" time="0" type="ASSERT" location="input_buffer.sv:57.21-57.52" id="_witness_.check_assert_input_buffer_sv_57_407">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:71.13-71.37" time="0" type="ASSERT" location="input_buffer.sv:71.13-71.37" id="_witness_.check_assert_input_buffer_sv_71_105">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:79.13-79.51" time="0" type="ASSERT" location="input_buffer.sv:79.13-79.51" id="_witness_.check_assert_input_buffer_sv_79_108">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:80.13-80.53" time="0" type="ASSERT" location="input_buffer.sv:80.13-80.53" id="_witness_.check_assert_input_buffer_sv_80_111">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:81.13-81.53" time="0" type="ASSERT" location="input_buffer.sv:81.13-81.53" id="_witness_.check_assert_input_buffer_sv_81_115">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in input_buffer at input_buffer.sv:82.13-82.53" time="0" type="ASSERT" location="input_buffer.sv:82.13-82.53" id="_witness_.check_assert_input_buffer_sv_82_119">
+<skipped />
+</testcase>
+<system-out>SBY  1:31:25 [input_buffer] Removing directory '/home/fawad/ICdesign/Functional/matrix_multiplier/input_buffer'.
+SBY  1:31:25 [input_buffer] Copy '/home/fawad/ICdesign/Functional/matrix_multiplier/input_buffer.sv' to '/home/fawad/ICdesign/Functional/matrix_multiplier/input_buffer/src/input_buffer.sv'.
+SBY  1:31:25 [input_buffer] engine_0: smtbmc
+SBY  1:31:25 [input_buffer] base: starting process &quot;cd input_buffer/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY  1:31:25 [input_buffer] base: finished (returncode=0)
+SBY  1:31:25 [input_buffer] prep: starting process &quot;cd input_buffer/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY  1:31:25 [input_buffer] prep: finished (returncode=0)
+SBY  1:31:25 [input_buffer] smt2: starting process &quot;cd input_buffer/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY  1:31:25 [input_buffer] smt2: finished (returncode=0)
+SBY  1:31:25 [input_buffer] engine_0.basecase: starting process &quot;cd input_buffer; yosys-smtbmc --presat --unroll --noprogress -t 100  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY  1:31:25 [input_buffer] engine_0.induction: starting process &quot;cd input_buffer; yosys-smtbmc --presat --unroll -i --noprogress -t 100  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2&quot;
+SBY  1:31:25 [input_buffer] engine_0.basecase: ##   0:00:00  Solver: yices
+SBY  1:31:25 [input_buffer] engine_0.induction: ##   0:00:00  Solver: yices
+SBY  1:31:25 [input_buffer] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY  1:31:25 [input_buffer] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY  1:31:25 [input_buffer] engine_0.induction: ##   0:00:00  Trying induction in step 100..
+SBY  1:31:25 [input_buffer] engine_0.basecase: ##   0:00:00  Checking assumptions in step 1..
+SBY  1:31:25 [input_buffer] engine_0.basecase: ##   0:00:00  Checking assertions in step 1..
+SBY  1:31:25 [input_buffer] engine_0.induction: ##   0:00:00  Trying induction in step 99..
+SBY  1:31:25 [input_buffer] engine_0.basecase: ##   0:00:00  Checking assumptions in step 2..
+SBY  1:31:25 [input_buffer] engine_0.basecase: ##   0:00:00  Checking assertions in step 2..
+SBY  1:31:25 [input_buffer] engine_0.induction: ##   0:00:00  Trying induction in step 98..
+SBY  1:31:25 [input_buffer] engine_0.basecase: ##   0:00:00  BMC failed!
+SBY  1:31:25 [input_buffer] engine_0.basecase: ##   0:00:00  Assert failed in input_buffer: input_buffer.sv:57.21-57.52 (_witness_.check_assert_input_buffer_sv_57_128)
+SBY  1:31:25 [input_buffer] engine_0.induction: ##   0:00:00  Trying induction in step 97..
+SBY  1:31:25 [input_buffer] engine_0.basecase: ##   0:00:00  Writing trace to VCD file: engine_0/trace.vcd
+SBY  1:31:25 [input_buffer] engine_0.basecase: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace_tb.v
+SBY  1:31:25 [input_buffer] engine_0.induction: ##   0:00:00  Trying induction in step 96..
+SBY  1:31:25 [input_buffer] engine_0.basecase: ##   0:00:00  Writing trace to constraints file: engine_0/trace.smtc
+SBY  1:31:25 [input_buffer] engine_0.basecase: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace.yw
+SBY  1:31:25 [input_buffer] engine_0.induction: ##   0:00:00  Trying induction in step 95..
+SBY  1:31:25 [input_buffer] engine_0.basecase: ##   0:00:00  Status: failed
+SBY  1:31:25 [input_buffer] engine_0.induction: ##   0:00:00  Trying induction in step 94..
+SBY  1:31:25 [input_buffer] engine_0.basecase: finished (returncode=1)
+SBY  1:31:25 [input_buffer] engine_0.basecase: Status returned by engine for basecase: FAIL
+SBY  1:31:25 [input_buffer] engine_0.induction: terminating process
+SBY  1:31:25 [input_buffer] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  1:31:25 [input_buffer] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  1:31:25 [input_buffer] summary: engine_0 (smtbmc) returned FAIL for basecase
+SBY  1:31:25 [input_buffer] summary: counterexample trace [basecase]: input_buffer/engine_0/trace.vcd
+SBY  1:31:25 [input_buffer] summary:   failed assertion input_buffer._witness_.check_assert_input_buffer_sv_57_128 at input_buffer.sv:57.21-57.52 step 2
+SBY  1:31:25 [input_buffer] DONE (FAIL, rc=2)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

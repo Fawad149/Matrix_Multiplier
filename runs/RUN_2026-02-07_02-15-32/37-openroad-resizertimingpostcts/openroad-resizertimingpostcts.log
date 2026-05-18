@@ -1,0 +1,96 @@
+Reading timing models for corner nom_fast_1p32V_m40C…
+Reading timing library for the 'nom_fast_1p32V_m40C' corner at '/home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_fast_1p32V_m40C.lib'…
+Reading timing models for corner nom_slow_1p08V_125C…
+Reading timing library for the 'nom_slow_1p08V_125C' corner at '/home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_slow_1p08V_125C.lib'…
+Reading timing models for corner nom_typ_1p20V_25C…
+Reading timing library for the 'nom_typ_1p20V_25C' corner at '/home/fawad/.ciel/ciel/ihp-sg13g2/versions/cb7daaa8901016cf7c5d272dfa322c41f024931f/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_typ_1p20V_25C.lib'…
+Reading OpenROAD database at '/home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/35-openroad-cts/mm_top.odb'…
+Reading design constraints file at '/nix/store/m14ar4akyh801bihjgbvb3k669h95ig3-python3-3.12.10-env/lib/python3.12/site-packages/librelane/scripts/base.sdc'…
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 2
+[INFO] Setting input delay to: 2
+[INFO] Setting load to: 0.006
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.15
+[INFO] Setting timing derate to: 5%
++ repair_timing -verbose -setup -setup_margin 0.05000000000000000277555756156289135105907917022705078125 -max_buffer_percent 50
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0098] No setup violations found
++ repair_timing -verbose -hold -setup_margin 0.05000000000000000277555756156289135105907917022705078125 -hold_margin 0.1000000000000000055511151231257827021181583404541015625 -max_buffer_percent 50
+[INFO RSZ-0046] Found 375 endpoints with hold violations.
+Iteration | Resized | Buffers | Cloned Gates |   Area   |   WNS   |   TNS   | Endpoint
+--------------------------------------------------------------------------------------
+        0 |       0 |       0 |            0 |    +0.0% |  -0.066 | -14.840 | u_ctrl.finish$_SDFF_PP0_/D
+       10 |       0 |      11 |            0 |    +0.1% |  -0.063 | -14.231 | u_input_buffer.mem\[9\]\[0\]$_DFFE_PP_/D
+       20 |       0 |      25 |            0 |    +0.3% |  -0.062 | -13.607 | u_input_buffer.mem\[9\]\[2\]$_DFFE_PP_/D
+       30 |       0 |      41 |            0 |    +0.5% |  -0.061 | -12.965 | u_input_buffer.mem\[31\]\[3\]$_DFFE_PP_/D
+       40 |       0 |      60 |            0 |    +0.7% |  -0.060 | -12.358 | u_input_buffer.mem\[8\]\[1\]$_DFFE_PP_/D
+       50 |       0 |      74 |            0 |    +0.9% |  -0.058 | -11.766 | u_input_buffer.mem\[31\]\[5\]$_DFFE_PP_/D
+       60 |       0 |      86 |            0 |    +1.0% |  -0.053 | -11.225 | u_input_buffer.mem\[2\]\[3\]$_DFFE_PP_/D
+       70 |       0 |      96 |            0 |    +1.1% |  -0.053 | -10.697 | u_input_buffer.mem\[7\]\[5\]$_DFFE_PP_/D
+       80 |       0 |     108 |            0 |    +1.3% |  -0.052 | -10.172 | u_input_buffer.mem\[26\]\[3\]$_DFFE_PP_/D
+       90 |       0 |     118 |            0 |    +1.4% |  -0.052 |  -9.649 | u_input_buffer.mem\[13\]\[0\]$_DFFE_PP_/D
+      100 |       0 |     129 |            0 |    +1.5% |  -0.052 |  -9.128 | u_input_buffer.mem\[28\]\[4\]$_DFFE_PP_/D
+      110 |       0 |     139 |            0 |    +1.7% |  -0.052 |  -8.609 | u_input_buffer.mem\[28\]\[3\]$_DFFE_PP_/D
+      120 |       0 |     152 |            0 |    +1.8% |  -0.051 |  -8.093 | u_input_buffer.mem\[20\]\[0\]$_DFFE_PP_/D
+      130 |       0 |     163 |            0 |    +2.0% |  -0.051 |  -7.581 | u_input_buffer.mem\[30\]\[6\]$_DFFE_PP_/D
+      140 |       0 |     175 |            0 |    +2.1% |  -0.051 |  -7.071 | u_input_buffer.mem\[29\]\[1\]$_DFFE_PP_/D
+      150 |       0 |     186 |            0 |    +2.2% |  -0.050 |  -6.565 | u_input_buffer.mem\[29\]\[5\]$_DFFE_PP_/D
+      160 |       0 |     198 |            0 |    +2.4% |  -0.050 |  -6.062 | u_input_buffer.mem\[23\]\[0\]$_DFFE_PP_/D
+      170 |       0 |     209 |            0 |    +2.5% |  -0.050 |  -5.540 | u_input_buffer.mem\[10\]\[2\]$_DFFE_PP_/D
+      180 |       0 |     219 |            0 |    +2.6% |  -0.049 |  -5.044 | u_input_buffer.mem\[20\]\[1\]$_DFFE_PP_/D
+      190 |       0 |     230 |            0 |    +2.8% |  -0.049 |  -4.511 | u_input_buffer.mem\[11\]\[6\]$_DFFE_PP_/D
+      200 |       0 |     242 |            0 |    +2.9% |  -0.049 |  -4.020 | u_mac_3.temp_res\[0\]$_SDFF_PP0_/D
+      210 |       0 |     254 |            0 |    +3.0% |  -0.049 |  -3.510 | u_input_buffer.mem\[22\]\[2\]$_DFFE_PP_/D
+      220 |       0 |     264 |            0 |    +3.2% |  -0.048 |  -3.025 | u_input_buffer.mem\[2\]\[1\]$_DFFE_PP_/D
+      230 |       0 |     276 |            0 |    +3.3% |  -0.048 |  -2.543 | u_input_buffer.mem\[30\]\[5\]$_DFFE_PP_/D
+      240 |       0 |     288 |            0 |    +3.4% |  -0.047 |  -2.065 | u_input_buffer.mem\[12\]\[7\]$_DFFE_PP_/D
+      250 |       0 |     301 |            0 |    +3.6% |  -0.046 |  -1.594 | u_input_buffer.mem\[27\]\[6\]$_DFFE_PP_/D
+      260 |       0 |     313 |            0 |    +3.7% |  -0.043 |  -1.116 | u_input_buffer.mem\[6\]\[6\]$_DFFE_PP_/D
+      270 |       0 |     330 |            0 |    +4.0% |  -0.038 |  -0.695 | u_ctrl.input_cnt\[1\]$_SDFFE_PP0P_/D
+      280 |       0 |     353 |            0 |    +4.2% |  -0.029 |  -0.353 | read_index\[3\]$_SDFFE_PP0P_/D
+      290 |       0 |     368 |            0 |    +4.4% |  -0.023 |  -0.136 | u_ctrl.res_idx_r\[8\]$_SDFFE_PP0P_/D
+      300 |       0 |     384 |            0 |    +4.6% |  -0.009 |  -0.040 | read_index\[4\]$_SDFFE_PP0P_/D
+      310 |       0 |     396 |            0 |    +4.7% |  -0.003 |  -0.004 | read_data_out\[3\]$_SDFFE_PP0P_/D
+      320 |       0 |     412 |            0 |    +4.9% |   0.010 |   0.000 | u_mac_3.temp_res\[3\]$_SDFF_PP0_/D
+      330 |       0 |     428 |            0 |    +5.1% |   0.020 |   0.000 | u_mac_4.temp_res\[9\]$_SDFF_PP0_/D
+      340 |       0 |     442 |            0 |    +5.3% |   0.024 |   0.000 | u_mac_2.temp_res\[3\]$_SDFF_PP0_/D
+      350 |       0 |     455 |            0 |    +5.4% |   0.036 |   0.000 | u_ctrl.input_cnt\[3\]$_SDFFE_PP0P_/D
+      360 |       0 |     469 |            0 |    +5.6% |   0.048 |   0.000 | u_mac_4.temp_res\[10\]$_SDFF_PP0_/D
+      370 |       0 |     477 |            0 |    +5.7% |   0.059 |   0.000 | u_mac_2.temp_res\[10\]$_SDFF_PP0_/D
+    final |       0 |     483 |            0 |    +5.8% |   0.100 |   0.000 | u_mac_2.temp_res\[6\]$_SDFF_PP0_/D
+--------------------------------------------------------------------------------------
+[INFO RSZ-0032] Inserted 483 hold buffers.
++ detailed_placement -max_displacement  500 100 
+Placement Analysis
+---------------------------------
+total displacement       2408.3 u
+average displacement        0.6 u
+max displacement            9.0 u
+original HPWL          116389.1 u
+legalized HPWL         120681.2 u
+delta HPWL                    4 %
+
+[INFO DPL-0020] Mirrored 2282 instances
+[INFO DPL-0021] HPWL before          120681.2 u
+[INFO DPL-0022] HPWL after           116876.7 u
+[INFO DPL-0023] HPWL delta               -3.2 %
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+u_ram matched with u_ram
+u_ram matched with u_ram
+Updating metrics…
+Cell type report:                       Count       Area
+  Macro                                     1   79719.90
+  Clock buffer                             67    1580.34
+  Timing Repair Buffer                    782   14201.31
+  Inverter                                 58     328.41
+  Clock inverter                            5      39.92
+  Sequential cell                         376   18559.50
+  Multi-Input combinational cell         3032   29810.59
+  Total                                  4321  144239.96
+Writing OpenROAD database to '/home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/37-openroad-resizertimingpostcts/mm_top.odb'…
+Writing netlist to '/home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/37-openroad-resizertimingpostcts/mm_top.nl.v'…
+Writing powered netlist to '/home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/37-openroad-resizertimingpostcts/mm_top.pnl.v'…
+Writing layout to '/home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/37-openroad-resizertimingpostcts/mm_top.def'…
+Writing timing constraints to '/home/fawad/matrixMul/Matrix_Multiplier/runs/RUN_2026-02-07_02-15-32/37-openroad-resizertimingpostcts/mm_top.sdc'…
