@@ -8,6 +8,7 @@ The project covers the entire hardware design flow, from **RTL architecture and
 formal verification** to **logic synthesis, physical design, clock tree synthesis,
 and post-layout timing analysis**.
 
+Authors: Fawad149, Umar-908
 ---
 
 ## Project Overview
